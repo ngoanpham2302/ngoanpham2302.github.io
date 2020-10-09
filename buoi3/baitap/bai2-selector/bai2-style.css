@@ -1,0 +1,27 @@
+body {
+  margin: 50px 300px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: justify;
+}
+#nation {
+  text-align: center;
+  font-size: large;
+  font-weight: bold;
+}
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+}
+p.p1 {
+  text-align: center;
+  font-weight: bold;
+}
+p.p2 {
+  font-weight: bold;
+  font-style: italic;
+}
+.date,
+.end {
+  text-align: right;
+  font-style: italic;
+}
