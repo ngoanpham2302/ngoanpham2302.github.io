@@ -1,0 +1,55 @@
+body {
+  margin: 30px 200px;
+  font-family: "Segoe UI";
+  color: rgb(0, 70, 0);
+}
+table,
+th,
+td {
+  border: 2px solid white;
+  border-collapse: collapse;
+}
+table {
+  text-align: center;
+  font-size: 20px;
+  caption-side: bottom;
+}
+th,
+td {
+  width: 120px;
+  padding: 3px;
+}
+tbody tr:nth-child(odd) {
+  background-color: #d5e3cf;
+}
+tbody tr:nth-child(even) {
+  background-color: #ebf1e9;
+}
+tbody tr:hover {
+  background-color: #fff4e7;
+}
+thead {
+  color: white;
+  font-size: 26px;
+  background-color: #70ad47;
+}
+tfoot {
+  color: rgb(0, 70, 0);
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #fff4e7;
+}
+caption {
+  color: darkred;
+  font-style: italic;
+  font-size: 18px;
+  padding: 5px;
+}
+span {
+  color: red;
+}
+.special-prize {
+  color: red;
+  font-weight: bold;
+  background-color: #fff4e7 !important;
+}

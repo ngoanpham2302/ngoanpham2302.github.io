@@ -1,0 +1,66 @@
+body {
+  background-image: url(https://i.pinimg.com/originals/de/fb/41/defb4161eb05111ed5813229b9611c95.jpg);
+  background-size: 100%;
+  background-position: center;
+  background-attachment: fixed;
+}
+.container {
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Roboto, sans-serif;
+}
+
+.menu {
+  list-style: none;
+  padding-left: 0;
+}
+
+.menu_item {
+  display: inline-block;
+  margin-right: 21px;
+  color: maroon;
+}
+
+.menu_link {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.music-card {
+  width: 192px;
+  display: inline-block;
+  position: relative;
+  margin: 4px 2px;
+}
+.music-info {
+  font-size: 18px;
+  text-align: center;
+  font-weight: 700;
+  width: 100%;
+  height: 68px;
+  color: white;
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  height: auto;
+  border-radius: 8px;
+}
+
+a {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+.topbar {
+  margin: 20px auto 30px -20px;
+}
+.intro-content {
+  line-height: 28px;
+}
