@@ -2,6 +2,10 @@ body {
   margin: 30px 200px;
   font-family: "Segoe UI";
   color: rgb(0, 70, 0);
+  background-image: url(https://wallpaperset.com/w/full/4/6/7/96482.jpg);
+  background-size: 100%;
+  background-position: center;
+  background-attachment: fixed;
 }
 table,
 th,
@@ -40,7 +44,7 @@ tfoot {
   background-color: #fff4e7;
 }
 caption {
-  color: darkred;
+  color: white;
   font-style: italic;
   font-size: 18px;
   padding: 5px;
