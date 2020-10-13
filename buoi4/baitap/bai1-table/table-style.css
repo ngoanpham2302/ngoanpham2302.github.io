@@ -23,14 +23,25 @@ td {
   width: 120px;
   padding: 3px;
 }
-tbody tr:nth-child(odd) {
+.odd-row {
   background-color: #d5e3cf;
 }
-tbody tr:nth-child(even) {
+.even-row {
   background-color: #ebf1e9;
 }
-tbody tr:hover {
+tbody td:hover,
+tbody th:hover {
   background-color: #fff4e7;
+}
+.special-prize td,
+.special-prize th {
+  color: red;
+  font-weight: bold;
+  background-color: #fff4e7;
+}
+.special-prize td:hover,
+.special-prize th:hover {
+  background-color: #ffe8cb;
 }
 thead {
   color: white;
@@ -51,9 +62,4 @@ caption {
 }
 span {
   color: red;
-}
-.special-prize {
-  color: red;
-  font-weight: bold;
-  background-color: #fff4e7 !important;
 }

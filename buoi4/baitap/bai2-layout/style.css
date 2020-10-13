@@ -33,6 +33,10 @@ body {
   display: inline-block;
   position: relative;
   margin: 4px 2px;
+  transition: 0.5s linear;
+}
+.music-card:hover {
+  transform: scale(1.03, 1.03);
 }
 .music-info {
   font-size: 18px;
@@ -45,14 +49,18 @@ body {
   top: 80%;
   left: 50%;
   transform: translate(-50%, -50%);
+  transition: 0.5s linear;
+}
+.music-info:hover {
+  top: 70%;
 }
 img {
   max-width: 100%;
   vertical-align: middle;
   height: auto;
   border-radius: 8px;
+  transition: 0.5s linear;
 }
-
 a {
   display: block;
   color: inherit;
