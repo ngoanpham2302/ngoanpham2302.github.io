@@ -1,0 +1,198 @@
+* {
+  box-sizing: border-box;
+  font-family: Helvetica, sans-serif;
+}
+form.login-form {
+  width: 350px;
+  margin: 100px auto;
+  box-shadow: 0 0 5px rgb(209, 202, 202);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 12px 8px;
+  margin-bottom: 10px;
+  border: 1px solid rgb(209, 202, 202);
+  border-radius: 5px;
+  outline: none;
+  font-size: 16px;
+}
+
+.login-form input:focus {
+  border-color: #166fe5;
+}
+
+.login-form button[type="submit"] {
+  width: 100%;
+  background-color: #3484ec;
+  border: 0;
+  border-radius: 5px;
+  padding: 12px 8px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.login-form button[type="submit"]:hover {
+  background-color: #166fe5;
+}
+
+.login-form p {
+  text-align: center;
+  margin: 10px 0 15px;
+}
+
+hr {
+  border: 0;
+  border-bottom: 1px solid rgb(209, 202, 202);
+  margin-bottom: 20px;
+}
+
+.login-form label[type="button"] {
+  background-color: #36a420;
+  border: 0;
+  border-radius: 5px;
+  padding: 12px 8px;
+  color: white;
+  display: block;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.login-form input::placeholder {
+  color: rgb(209, 202, 202);
+}
+
+.login-form a {
+  position: sticky;
+}
+
+form.signup-form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+input[type="checkbox"] {
+  display: none;
+}
+input[type="checkbox"]:checked + .signup-form {
+  display: block;
+  z-index: 1;
+  background-color: white;
+  width: 430px;
+  height: 520px;
+  margin: 0 auto;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.signup-form button[type="submit"] {
+  width: 50%;
+  margin: 2% 25%;
+  background-color: #119f16;
+  border: 0;
+  border-radius: 5px;
+  padding: 8px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  cursor: pointer;
+}
+.title {
+  font-size: 32px;
+  font-weight: bold;
+  margin: 0 auto;
+}
+p.sub-title {
+  color: rgb(122, 122, 122);
+  margin-top: 3px;
+}
+p.birthday-intro,
+p.gender-intro {
+  color: rgb(122, 122, 122);
+  font-size: 12px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.signup-form input[type="text"],
+.signup-form input[type="password"],
+.signup-form .birthday,
+div.gender {
+  padding: 10px 8px;
+  margin-bottom: 10px;
+  border: 1px solid rgb(209, 202, 202);
+  border-radius: 5px;
+  outline: none;
+  font-size: 16px;
+}
+.signup-form .birthday,
+div.gender {
+  padding: 7px 8px;
+}
+.signup-form .phone-email,
+.signup-form .password {
+  width: 100%;
+  background-color: #f5f6f7;
+}
+.signup-form input::placeholder {
+  color: rgb(122, 122, 122);
+}
+.signup-form .family-name,
+.signup-form .first-name {
+  width: 48%;
+  background-color: #f5f6f7;
+}
+.name-box .name-info:not(:last-child) {
+  margin-right: 2.8%;
+}
+
+.birthday-box .birthday {
+  width: 30.7%;
+}
+.birthday-box .birthday:not(:last-child),
+.gender-box .gender:not(:last-child) {
+  margin-right: 2.8%;
+}
+div.gender {
+  display: inline-block;
+  width: 30.7%;
+}
+select.birthday,
+.gender-box .gender {
+  color: rgb(58, 58, 58);
+}
+p.policy {
+  color: rgb(122, 122, 122);
+  font-size: 11px;
+  margin-top: 0;
+}
+div.signup-page {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.close img {
+  width: 24px;
+  height: 24px;
+}
