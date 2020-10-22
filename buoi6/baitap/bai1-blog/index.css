@@ -71,6 +71,7 @@ img {
   background-color: #f7f2ee;
   margin-top: 0;
   margin-bottom: 0;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
 .menu-item:not(:last-child) {
@@ -415,4 +416,64 @@ hr {
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+form.newsletter-form {
+  width: 300px;
+  margin: 30px auto;
+  text-align: center;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  padding: 15px;
+  border-radius: 10px;
+  background-color: #eff4f7;
+}
+
+.newsletter-form input,
+.search-form .search-input {
+  width: 100%;
+  padding: 12px 8px;
+  margin-bottom: 10px;
+  border: 1px solid rgb(209, 202, 202);
+  border-radius: 5px;
+  outline: none;
+  font-size: 16px;
+}
+
+.search-form .search-input {
+  width: 200px;
+  margin-right: 0;
+}
+
+.newsletter-form input:focus {
+  border-color: #363940;
+}
+
+.newsletter-form button[type="submit"],
+.search-form .search-submit {
+  width: 100%;
+  margin-top: 10px;
+  background-color: #363940;
+  border: 0;
+  border-radius: 5px;
+  padding: 12px 8px;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.search-form .search-submit {
+  width: 95px;
+  margin-right: 0;
+}
+
+.newsletter-form button[type="submit"]:hover,
+.search-form .search-submit:hover {
+  background-color: #7b7b7b;
+}
+
+.newsletter-form p {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 15px;
 }
