@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,400&family=Mr+De+Haviland&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Mr+De+Haviland&family=Overlock:ital,wght@0,400;0,700;1,400&display=swap");
 
 * {
   box-sizing: border-box;
@@ -249,7 +249,6 @@ h2.post-destination-text {
   display: flex;
   flex-direction: row;
   margin-top: 30px;
-  margin-bottom: 0;
   text-align: justify;
 }
 
@@ -365,10 +364,11 @@ hr {
 
 .author-detail {
   margin-top: 0;
+  font-family: "Overlock", cursive;
+  font-size: 18px;
 }
 
 .author .readmore-button {
-  margin-top: 0;
   width: 150px;
   color: #ffffff;
   background-color: #434343;
@@ -390,7 +390,7 @@ hr {
 }
 
 .view-image-insta {
-  margin-bottom: 80px;
+  margin-bottom: 50px;
   position: relative;
 }
 .image-insta-list {
@@ -434,7 +434,7 @@ form.newsletter-form {
   width: 300px;
   margin: 30px auto;
   text-align: center;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   padding: 15px;
   border-radius: 10px;
   background-color: #eff4f7;
@@ -454,6 +454,7 @@ form.newsletter-form {
 .search-form .search-input {
   width: 200px;
   margin-right: 0;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
 .newsletter-form input:focus,
@@ -478,6 +479,7 @@ form.newsletter-form {
 .search-form .search-submit {
   width: 95px;
   margin-right: 0;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
 .newsletter-form button[type="submit"]:hover,
@@ -489,4 +491,45 @@ form.newsletter-form {
   text-align: center;
   margin-bottom: 20px;
   font-size: 15px;
+}
+
+.popular-list {
+  border: 1px solid rgba(129, 129, 129, 0.3);
+  counter-reset: list-counter;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+.popular-list-item {
+  text-align: left;
+  padding: 12px;
+  margin-left: 10px;
+  margin-right: 0;
+  position: relative;
+}
+
+.popular-list-item::before {
+  counter-increment: list-counter;
+  content: counter(list-counter);
+  position: absolute;
+  top: 12px;
+  left: -40px;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  color: #363940;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border: 2px solid #eeeeee;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.popular-list-item:not(:last-child) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.popular-list-item:hover {
+  font-weight: 600;
 }
