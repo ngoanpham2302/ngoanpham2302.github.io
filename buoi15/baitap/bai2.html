@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thực hành DOM cơ bản 2</title>
+  </head>
+  <body>
+    <h1 id="heading">Bài tập thực hành DOM</h1>
+    <p class="para para-1">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    </p>
+    <p class="para para-2">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    </p>
+    <p class="para para-3">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    </p>
+    <div class="content">
+      <h2 id="title">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+      </h2>
+      <p class="description">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem
+        voluptatibus sint molestias sit odit quia labore alias! Accusamus magnam
+        aperiam officiis? Laboriosam numquam at eum dicta quos temporibus in
+        aliquid?
+      </p>
+    </div>
+
+    <script>
+      // Bài tập: Cho mã HTML như trên. Yêu cầu:
+
+      // 1. Truy cập vào thẻ h1 có id="heading" thay đổi màu chữ thành 'red', và in hoa nội dung của thẻ đó
+      let h1 = document.getElementById("heading");
+      h1.style.color = "red";
+      h1.style.textTransform = "uppercase";
+
+      // 2. Thay đổi màu chữ của tất cả thẻ có class "para" thành màu "blue" và có font-size = "20px"
+      let paras = document.getElementsByClassName("para");
+      for (let i = 0; i < paras.length; i++) {
+        paras[i].style.color = "blue";
+        paras[i].style.fontSize = "20px";
+      }
+
+      // 3. Thêm thẻ a link đến trang 'facebook' ở đằng sau thẻ có class "para-3"
+      let link = document.createElement("a");
+      link.href = "https://www.facebook.com/";
+      link.innerText = "Facebook";
+      let para3 = document.querySelector(".para-3");
+      para3.insertAdjacentElement("afterend", link);
+
+      // 4. Thay đổi nội dung của thẻ có id="title" thành "Đây là thẻ tiêu đề"
+      let title = document.getElementById("title");
+      title.innerText = "Đây là thẻ tiêu đề";
+
+      // 5. Thêm class "text-bold" vào thẻ có class="description" (định nghĩa class "text-bold" có tác dụng in đậm chữ)
+      let des = document.querySelector(".description");
+      des.classList.add("text-bold");
+
+      // 6. Thay thế thẻ có class="para-3" thành thẻ button có nội dung là "Click me"
+      let button = document.createElement("button");
+      button.innerText = "Click me";
+      document.body.replaceChild(button, para3);
+
+      // 7. Copy thẻ có class="para-2" và hiển thị ngay đằng sau thẻ đó
+      let para2 = document.querySelector(".para-2");
+      let paraCopy = para2.cloneNode(true);
+      para2.insertAdjacentElement("afterend", paraCopy);
+
+      // 8. Xóa thẻ có class="para-1"
+      let para1 = document.querySelector(".para-1");
+      para1.parentNode.removeChild(para1);
+    </script>
+  </body>
+</html>
