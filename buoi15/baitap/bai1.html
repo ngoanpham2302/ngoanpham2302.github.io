@@ -4,8 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Thực hành DOM cơ bản 1</title>
+    <style>
+      .hide-show {
+        display: none;
+      }
+      .texture-sample {
+        height: 300px;
+      }
+    </style>
   </head>
   <body>
+    <button id="btn">Click me!</button>
     <p id="text">
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti impedit
       voluptates, voluptatibus fugit, est quia, cumque possimus dicta nulla
@@ -18,6 +27,30 @@
       <li>Item 2</li>
       <li>Item 3</li>
     </ul>
+
+    <div>
+      <label for="texture-selector">Choose a texture:</label>
+      <select id="texture-selector">
+        <option
+          value="https://image.freepik.com/free-vector/memphis-seamless-patterns_9202-768.jpg"
+        >
+          Memphis Seamless
+        </option>
+        <option
+          value="https://image.freepik.com/free-vector/retro-styled-pattern-background_1048-6593.jpg"
+        >
+          Retro-styled
+        </option>
+        <option
+          value="https://image.freepik.com/free-vector/abstract-background-with-3d-pattern_1319-68.jpg"
+        >
+          3D Cubes
+        </option>
+      </select>
+    </div>
+
+    <div id="texture-background" class="texture-sample"></div>
+
     <script>
       // Bài tập 1. Tạo 1 thẻ p có id="text", có nội dung bất kỳ. Yêu cầu:
       // - Đặt màu văn bản thành #777
@@ -35,6 +68,25 @@
       for (let i = 0; i < lists.length; i++) {
         lists[i].style.color = "blue";
       }
+
+      // Bài tập 3. Tạo 1 thẻ p có nội dung bất kỳ và 1 thẻ button sau đó ấn vào button thì toggle ẩn/hiện thẻ p
+
+      let button = document.getElementById("btn");
+      button.addEventListener("click", function () {
+        p.classList.toggle("hide-show");
+      });
+
+      // Bài tập 4. Lắng nghe sự kiện "change" của ô select có id="texture-selector". Thay đổi background-image của thẻ div có id="texture-background"  = giá trị trong ô select được chọn
+
+      let select = document.getElementById("texture-selector");
+      let options = document.getElementsByTagName("option");
+      let background = document.getElementById("texture-background");
+
+      select.addEventListener("change", function () {
+        for (let i = 0; i < options.length; i++) {
+          background.style.backgroundImage = "url(" + select.value + ")";
+        }
+      });
     </script>
   </body>
 </html>
