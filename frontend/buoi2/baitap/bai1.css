@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #dddddd;
+  text-align: justify;
+  font-size: 16px;
+}
+
+#container {
+  background-color: white;
+  width: 60%;
+  margin: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 50px 80px;
+  line-height: 1.5;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+#opening-box {
+  text-align: center;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+#title {
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.sub-content {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.experience-list {
+  margin-left: 15px;
+}
+
+#ending-box {
+  text-align: right;
+}
+
+.name-box {
+  text-align: center;
+  margin-left: 370px;
+}
+
+.writer-name {
+  margin-top: 15px;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.italic {
+  font-style: italic;
+}
