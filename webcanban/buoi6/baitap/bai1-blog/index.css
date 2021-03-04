@@ -188,7 +188,7 @@ p.slogan-text {
 }
 
 .post-card:not(:last-child) {
-  margin-right: 15px;
+  margin-right: 20px;
 }
 
 .post-card {
@@ -320,6 +320,7 @@ hr {
 }
 
 .all-post-list {
+  width: 100%;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -327,7 +328,7 @@ hr {
 }
 
 .all-post-card {
-  width: 385px;
+  width: calc((100% - 50px) / 2);
   margin-bottom: 50px;
 }
 
