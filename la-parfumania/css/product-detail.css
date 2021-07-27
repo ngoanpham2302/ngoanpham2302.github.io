@@ -631,11 +631,15 @@
   }
 
   #info .feature-list .scent-item__name {
-    width: 35%;
+    width: 37%;
   }
 }
 
 @media (max-width: 450px) {
+  .section__title {
+    font-size: 1.45rem;
+  }
+
   .product-detail__slider-nav .product-detail__slide {
     margin: 0 0.4rem;
   }

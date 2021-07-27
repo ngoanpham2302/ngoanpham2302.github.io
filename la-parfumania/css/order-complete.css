@@ -1,0 +1,77 @@
+/*------------ START: MAIN CONTENT ----------- */
+
+#main {
+  background-image: url(../images/banners/order-complete-bg.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-top: 3rem;
+}
+
+.order-payment,
+.order-ship,
+.order-expect {
+  padding: 0.75rem 0 0.5rem 0;
+}
+
+.order-ship {
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(18, 18, 18, 0.1);
+}
+
+.order__details {
+  background-color: #fff;
+  max-width: 600px;
+  margin: auto;
+}
+
+.order-row-small .col-left {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+}
+
+.thank-you {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.order-expect .col-left {
+  padding-right: 0.5rem;
+}
+
+.order-result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 2.5rem;
+}
+
+.order-result > div > p:last-child {
+  margin-bottom: 0;
+}
+
+.vertical-line {
+  width: 1px;
+  height: 3rem;
+  background-color: #fff;
+}
+
+.order-number > p:first-child,
+.order-date > p:first-child {
+  margin-bottom: 0.5rem;
+}
+
+.support-info {
+  margin-bottom: 2rem;
+}
+
+.order__list {
+  margin-bottom: 2rem;
+}
+
+/*------------ END: MAIN CONTENT ----------- */

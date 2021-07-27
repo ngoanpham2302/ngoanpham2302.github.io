@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Thanh toán - La Parfumania Perfume Gallery</title>
+    <title>Hoàn tất đơn hàng - La Parfumania Perfume Gallery</title>
     <link
       rel="shortcut icon"
       href="./images/brands/flavicon.png"
@@ -17,15 +17,12 @@
       rel="stylesheet"
       href="./vendor/bootstrap-5.0.2/css/bootstrap.min.css"
     />
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/css/datepicker.min.css"
-      rel="stylesheet"
-    />
 
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
 
     <link rel="stylesheet" href="./css/layout.css" />
     <link rel="stylesheet" href="./css/payment.css" />
+    <link rel="stylesheet" href="./css/order-complete.css" />
   </head>
 
   <body>
@@ -487,7 +484,7 @@
       </div>
 
       <!-- Header Page Banner -->
-      <div class="page-banner container-fluid">
+      <!-- <div class="page-banner container-fluid">
         <div class="page-banner__content">
           <h2 class="page-banner__title">THANH TOÁN</h2>
 
@@ -527,398 +524,111 @@
             </nav>
           </div>
         </div>
-      </div>
+      </div> -->
     </header>
 
     <!-- Main Content -->
     <main id="main">
       <!-- Section Order Info -->
-      <section class="section-order__container container-fluid">
-        <div class="order container">
-          <form class="order-form needs-validation">
-            <div class="order__payment-info">
-              <h4 class="order__title">Thông tin thanh toán</h4>
+      <section class="section order--complete container-fluid">
+        <div class="order-summary container">
+          <div class="order-thank">
+            <h4 class="thank-you">
+              Cảm ơn quý khách đã lựa chọn La&nbsp;Parfumania.
+            </h4>
 
-              <div class="order__first-info row g-3">
-                <div class="order__name">
-                  <input
-                    type="text"
-                    class="form-control name-input"
-                    placeholder="Họ tên *"
-                  />
-                  <div class="feedback-noti">Vui lòng nhập họ tên</div>
+            <div class="order-result">
+              <div class="order-number">
+                <p>Mã đơn hàng</p>
+                <p class="text-bold">367289</p>
+              </div>
+
+              <div class="vertical-line"></div>
+
+              <div class="order-date">
+                <p>Ngày nhận đơn</p>
+                <p class="text-bold">26/07/2021</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="order__details">
+            <h4 class="order__title">Chi tiết đơn hàng</h4>
+
+            <div class="order__list">
+              <div class="order-header order-row">
+                <div class="col-left">SẢN PHẨM</div>
+                <div class="col-right">THÀNH TIỀN</div>
+              </div>
+
+              <div class="order-item order-row">
+                <div class="col-left">
+                  Yves Saint Laurent Libre EDP 30ml x<span
+                    class="order-item__quantity"
+                    >&nbsp;1</span
+                  >
                 </div>
+                <div class="col-right order-item__unit-price">1.850.000₫</div>
+              </div>
 
-                <div class="order__phone">
-                  <input
-                    type="text"
-                    class="form-control phone-input"
-                    placeholder="Số điện thoại *"
-                  />
-                  <div class="feedback-noti">Vui lòng nhập số điện thoại</div>
+              <div class="order-item order-row">
+                <div class="col-left">
+                  Giorgio Armani Sì EDP 100ml x&nbsp;<span
+                    class="order-item__quantity"
+                    >1</span
+                  >
                 </div>
+                <div class="col-right order-item__unit-price">3.580.000₫</div>
+              </div>
 
-                <div class="order__city">
-                  <input
-                    type="text"
-                    class="form-control city-input"
-                    placeholder="Tỉnh/Thành phố *"
-                  />
-                  <div class="feedback-noti">Vui lòng nhập tỉnh/thành phố</div>
-                </div>
+              <div class="order-price order-row-small">
+                <div class="col-left">Tạm tính</div>
+                <div class="col-right">5.430.000₫</div>
+              </div>
 
-                <div class="order__district">
-                  <input
-                    type="text"
-                    class="form-control district-input"
-                    placeholder="Quận/Huyện *"
-                  />
-                  <div class="valid-feedback feedback-noti">
-                    Vui lòng nhập quận/huyện
-                  </div>
-                </div>
-
-                <div class="order__ward">
-                  <input
-                    type="text"
-                    class="form-control ward-input"
-                    placeholder="Phường/Xã *"
-                  />
-                  <div class="feedback-noti">Vui lòng nhập phường/xã</div>
-                </div>
-
-                <div class="order__address">
-                  <input
-                    type="text"
-                    class="form-control address-input"
-                    placeholder="Địa chỉ *"
-                  />
-                  <div class="feedback-noti">Vui lòng nhập địa chỉ</div>
-                </div>
-
-                <div class="order__ship-method">
-                  <select class="form-select" id="ship-method">
-                    <option selected disabled value="">
-                      Phương thức vận chuyển *
-                    </option>
-                    <option value="save">Tiết kiệm</option>
-                    <option value="standard">Tiêu chuẩn</option>
-                    <option value="fast">Nhanh</option>
-                    <option value="super-fast">Hỏa tốc</option>
-                  </select>
-                  <div class="invalid-feedback feedback-noti">
-                    Vui lòng chọn phương thức vận chuyển
-                  </div>
-                </div>
-
-                <div class="mb-3">
-                  <textarea
-                    class="form-control"
-                    id="order-note"
-                    rows="3"
-                    placeholder="Ghi chú đơn hàng"
-                  ></textarea>
+              <div class="order-discount order-row-small">
+                <div class="col-left">Giảm giá</div>
+                <div class="col-right">
+                  - <span class="discount-amount">200.000₫</span>
                 </div>
               </div>
 
-              <div class="form-check order__other-address">
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  value="other-address"
-                  id="other-address"
-                />
-                <label class="form-check-label" for="other-address">
-                  Giao hàng tới địa chỉ khác?
-                </label>
+              <div class="order-ship-fee order-row-small">
+                <div class="col-left">Phí giao hàng</div>
+                <div class="col-right">0₫</div>
               </div>
 
-              <div class="order__receiver-info row g-3 d-none">
-                <div class="order__name">
-                  <input
-                    type="text"
-                    class="form-control name-input"
-                    placeholder="Họ tên *"
-                  />
-                  <div class="feedback-noti">Vui lòng nhập họ tên</div>
-                </div>
+              <div class="order-payment order-row-small">
+                <div class="col-left">Phương thức thanh&nbsp;toán</div>
+                <div class="col-right">Chuyển khoản ngân&nbsp;hàng</div>
+              </div>
 
-                <div class="order__phone">
-                  <input
-                    type="text"
-                    class="form-control phone-input"
-                    placeholder="Số điện thoại *"
-                  />
-                  <div class="feedback-noti">Vui lòng nhập số điện thoại</div>
-                </div>
+              <div class="order-expect order-row-small">
+                <div class="col-left">Giao hàng dự&nbsp;kiến</div>
+                <div class="col-right">01/08/2021</div>
+              </div>
 
-                <div class="order__city">
-                  <input
-                    type="text"
-                    class="form-control city-input"
-                    placeholder="Tỉnh/Thành phố *"
-                  />
-                  <div class="feedback-noti">Vui lòng nhập tỉnh/thành phố</div>
-                </div>
+              <div class="order-ship order-row-small">
+                <div class="col-left">Phương thức vận&nbsp;chuyển</div>
+                <div class="col-right">Tiêu chuẩn</div>
+              </div>
 
-                <div class="order__district">
-                  <input
-                    type="text"
-                    class="form-control district-input"
-                    placeholder="Quận/Huyện *"
-                  />
-                  <div class="valid-feedback feedback-noti">
-                    Vui lòng nhập quận/huyện
-                  </div>
-                </div>
-
-                <div class="order__ward">
-                  <input
-                    type="text"
-                    class="form-control ward-input"
-                    placeholder="Phường/Xã *"
-                  />
-                  <div class="feedback-noti">Vui lòng nhập phường/xã</div>
-                </div>
-
-                <div class="order__address">
-                  <input
-                    type="text"
-                    class="form-control address-input"
-                    placeholder="Địa chỉ *"
-                  />
-                  <div class="feedback-noti">Vui lòng nhập địa chỉ</div>
-                </div>
+              <div class="order-subtotal order-row">
+                <div class="col-left">TỔNG CỘNG</div>
+                <div class="col-right">5.230.000₫</div>
               </div>
             </div>
 
-            <div class="order__details">
-              <h4 class="order__title">Thông tin đơn hàng</h4>
+            <p class="support-info">
+              Tổng đài hỗ trợ: <span class="text-info">0123456789</span>
+            </p>
 
-              <div class="order__list">
-                <div class="order-header order-row">
-                  <div class="col-left">SẢN PHẨM</div>
-                  <div class="col-right">THÀNH TIỀN</div>
-                </div>
-
-                <div class="order-item order-row">
-                  <div class="col-left">
-                    Yves Saint Laurent Libre EDP 30ml x<span
-                      class="order-item__quantity"
-                      >&nbsp;1</span
-                    >
-                  </div>
-                  <div class="col-right order-item__unit-price">1.850.000₫</div>
-                </div>
-
-                <div class="order-item order-row">
-                  <div class="col-left">
-                    Giorgio Armani Sì EDP 100ml x&nbsp;<span
-                      class="order-item__quantity"
-                      >1</span
-                    >
-                  </div>
-                  <div class="col-right order-item__unit-price">3.580.000₫</div>
-                </div>
-
-                <div class="order-price order-row-small">
-                  <div class="col-left">Tạm tính</div>
-                  <div class="col-right">5.430.000₫</div>
-                </div>
-
-                <div class="order-discount order-row-small">
-                  <div class="col-left">Giảm giá</div>
-                  <div class="col-right">
-                    - <span class="discount-amount">200.000₫</span>
-                  </div>
-                </div>
-
-                <div class="order-ship-fee order-row-small">
-                  <div class="col-left">Phí giao hàng</div>
-                  <div class="col-right">0₫</div>
-                </div>
-
-                <div class="order-subtotal order-row">
-                  <div class="col-left">TỔNG TIỀN</div>
-                  <div class="col-right">5.230.000₫</div>
-                </div>
-              </div>
-
-              <div class="order__payment-method">
-                <h4 class="order__title">Phương thức thanh&nbsp;toán</h4>
-
-                <div class="accordion" id="payment-methods">
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingVisa">
-                      <button
-                        class="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#visa"
-                        aria-expanded="false"
-                        aria-controls="visa"
-                      >
-                        <div class="form-check">
-                          <input
-                            class="form-check-input pay-radio"
-                            type="radio"
-                            name="pay-methods"
-                            id="visa-pay"
-                            value="visa-pay"
-                            checked
-                          />
-                          <label class="form-check-label" for="visa-pay">
-                            Thanh toán trực tuyến bằng thẻ Visa/MasterCard
-                          </label>
-                        </div>
-                      </button>
-                    </h2>
-                    <div
-                      id="visa"
-                      class="accordion-collapse collapse show"
-                      aria-labelledby="headingVisa"
-                      data-bs-parent="#payment-methods"
-                    >
-                      <div class="accordion-body">
-                        <div class="row g-2">
-                          <div class="col-12">
-                            <input
-                              required
-                              class="form-control"
-                              type="text"
-                              placeholder="Số thẻ"
-                              aria-label="Card number"
-                            />
-                          </div>
-
-                          <div class="col-12">
-                            <input
-                              required
-                              type="text"
-                              class="form-control"
-                              placeholder="Tên chủ thẻ"
-                              aria-label="Card name"
-                            />
-                          </div>
-
-                          <div class="col-7">
-                            <input
-                              required
-                              type="text"
-                              class="form-control"
-                              name="datepicker"
-                              id="datepicker"
-                              placeholder="MM/YYYY"
-                            />
-                          </div>
-
-                          <div class="col-5">
-                            <input
-                              required
-                              type="text"
-                              class="form-control"
-                              placeholder="CVV/CVC"
-                              aria-label="CVV-CVC"
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingBankTransfer">
-                      <button
-                        class="accordion-button"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#bankTransfer"
-                        aria-expanded="true"
-                        aria-controls="bankTransfer"
-                      >
-                        <div class="form-check">
-                          <input
-                            class="form-check-input pay-radio"
-                            type="radio"
-                            name="pay-methods"
-                            id="bank-pay"
-                            value="bank-pay"
-                          />
-                          <label class="form-check-label" for="bank-pay">
-                            Chuyển khoản ngân hàng
-                          </label>
-                        </div>
-                      </button>
-                    </h2>
-
-                    <div
-                      id="bankTransfer"
-                      class="accordion-collapse collapse"
-                      aria-labelledby="headingBankTransfer"
-                      data-bs-parent="#payment-methods"
-                    >
-                      <div class="accordion-body">
-                        Thực hiện chuyển khoản vào tài khoản ngân hàng của
-                        La&nbsp;Parfumania. <br />
-                        Xem thông tin chi tiết tài khoản tại
-                        <a href="#" class="text-info">đây</a>. <br />
-                        Nội dung chuyển khoản:
-                        <span class="text-bold text-danger"
-                          >“SĐT của bạn - Mã đơn hàng”</span
-                        >.
-                        <br />
-                        (Ví dụ:
-                        <span class="text-bold">“0123456789 - 005250”</span>)
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="accordion-item">
-                    <h2 class="accordion-header" id="headingCod">
-                      <button
-                        class="accordion-button collapsed"
-                        type="button"
-                        data-bs-toggle="collapse"
-                        data-bs-target="#cod"
-                        aria-expanded="false"
-                        aria-controls="cod"
-                      >
-                        <div class="form-check">
-                          <input
-                            class="form-check-input pay-radio"
-                            type="radio"
-                            name="pay-methods"
-                            id="cod-pay"
-                            value="cod-pay"
-                          />
-                          <label class="form-check-label" for="cod-pay">
-                            Thanh toán tiền mặt khi nhận hàng (COD)
-                          </label>
-                        </div>
-                      </button>
-                    </h2>
-                    <div
-                      id="cod"
-                      class="accordion-collapse collapse"
-                      aria-labelledby="headingCod"
-                      data-bs-parent="#payment-methods"
-                    >
-                      <div class="accordion-body">
-                        Quý khách sẽ thanh toán tiền mặt trực tiếp cho nhân viên
-                        giao hàng ngay sau khi nhận hàng.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-12">
-                <button class="section__btn w-100" type="submit">
-                  <a href="./order-complete.html">ĐẶT HÀNG</a>
-                </button>
-              </div>
+            <div class="col-12">
+              <button class="section__btn" type="submit">
+                <a href="./index.html">QUAY VỀ TRANG CHỦ</a>
+              </button>
             </div>
-          </form>
+          </div>
         </div>
       </section>
 
@@ -1174,9 +884,7 @@
     <script src="./vendor/jquery/jquery-3.6.0.min.js"></script>
 
     <script src="./vendor/bootstrap-5.0.2/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/js/bootstrap-datepicker.min.js"></script>
 
     <script src="./js/layout.js"></script>
-    <script src="./js/payment.js"></script>
   </body>
 </html>

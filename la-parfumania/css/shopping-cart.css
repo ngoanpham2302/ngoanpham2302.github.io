@@ -291,6 +291,11 @@ input.discount-input::placeholder {
     align-items: center;
   }
 
+  .pro-name > a {
+    text-align: left;
+    padding-right: 1rem;
+  }
+
   .cart__quantity {
     height: 2rem;
     margin: 0;

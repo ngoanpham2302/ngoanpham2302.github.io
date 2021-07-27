@@ -13,6 +13,19 @@ $(function () {
     fade: true,
     pauseOnFocus: false,
     pauseOnHover: false,
+
+    responsive: [
+      {
+        breakpoint: 576,
+        settings: {
+          slidesToShow: 1,
+          arrows: false,
+          dots: true,
+          autoplaySpeed: 5000,
+          speed: 1300,
+        },
+      },
+    ],
   });
 
   // Product list
@@ -74,7 +87,7 @@ $(function () {
     slidesToShow: 6,
     slidesToScroll: 1,
     arrows: false,
-    dots: false,
+    dots: true,
     pauseOnFocus: false,
     pauseOnHover: false,
 
@@ -102,6 +115,7 @@ $(function () {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
+          autoplaySpeed: 3000,
         },
       },
     ],
