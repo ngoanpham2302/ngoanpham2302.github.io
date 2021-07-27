@@ -1,0 +1,61 @@
+/* ----- Start: Header Page Banner ----- */
+
+.page-banner {
+  background-image: url(../images/banners/wishlist-banner.webp);
+}
+
+/* ----- End: Header Page Banner ----- */
+
+/*------------ START: MAIN CONTENT ----------- */
+
+/* ----- Start: Section Wishlist ----- */
+
+.btn-wishtocart {
+  padding: 0.75rem 0.75rem;
+}
+
+.status--available {
+  color: var(--color-success);
+}
+
+.status--runout {
+  color: var(--color-danger);
+}
+
+.wish-to-cart,
+.wishtocart-entry {
+  width: 20%;
+}
+
+.status,
+.status-entry {
+  width: 18%;
+}
+
+/* ----- End: Section Wishlist ----- */
+
+/*------------ END: MAIN CONTENT ----------- */
+
+/*------------ START: RESPONSIVE ----------- */
+
+@media (max-width: 992px) {
+  .name-entry,
+  .pro-name {
+    width: 22%;
+  }
+
+  .wish-to-cart,
+  .wishtocart-entry {
+    width: 24%;
+  }
+}
+
+@media (max-width: 768px) {
+  .wish-to-cart {
+    padding-top: 1rem;
+    justify-content: flex-end;
+    height: auto !important;
+  }
+}
+
+/*------------ END: RESPONSIVE ----------- */

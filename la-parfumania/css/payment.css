@@ -1,0 +1,100 @@
+/* ----- Start: Header Page Banner ----- */
+
+.page-banner {
+  background-image: url(../images/banners/product-detail-banner.webp);
+}
+
+/* ----- End: Header Page Banner ----- */
+
+/*------------ START: MAIN CONTENT ----------- */
+
+/* ----- Start: Section Product Carousel ----- */
+.products-slider {
+  margin-bottom: 3rem;
+}
+
+.prev-arrow,
+.next-arrow {
+  font-size: 2.5rem;
+  color: rgba(18, 18, 18, 0.4);
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: calc(50% - 1.125rem);
+  transition: all 0.2s ease;
+}
+
+.prev-arrow {
+  left: -1.25rem;
+}
+
+.next-arrow {
+  right: -1.25rem;
+}
+
+.prev-arrow:hover,
+.next-arrow:hover {
+  color: var(--color-text-light);
+}
+
+.slick-dots {
+  bottom: -3rem;
+}
+
+.slick-dotted.slick-slider {
+  margin-bottom: 5rem;
+}
+
+/* Fix content width inside hidden tabs which contain carousel */
+.tab-content > .tab-pane,
+.pill-content > .pill-pane {
+  display: block;
+  height: 0;
+  overflow-y: hidden;
+}
+
+.tab-content > .active,
+.pill-content > .active {
+  /* Let the content decide the height, show arrows */
+  height: auto;
+  overflow-y: visible;
+}
+
+/* ----- End: Section Product Carousel ----- */
+
+/*------------ END: MAIN CONTENT ----------- */
+
+/*------------ START: RESPONSIVE ----------- */
+
+/* @media (max-width: 1399px) {
+
+} */
+
+/* @media (max-width: 1199px) {
+
+} */
+
+/* @media (max-width: 992px) {
+} */
+
+/* @media (max-width: 768px) {
+
+} */
+
+/* @media (max-width: 650px) {
+
+} */
+
+/* @media (max-width: 576px) {
+
+} */
+
+/* @media (max-width: 500px) {
+
+} */
+
+/* @media (max-width: 320px) {
+
+} */
+
+/*------------ END: RESPONSIVE ----------- */

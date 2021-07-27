@@ -1,0 +1,2317 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Yves Saint Laurent Libre - La Parfumania Perfume Gallery</title>
+    <link
+      rel="shortcut icon"
+      href="./images/brands/flavicon.png"
+      type="image/x-icon"
+    />
+
+    <link
+      rel="stylesheet"
+      href="./vendor/bootstrap-5.0.2/css/bootstrap.min.css"
+    />
+
+    <link rel="stylesheet" href="./vendor/slick-1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="./vendor/slick-1.8.1/slick/slick-theme.css" />
+
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+
+    <link rel="stylesheet" href="./css/layout.css" />
+    <link rel="stylesheet" href="./css/product-detail.css" />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header id="header">
+      <div class="info-bar container-fluid">
+        <div class="info-bar__wrapper">
+          <div class="info-bar__phone">
+            <a href="tel:0123456789" target="_blank">
+              <span
+                class="iconify phone-icon"
+                data-icon="carbon:phone-filled"
+                data-inline="false"
+              ></span>
+              <span class="info-bar__phone-number">0123456789</span>
+            </a>
+          </div>
+
+          <div class="info-bar__social-icons">
+            <a href="#"
+              ><span
+                class="iconify youtube-icon"
+                data-icon="carbon:logo-youtube"
+                data-inline="false"
+              ></span
+            ></a>
+            <a href="#">
+              <span
+                class="iconify facebook-icon"
+                data-icon="bx:bxl-facebook"
+                data-inline="false"
+              ></span>
+            </a>
+            <a href="#">
+              <span
+                class="iconify email-icon"
+                data-icon="carbon:email"
+                data-inline="false"
+              ></span>
+            </a>
+            <a href="#">
+              <span
+                class="iconify instagram-icon"
+                data-icon="carbon:logo-instagram"
+                data-inline="false"
+              ></span>
+            </a>
+            <a href="#">
+              <span
+                class="iconify pinterest-icon"
+                data-icon="bx:bxl-pinterest-alt"
+                data-inline="false"
+              ></span>
+            </a>
+            <a href="#">
+              <span
+                class="iconify twitter-icon"
+                data-icon="bx:bxl-twitter"
+                data-inline="false"
+              ></span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="header-component container">
+        <div class="header-component__wrapper row">
+          <div class="header-component__search-box col-4">
+            <div class="header-component__inner-search d-flex">
+              <span
+                class="iconify search-icon"
+                data-icon="carbon:search"
+                data-inline="false"
+              ></span>
+              <input
+                type="search"
+                class="header-component__search-input"
+                placeholder="Tìm kiếm"
+              />
+            </div>
+          </div>
+
+          <div class="tablet-components col-4">
+            <button class="btn-mobile mobile-menu-icon">
+              <span
+                class="iconify"
+                data-icon="clarity:menu-line"
+                data-inline="false"
+              ></span>
+            </button>
+
+            <button class="btn-mobile mobile-search-icon">
+              <span
+                class="iconify search-icon"
+                data-icon="carbon:search"
+                data-inline="false"
+              ></span>
+            </button>
+          </div>
+
+          <div class="header-component__logo col-4 text-center">
+            <a href="index.html">
+              <img
+                class="logo"
+                src="./images/brands/logo.png"
+                alt="la-parfumania-logo"
+              />
+            </a>
+          </div>
+
+          <div class="header-component__user-items col-4">
+            <button class="header-component__btn header-component__btn-account">
+              <span
+                class="iconify account-icon"
+                data-icon="clarity:user-line"
+                data-inline="false"
+              ></span>
+            </button>
+
+            <button
+              class="header-component__btn header-component__btn-wishlist"
+            >
+              <a href="./wishlist.html">
+                <span
+                  class="iconify wishlist-icon"
+                  data-icon="clarity:heart-line"
+                  data-inline="false"
+                ></span>
+              </a>
+            </button>
+
+            <button class="header-component__btn header-component__btn-cart">
+              <a href="./shopping-cart.html">
+                <span
+                  class="iconify cart-icon"
+                  data-icon="clarity:shopping-cart-line"
+                  data-inline="false"
+                ></span>
+                <span class="header-component__cart-badge">2</span>
+              </a>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Logo Bar -->
+      <div class="mobile-logo-bar">
+        <button class="btn-mobile mobile-menu-icon">
+          <span
+            class="iconify"
+            data-icon="clarity:menu-line"
+            data-inline="false"
+          ></span>
+        </button>
+
+        <div class="mobile-logo">
+          <a href="index.html">
+            <img
+              class="logo"
+              src="./images/brands/logo.png"
+              alt="la-parfumania-logo"
+            />
+          </a>
+        </div>
+
+        <button class="btn-mobile mobile-search-icon">
+          <span
+            class="iconify search-icon"
+            data-icon="carbon:search"
+            data-inline="false"
+          ></span>
+        </button>
+      </div>
+
+      <!-- Desktop Navbar -->
+      <nav class="nav-bar container-fluid desktop-navbar">
+        <ul class="menu desktop-menu">
+          <li class="menu__item menu__item--nochild">
+            <a href="./index.html" class="menu__entry">Trang chủ</a>
+          </li>
+
+          <li class="menu__item menu__item--haschild">
+            <div class="menu__entry">
+              <span class="menu__text">Sản phẩm</span>
+              <span
+                class="iconify caret-down"
+                data-icon="bi:caret-down-fill"
+                data-inline="false"
+              ></span>
+            </div>
+
+            <ul class="submenu products-submenu">
+              <li class="submenu__item">
+                <a class="submenu__link" href="./male-products.html"
+                  >Nước hoa nam</a
+                >
+              </li>
+              <li class="submenu__item">
+                <a class="submenu__link" href="./female-products.html"
+                  >Nước hoa nữ</a
+                >
+              </li>
+              <li class="submenu__item">
+                <a class="submenu__link" href="./unisex-products.html"
+                  >Nước hoa unisex</a
+                >
+              </li>
+            </ul>
+          </li>
+
+          <li class="menu__item menu__item--haschild">
+            <div class="menu__entry">
+              <span class="menu__text">Nhóm hương</span>
+              <span
+                class="iconify caret-down"
+                data-icon="bi:caret-down-fill"
+                data-inline="false"
+              ></span>
+            </div>
+
+            <ul class="submenu scents-submenu">
+              <li class="submenu__item">
+                <a class="submenu__link" href="./scent-group-products.html"
+                  >Hương hổ phách - Amber</a
+                >
+              </li>
+
+              <li class="submenu__item">
+                <a class="submenu__link" href="./scent-group-products.html"
+                  >Hương Síp - Chypre</a
+                >
+              </li>
+
+              <li class="submenu__item">
+                <a class="submenu__link" href="./scent-group-products.html"
+                  >Hương cam quýt - Citrus</a
+                >
+              </li>
+
+              <li class="submenu__item">
+                <a class="submenu__link" href="./scent-group-products.html"
+                  >Hương da thuộc - Leather</a
+                >
+              </li>
+
+              <li class="submenu__item">
+                <a class="submenu__link" href="./scent-group-products.html"
+                  >Hương hoa - Floral</a
+                >
+              </li>
+
+              <li class="submenu__item">
+                <a class="submenu__link" href="./scent-group-products.html"
+                  >Hương gỗ - Woody</a
+                >
+              </li>
+
+              <li class="submenu__item">
+                <a class="submenu__link" href="./scent-group-products.html"
+                  >Hương thơm ngát - Aromatic</a
+                >
+              </li>
+            </ul>
+          </li>
+
+          <li class="menu__item menu__item--nochild">
+            <a href="./brands.html" class="menu__entry">Thương hiệu</a>
+          </li>
+
+          <li class="menu__item menu__item--nochild menu__item--about">
+            <a href="./about.html" class="menu__entry">Về La Parfumania</a>
+          </li>
+
+          <li class="menu__item menu__item--nochild">
+            <a href="./blogs.html" class="menu__entry">Blogs</a>
+          </li>
+
+          <li class="menu__item menu__item--nochild">
+            <a href="./contact.html" class="menu__entry">Liên hệ</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Mobile Navbar -->
+      <div class="backdrop-bg">
+        <div class="mobile-nav-bar">
+          <div class="btn-close-menu">
+            <span
+              class="iconify"
+              data-icon="clarity:window-close-line"
+              data-inline="false"
+            ></span>
+          </div>
+
+          <div class="mobile-menu__logo">
+            <a href="index.html">
+              <img
+                class="logo"
+                src="./images/brands/logo.png"
+                alt="la-parfumania-logo"
+              />
+            </a>
+          </div>
+
+          <ul class="menu mobile-menu">
+            <li class="mobile-menu__item mobile-menu__item--nochild">
+              <a href="./index.html" class="mobile-menu__entry">Trang chủ</a>
+            </li>
+
+            <div class="accordion accordion-flush" id="menuItemHasChild">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingOne">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseOne"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseOne"
+                  >
+                    SẢN PHẨM
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseOne"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="flush-headingOne"
+                  data-bs-parent="#menuItemHasChild"
+                >
+                  <div class="accordion-body">
+                    <ul class="mobile-submenu products-mobile-submenu">
+                      <li class="mobile-submenu__item">
+                        <a
+                          class="mobile-submenu__link"
+                          href="./male-products.html"
+                          >Nước hoa nam</a
+                        >
+                      </li>
+                      <li class="mobile-submenu__item">
+                        <a
+                          class="mobile-submenu__link"
+                          href="./female-products.html"
+                          >Nước hoa nữ</a
+                        >
+                      </li>
+                      <li class="mobile-submenu__item">
+                        <a
+                          class="mobile-submenu__link"
+                          href="./unisex-products.html"
+                          >Nước hoa unisex</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="flush-headingTwo">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="flush-collapseTwo"
+                  >
+                    NHÓM HƯƠNG
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapseTwo"
+                  class="accordion-collapse collapse"
+                  aria-labelledby="flush-headingTwo"
+                  data-bs-parent="#menuItemHasChild"
+                >
+                  <div class="accordion-body">
+                    <ul class="mobile-submenu scents-mobile-submenu">
+                      <li class="mobile-submenu__item">
+                        <a
+                          class="mobile-submenu__link"
+                          href="./scent-group-products.html"
+                          >Hương hổ phách - Amber</a
+                        >
+                      </li>
+
+                      <li class="mobile-submenu__item">
+                        <a
+                          class="mobile-submenu__link"
+                          href="./scent-group-products.html"
+                          >Hương Síp - Chypre</a
+                        >
+                      </li>
+
+                      <li class="mobile-submenu__item">
+                        <a
+                          class="mobile-submenu__link"
+                          href="./scent-group-products.html"
+                          >Hương cam quýt - Citrus</a
+                        >
+                      </li>
+
+                      <li class="mobile-submenu__item">
+                        <a
+                          class="mobile-submenu__link"
+                          href="./scent-group-products.html"
+                          >Hương da thuộc - Leather</a
+                        >
+                      </li>
+
+                      <li class="mobile-submenu__item">
+                        <a
+                          class="mobile-submenu__link"
+                          href="./scent-group-products.html"
+                          >Hương hoa - Floral</a
+                        >
+                      </li>
+
+                      <li class="mobile-submenu__item">
+                        <a
+                          class="mobile-submenu__link"
+                          href="./scent-group-products.html"
+                          >Hương gỗ - Woody</a
+                        >
+                      </li>
+
+                      <li class="mobile-submenu__item">
+                        <a
+                          class="mobile-submenu__link"
+                          href="./scent-group-products.html"
+                          >Hương thơm ngát - Aromatic</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <li class="mobile-menu__item mobile-menu__item--nochild">
+              <a href="./index.html" class="mobile-menu__entry">Thương hiệu</a>
+            </li>
+
+            <li class="mobile-menu__item mobile-menu__item--nochild">
+              <a href="./index.html" class="mobile-menu__entry"
+                >Về La Parfumania</a
+              >
+            </li>
+
+            <li class="mobile-menu__item mobile-menu__item--nochild">
+              <a href="./index.html" class="mobile-menu__entry">Blogs</a>
+            </li>
+
+            <li class="mobile-menu__item mobile-menu__item--nochild">
+              <a href="./index.html" class="mobile-menu__entry">Liên hệ</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Header Page Banner -->
+      <div class="page-banner container-fluid">
+        <div class="page-banner__content">
+          <h2 class="page-banner__title">YVES SAINT LAURENT LIBRE</h2>
+
+          <div class="page-banner__hr-line"></div>
+
+          <div class="page-banner__breadcrumb">
+            <nav aria-label="breadcrumb">
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <a href="./index.html">Trang chủ</a>
+                </li>
+
+                <li class="breadcrumb-divider">
+                  <span
+                    class="iconify"
+                    data-icon="carbon:chevron-right"
+                    data-inline="false"
+                  ></span>
+                </li>
+
+                <li class="breadcrumb-item active" aria-current="page">
+                  <a href="./female-products.html">Nước hoa nữ</a>
+                </li>
+
+                <li class="breadcrumb-divider">
+                  <span
+                    class="iconify"
+                    data-icon="carbon:chevron-right"
+                    data-inline="false"
+                  ></span>
+                </li>
+
+                <li class="breadcrumb-item active" aria-current="page">
+                  Yves Saint Laurent Libre
+                </li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main">
+      <!-- Section Products Detail -->
+      <section class="section section-product-detail container">
+        <div class="product-detail row">
+          <div class="product-detail__img col-12 col-lg-6">
+            <div class="product-detail__slider">
+              <div class="product-detail__slider-for">
+                <div class="product-detail__slide">
+                  <img src="./images/decors/libre-01.webp" alt="ysl-libre" />
+                </div>
+
+                <div class="product-detail__slide">
+                  <img src="./images/decors/libre-02.webp" alt="ysl-libre" />
+                </div>
+
+                <div class="product-detail__slide">
+                  <img src="./images/decors/libre-03.webp" alt="ysl-libre" />
+                </div>
+
+                <div class="product-detail__slide">
+                  <img src="./images/decors/libre-04.webp" alt="ysl-libre" />
+                </div>
+
+                <div class="product-detail__slide">
+                  <img src="./images/decors/libre-05.webp" alt="ysl-libre" />
+                </div>
+
+                <div class="product-detail__slide">
+                  <img src="./images/decors/libre-06.webp" alt="ysl-libre" />
+                </div>
+              </div>
+
+              <div class="product-detail__slider-nav">
+                <div class="product-detail__slide">
+                  <img src="./images/decors/libre-01.webp" alt="ysl-libre" />
+                </div>
+
+                <div class="product-detail__slide">
+                  <img src="./images/decors/libre-02.webp" alt="ysl-libre" />
+                </div>
+
+                <div class="product-detail__slide">
+                  <img src="./images/decors/libre-03.webp" alt="ysl-libre" />
+                </div>
+
+                <div class="product-detail__slide">
+                  <img src="./images/decors/libre-04.webp" alt="ysl-libre" />
+                </div>
+
+                <div class="product-detail__slide">
+                  <img src="./images/decors/libre-05.webp" alt="ysl-libre" />
+                </div>
+
+                <div class="product-detail__slide">
+                  <img src="./images/decors/libre-06.webp" alt="ysl-libre" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-detail__info col-12 col-lg-6">
+            <div class="product__brand-container row">
+              <p class="product__brand col-9 col-sm-6">YVES SAINT LAURENT</p>
+
+              <div class="product__stars col-3 col-sm-6 d-sm-flex">
+                <div class="stars">
+                  <span
+                    class="iconify"
+                    data-icon="clarity:star-solid"
+                    data-inline="false"
+                  ></span>
+                  <span
+                    class="iconify"
+                    data-icon="clarity:star-solid"
+                    data-inline="false"
+                  ></span>
+                  <span
+                    class="iconify"
+                    data-icon="clarity:star-solid"
+                    data-inline="false"
+                  ></span>
+                  <span
+                    class="iconify"
+                    data-icon="clarity:star-solid"
+                    data-inline="false"
+                  ></span>
+                  <span
+                    class="iconify"
+                    data-icon="clarity:star-line"
+                    data-inline="false"
+                  ></span>
+                </div>
+                <span class="comment-quantity">(25)</span>
+              </div>
+            </div>
+
+            <p class="product-detail__name">
+              Libre <span class="product__volume">30ml</span>
+            </p>
+            <p class="product-detail__types">Eau de Parfum</p>
+            <p class="product-detail__price">1.850.000₫</p>
+
+            <div class="product-detail__volume-btns">
+              <button class="btn-volume selected" data-volume="30">30ml</button>
+              <button class="btn-volume" data-volume="50">50ml</button>
+              <button class="btn-volume" data-volume="90">90ml</button>
+            </div>
+
+            <div class="divider-line product-detail__hr-line"></div>
+
+            <div class="product-detail-status">
+              Tình trạng: <span>Còn hàng</span>
+            </div>
+
+            <div class="product-detail__buy">
+              <div class="product-detail__quantity">
+                <button class="quantity-btn quantity-decrease-btn">-</button>
+                <input type="text" class="quantity-input" value="1" />
+                <button class="quantity-btn quantity-increase-btn">+</button>
+              </div>
+
+              <button class="addtocart-btn product-card__btn section__btn">
+                <span
+                  class="iconify cart-icon"
+                  data-icon="clarity:shopping-cart-line"
+                  data-inline="false"
+                ></span>
+                <span class="text-long">THÊM VÀO GIỎ HÀNG</span>
+                <span class="text-short">THÊM VÀO GIỎ</span>
+              </button>
+
+              <div class="btn-wishlist-container">
+                <button class="addtowishlist-btn inactive">
+                  <span
+                    class="iconify wishlist-icon--empty"
+                    data-icon="clarity:heart-line"
+                    data-inline="false"
+                  ></span>
+
+                  <span
+                    class="iconify d-none wishlist-icon--filled"
+                    data-icon="clarity:heart-solid"
+                    data-inline="false"
+                  ></span>
+                </button>
+              </div>
+            </div>
+
+            <div class="btn-buynow-container">
+              <div class="btn-wishlist-container">
+                <button class="addtowishlist-btn inactive">
+                  <span
+                    class="iconify wishlist-icon--empty"
+                    data-icon="clarity:heart-line"
+                    data-inline="false"
+                  ></span>
+
+                  <span
+                    class="iconify d-none wishlist-icon--filled"
+                    data-icon="clarity:heart-solid"
+                    data-inline="false"
+                  ></span>
+                </button>
+              </div>
+
+              <button class="product-card__btn btn-buynow">
+                <a href="./shopping-cart.html">MUA NGAY</a>
+              </button>
+            </div>
+
+            <div class="scents-info">
+              <div class="scents-info__nav">
+                <ul
+                  class="nav nav-pills justify-content-start"
+                  id="scentsInfoTab"
+                  role="tablist"
+                >
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link active"
+                      id="scent-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#scent"
+                      type="button"
+                      role="tab"
+                      aria-controls="scent"
+                      aria-selected="true"
+                    >
+                      <span class="scent-group">Nhóm hương</span>
+                      <span class="scent">Hương</span>
+                    </button>
+                  </li>
+
+                  <div class="vertical-line"></div>
+
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link"
+                      id="feature-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#feature"
+                      type="button"
+                      role="tab"
+                      aria-controls="feature"
+                      aria-selected="false"
+                    >
+                      Đặc điểm
+                    </button>
+                  </li>
+
+                  <div class="vertical-line"></div>
+
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link"
+                      id="advice-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#advice"
+                      type="button"
+                      role="tab"
+                      aria-controls="advice"
+                      aria-selected="false"
+                    >
+                      Khuyên dùng
+                    </button>
+                  </li>
+                </ul>
+
+                <div class="tab-content" id="scentsInfoTabContent">
+                  <div
+                    class="tab-pane fade show active container"
+                    id="scent"
+                    role="tabpanel"
+                    aria-labelledby="scent-tab"
+                  >
+                    <ul class="scent-list">
+                      <li class="scent-item">
+                        <p class="scent-item__name">Tone hương</p>
+                        <p class="scent-item__detail">
+                          Hương hoa, hoa&nbsp;trắng
+                        </p>
+                      </li>
+
+                      <li class="scent-item">
+                        <p class="scent-item__name">Hương đầu</p>
+                        <p class="scent-item__detail">
+                          Hoa oải hương, quýt, quả lý chua&nbsp;đen
+                        </p>
+                      </li>
+
+                      <li class="scent-item">
+                        <p class="scent-item__name">Hương giữa</p>
+                        <p class="scent-item__detail">
+                          Hoa oải hương, hoa cam, hoa&nbsp;nhài
+                        </p>
+                      </li>
+
+                      <li class="scent-item">
+                        <p class="scent-item__name">Hương cuối</p>
+                        <p class="scent-item__detail">
+                          Vani Madagascar, xạ hương, gỗ tuyết&nbsp;tùng
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div
+                    class="tab-pane fade container"
+                    id="feature"
+                    role="tabpanel"
+                    aria-labelledby="feature-tab"
+                  >
+                    <ul class="scent-list feature-list">
+                      <li class="scent-item">
+                        <p class="scent-item__name">Giới tính</p>
+                        <p class="scent-item__detail">Nữ</p>
+                      </li>
+
+                      <li class="scent-item">
+                        <p class="scent-item__name">Độ tuổi</p>
+                        <p class="scent-item__detail">18 - 30</p>
+                      </li>
+
+                      <li class="scent-item">
+                        <p class="scent-item__name">Độ lưu hương</p>
+                        <p class="scent-item__detail">
+                          Lâu – 7 giờ đến 12&nbsp;giờ
+                        </p>
+                      </li>
+
+                      <li class="scent-item">
+                        <p class="scent-item__name">Độ tỏa hương</p>
+                        <p class="scent-item__detail">
+                          Xa – Toả hương trong bán kính 3&nbsp;mét
+                        </p>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div
+                    class="tab-pane fade container"
+                    id="advice"
+                    role="tabpanel"
+                    aria-labelledby="advice-tab"
+                  >
+                    <ul class="scent-list advice-list">
+                      <li class="scent-item">
+                        <p class="scent-item__name">Mùa</p>
+                        <p class="scent-item__detail">Mùa xuân, mùa thu</p>
+                      </li>
+
+                      <li class="scent-item">
+                        <p class="scent-item__name">Thời gian</p>
+                        <p class="scent-item__detail">Ban ngày</p>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="product-content">
+          <div class="product-content__nav">
+            <ul
+              class="nav nav-pills justify-content-start"
+              id="productContentTab"
+              role="tablist"
+            >
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link active"
+                  id="description-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#description"
+                  type="button"
+                  role="tab"
+                  aria-controls="description"
+                  aria-selected="true"
+                >
+                  MÔ TẢ
+                </button>
+              </li>
+
+              <div class="vertical-line"></div>
+
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="info-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#info"
+                  type="button"
+                  role="tab"
+                  aria-controls="info"
+                  aria-selected="false"
+                >
+                  THÔNG TIN
+                </button>
+              </li>
+
+              <div class="vertical-line"></div>
+
+              <li class="nav-item" role="presentation">
+                <button
+                  class="nav-link"
+                  id="comment-tab"
+                  data-bs-toggle="tab"
+                  data-bs-target="#comment"
+                  type="button"
+                  role="tab"
+                  aria-controls="comment"
+                  aria-selected="false"
+                >
+                  ĐÁNH GIÁ
+                </button>
+              </li>
+            </ul>
+
+            <div class="nav-pill-hr-line divider-line"></div>
+
+            <div class="tab-content" id="productContentTabContent">
+              <div
+                class="tab-pane fade show active container"
+                id="description"
+                role="tabpanel"
+                aria-labelledby="description-tab"
+              >
+                <div class="product-des-wrapper row">
+                  <div class="product-des col-12 col-lg-6">
+                    <h5 class="product-des__title">
+                      Sự gợi cảm tinh tế, thanh lịch và tươi&nbsp;mới
+                    </h5>
+                    <p class="product-des__content">
+                      Yves Saint Laurent Libre Eau de Parfum là dòng nước hoa nữ
+                      được ra mắt vào năm 2019 bởi sự hợp tác giữa chai chuyên
+                      gia nước hoa Anne Flipo và Carlos Benaim. Thiết kế của
+                      Libre gây ấn tượng mạnh mẽ về tính độc đáo, sang trọng và
+                      tinh tế mà hãng Yves Saint Laurent vẫn thường ưu ái dành
+                      cho các bộ sưu tập thời trang danh tiếng của&nbsp;mình.
+                    </p>
+                    <p class="product-des__content">
+                      Libre mang một mùi hương hoa phương Đông, nổi bật với nhóm
+                      hương chính như hoa lavender quyến rũ kết hợp cùng hoa cam
+                      tươi mát và thảo mộc. Sự góp mặt của hương vani giúp cô
+                      nàng Libre trở nên ngọt ngào và quyến rũ hơn, nhưng vẫn
+                      giữ được sự thanh lịch và tươi mới khi note hương cam vẫn
+                      hiện&nbsp;hữu.
+                    </p>
+                    <p class="product-des__content">
+                      Sự sang trọng, gợi cảm và cá tính là điều hãng Yves Saint
+                      Laurent muốn gửi gắm đến cô nàng kiêu kỳ&nbsp;này.
+                    </p>
+                  </div>
+
+                  <div class="product-des__img col-12 col-lg-6">
+                    <img src="./images/decors/libre-des.webp" alt="libre" />
+                  </div>
+                </div>
+
+                <h5 class="product-des__title note-title">
+                  Hương thơm của sự tự do - YSL&nbsp;Libre&nbsp;EDP
+                </h5>
+
+                <div class="product-notes row">
+                  <div class="product-note col-12 col-md-6 col-xl-4">
+                    <div class="product-note__img">
+                      <img
+                        src="./images/decors/libre-lavender.webp"
+                        alt="libre-lavender"
+                      />
+                    </div>
+
+                    <h4 class="product-note__title">DIVA LAVENDER</h4>
+
+                    <p class="product-note__detail">
+                      Tầng hương đầu của Libre bao gồm hoa oải hương diva và hoa
+                      lavandin hoang dã, mát mẻ. Sự pha trộn đặc biệt này mang
+                      đến cho Libre một nốt hương đầu có chút nam&nbsp;tính.
+                    </p>
+                  </div>
+
+                  <div class="product-note col-12 col-md-6 col-xl-4">
+                    <div class="product-note__img">
+                      <img
+                        src="./images/decors/libre-orange.webp"
+                        alt="libre-orange"
+                      />
+                    </div>
+
+                    <h4 class="product-note__title">ORANGE BLOSSOM</h4>
+
+                    <p class="product-note__detail">
+                      Libre Eau de Parfum gây ấn tượng với tầng hương giữa ngập
+                      tràn hoa cam. Hương thơm ấm áp, nữ tính khiến Libre mang
+                      một thứ hương hoa gần như gây nghiện cho mọi phụ&nbsp;nữ.
+                    </p>
+                  </div>
+
+                  <div class="product-note col-12 col-md-6 col-xl-4">
+                    <div class="product-note__img">
+                      <img
+                        src="./images/decors/libre-vanilla.webp"
+                        alt="libre-lavender"
+                      />
+                    </div>
+
+                    <h4 class="product-note__title">BOURBON VANILLA</h4>
+
+                    <p class="product-note__detail">
+                      Hương thơm ngọt ngào của vani tạo nên tầng hương cuối của
+                      nước hoa. Chiết xuất vani phong phú kết hợp với hương hổ
+                      phách mang đến cho Libre hương thơm cuốn hút,
+                      nữ&nbsp;tính.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="tab-pane fade container"
+                id="info"
+                role="tabpanel"
+                aria-labelledby="info-tab"
+              >
+                <ul class="scent-list feature-list">
+                  <li class="scent-item">
+                    <p class="scent-item__name">Năm phát hành</p>
+                    <p class="scent-item__detail">2019</p>
+                  </li>
+
+                  <li class="scent-item">
+                    <p class="scent-item__name">Nhà điều chế</p>
+                    <p class="scent-item__detail">Anne Flipo, Carlos Benaim</p>
+                  </li>
+
+                  <li class="scent-item">
+                    <p class="scent-item__name">Nước sản xuất</p>
+                    <p class="scent-item__detail">Pháp</p>
+                  </li>
+
+                  <li class="scent-item">
+                    <p class="scent-item__name">Dung tích</p>
+                    <p class="scent-item__detail">30ml, 50ml, 90ml</p>
+                  </li>
+                </ul>
+              </div>
+
+              <div
+                class="tab-pane fade container"
+                id="comment"
+                role="tabpanel"
+                aria-labelledby="comment-tab"
+              >
+                <p class="write-comment">ĐÁNH GIÁ SẢN PHẨM</p>
+
+                <div class="row mb-4">
+                  <div class="col me-2">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Họ tên *"
+                      aria-label="name"
+                    />
+                  </div>
+
+                  <div class="col ms-2">
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="Email *"
+                      aria-label="Email"
+                    />
+                  </div>
+                </div>
+
+                <div class="mb-5">
+                  <textarea
+                    class="form-control"
+                    id="commentTextarea"
+                    rows="4"
+                    placeholder="Đánh giá"
+                  ></textarea>
+                </div>
+
+                <button class="section__btn btn-send-comment">
+                  GỬI ĐÁNH GIÁ
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section Similar Products -->
+      <section
+        class="section section-similar-products section-product-carousel"
+      >
+        <h2 class="section__title section-similar-products__title">
+          SẢN PHẨM TƯƠNG&nbsp;TỰ
+        </h2>
+
+        <div class="container">
+          <div class="products-slider products-slider--similar">
+            <div class="products-slider__slide">
+              <div class="card product-card">
+                <div class="product-card__img">
+                  <img
+                    src="./images/products/juliette-vanilla-vibes.webp"
+                    class="card-img-top"
+                    alt="juliette-vanilla-vibes"
+                  />
+
+                  <div class="product-card__wishlist">
+                    <span
+                      class="iconify wishlist-icon--empty"
+                      data-icon="clarity:heart-line"
+                      data-inline="false"
+                    ></span>
+                    <span
+                      class="iconify wishlist-icon--filled"
+                      data-icon="clarity:heart-solid"
+                      data-inline="false"
+                    ></span>
+                  </div>
+
+                  <button class="btn-detail product-card__btn">
+                    <a href="./product-detail.html">XEM CHI TIẾT</a>
+                  </button>
+                </div>
+
+                <div class="card-body">
+                  <h5 class="card-title product-card__brand">
+                    JULIETTE HAS A GUN
+                  </h5>
+                  <p class="card-text product-card__name">Vanilla Vibes EDP</p>
+                  <p class="card-text product-card__price">2,120,000₫</p>
+                  <button class="btn-addtocart product-card__btn">
+                    <span
+                      class="iconify cart-icon"
+                      data-icon="clarity:shopping-cart-line"
+                      data-inline="false"
+                    ></span>
+                    <span>Thêm vào giỏ hàng</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="products-slider__slide">
+              <div class="card product-card">
+                <div class="product-card__img">
+                  <img
+                    src="./images/products/guerlain-mon.webp"
+                    class="card-img-top"
+                    alt="guerlain-mon-edp"
+                  />
+
+                  <div class="product-card__wishlist">
+                    <span
+                      class="iconify wishlist-icon--empty"
+                      data-icon="clarity:heart-line"
+                      data-inline="false"
+                    ></span>
+                    <span
+                      class="iconify wishlist-icon--filled"
+                      data-icon="clarity:heart-solid"
+                      data-inline="false"
+                    ></span>
+                  </div>
+
+                  <button class="btn-detail product-card__btn">
+                    <a href="./product-detail.html">XEM CHI TIẾT</a>
+                  </button>
+                </div>
+
+                <div class="card-body">
+                  <h5 class="card-title product-card__brand">GUERLAIN</h5>
+                  <p class="card-text product-card__name">Mon EDP</p>
+                  <p class="card-text product-card__price">2,890,000₫</p>
+                  <button class="btn-addtocart product-card__btn">
+                    <span
+                      class="iconify cart-icon"
+                      data-icon="clarity:shopping-cart-line"
+                      data-inline="false"
+                    ></span>
+                    <span>Thêm vào giỏ hàng</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="products-slider__slide">
+              <div class="card product-card">
+                <div class="product-card__img">
+                  <img
+                    src="./images/products/dg-the-only-one.webp"
+                    class="card-img-top"
+                    alt="dg-the-only-one"
+                  />
+
+                  <div class="product-card__wishlist">
+                    <span
+                      class="iconify wishlist-icon--empty"
+                      data-icon="clarity:heart-line"
+                      data-inline="false"
+                    ></span>
+                    <span
+                      class="iconify wishlist-icon--filled"
+                      data-icon="clarity:heart-solid"
+                      data-inline="false"
+                    ></span>
+                  </div>
+
+                  <button class="btn-detail product-card__btn">
+                    <a href="./product-detail.html">XEM CHI TIẾT</a>
+                  </button>
+                </div>
+
+                <div class="card-body">
+                  <h5 class="card-title product-card__brand">DOLCE&GABBANA</h5>
+                  <p class="card-text product-card__name">The Only One EDP</p>
+                  <p class="card-text product-card__price">3,250,000₫</p>
+                  <button class="btn-addtocart product-card__btn">
+                    <span
+                      class="iconify cart-icon"
+                      data-icon="clarity:shopping-cart-line"
+                      data-inline="false"
+                    ></span>
+                    <span>Thêm vào giỏ hàng</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="products-slider__slide">
+              <div class="card product-card">
+                <div class="product-card__img">
+                  <img
+                    src="./images/products/valentino-voce-viva.webp"
+                    class="card-img-top"
+                    alt="valentino-voce-viva"
+                  />
+
+                  <div class="product-card__wishlist">
+                    <span
+                      class="iconify wishlist-icon--empty"
+                      data-icon="clarity:heart-line"
+                      data-inline="false"
+                    ></span>
+                    <span
+                      class="iconify wishlist-icon--filled"
+                      data-icon="clarity:heart-solid"
+                      data-inline="false"
+                    ></span>
+                  </div>
+
+                  <button class="btn-detail product-card__btn">
+                    <a href="./product-detail.html">XEM CHI TIẾT</a>
+                  </button>
+                </div>
+
+                <div class="card-body">
+                  <h5 class="card-title product-card__brand">VALENTINO</h5>
+                  <p class="card-text product-card__name">Voce Viva EDP</p>
+                  <p class="card-text product-card__price">2,750,000₫</p>
+                  <button class="btn-addtocart product-card__btn">
+                    <span
+                      class="iconify cart-icon"
+                      data-icon="clarity:shopping-cart-line"
+                      data-inline="false"
+                    ></span>
+                    <span>Thêm vào giỏ hàng</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="products-slider__slide">
+              <div class="card product-card">
+                <div class="product-card__img">
+                  <img
+                    src="./images/products/ysl-mon-paris-couture.webp"
+                    class="card-img-top"
+                    alt="ysl-mon-paris-couture"
+                  />
+
+                  <div class="product-card__wishlist">
+                    <span
+                      class="iconify wishlist-icon--empty"
+                      data-icon="clarity:heart-line"
+                      data-inline="false"
+                    ></span>
+                    <span
+                      class="iconify wishlist-icon--filled"
+                      data-icon="clarity:heart-solid"
+                      data-inline="false"
+                    ></span>
+                  </div>
+
+                  <button class="btn-detail product-card__btn">
+                    <a href="./product-detail.html">XEM CHI TIẾT</a>
+                  </button>
+                </div>
+
+                <div class="card-body">
+                  <h5 class="card-title product-card__brand">
+                    YVES SAINT LAURENT
+                  </h5>
+                  <p class="card-text product-card__name">
+                    Mon Paris Couture EDP
+                  </p>
+                  <p class="card-text product-card__price">2,870,000₫</p>
+                  <button class="btn-addtocart product-card__btn">
+                    <span
+                      class="iconify cart-icon"
+                      data-icon="clarity:shopping-cart-line"
+                      data-inline="false"
+                    ></span>
+                    <span>Thêm vào giỏ hàng</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="products-slider__slide">
+              <div class="card product-card">
+                <div class="product-card__img">
+                  <img
+                    src="./images/products/armani-si.webp"
+                    class="card-img-top"
+                    alt="gucci-flora"
+                  />
+
+                  <div class="product-card__wishlist">
+                    <span
+                      class="iconify wishlist-icon--empty"
+                      data-icon="clarity:heart-line"
+                      data-inline="false"
+                    ></span>
+                    <span
+                      class="iconify wishlist-icon--filled"
+                      data-icon="clarity:heart-solid"
+                      data-inline="false"
+                    ></span>
+                  </div>
+
+                  <button class="btn-detail product-card__btn">
+                    <a href="./product-detail.html">XEM CHI TIẾT</a>
+                  </button>
+                </div>
+
+                <div class="card-body">
+                  <h5 class="card-title product-card__brand">GIORGIO ARMANI</h5>
+                  <p class="card-text product-card__name">Sì EDP</p>
+                  <p class="card-text product-card__price">3,580,000₫</p>
+                  <button class="btn-addtocart product-card__btn">
+                    <span
+                      class="iconify cart-icon"
+                      data-icon="clarity:shopping-cart-line"
+                      data-inline="false"
+                    ></span>
+                    <span>Thêm vào giỏ hàng</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="products-slider__slide">
+              <div class="card product-card">
+                <div class="product-card__img">
+                  <img
+                    src="./images/products/marc-jacobs-daisy.webp"
+                    class="card-img-top"
+                    alt="marc-jacobs-daisy"
+                  />
+
+                  <div class="product-card__wishlist">
+                    <span
+                      class="iconify wishlist-icon--empty"
+                      data-icon="clarity:heart-line"
+                      data-inline="false"
+                    ></span>
+                    <span
+                      class="iconify wishlist-icon--filled"
+                      data-icon="clarity:heart-solid"
+                      data-inline="false"
+                    ></span>
+                  </div>
+
+                  <button class="btn-detail product-card__btn">
+                    <a href="./product-detail.html">XEM CHI TIẾT</a>
+                  </button>
+                </div>
+
+                <div class="card-body">
+                  <h5 class="card-title product-card__brand">MARC JACOBS</h5>
+                  <p class="card-text product-card__name">Daisy EDP</p>
+                  <p class="card-text product-card__price">2,685,000₫</p>
+                  <button class="btn-addtocart product-card__btn">
+                    <span
+                      class="iconify cart-icon"
+                      data-icon="clarity:shopping-cart-line"
+                      data-inline="false"
+                    ></span>
+                    <span>Thêm vào giỏ hàng</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section Same Brand Products -->
+      <section class="section section-same-brands section-product-carousel">
+        <h2 class="section__title section-same-brands__title">
+          SẢN PHẨM CÙNG THƯƠNG&nbsp;HIỆU
+        </h2>
+
+        <div class="container">
+          <div class="products-slider products-slider--same-brand">
+            <div class="products-slider__slide">
+              <div class="card product-card">
+                <div class="product-card__img">
+                  <img
+                    src="./images/products/ysl-black-optium-edp.webp"
+                    class="card-img-top"
+                    alt="ysl-black-optium-edp"
+                  />
+
+                  <div class="product-card__wishlist">
+                    <span
+                      class="iconify wishlist-icon--empty"
+                      data-icon="clarity:heart-line"
+                      data-inline="false"
+                    ></span>
+                    <span
+                      class="iconify wishlist-icon--filled"
+                      data-icon="clarity:heart-solid"
+                      data-inline="false"
+                    ></span>
+                  </div>
+
+                  <button class="btn-detail product-card__btn">
+                    <a href="./product-detail.html">XEM CHI TIẾT</a>
+                  </button>
+                </div>
+
+                <div class="card-body">
+                  <h5 class="card-title product-card__brand">
+                    YVES SAINT LAURENT
+                  </h5>
+                  <p class="card-text product-card__name">Black Opium EDP</p>
+                  <p class="card-text product-card__price">3,320,000₫</p>
+                  <button class="btn-addtocart product-card__btn">
+                    <span
+                      class="iconify cart-icon"
+                      data-icon="clarity:shopping-cart-line"
+                      data-inline="false"
+                    ></span>
+                    <span>Thêm vào giỏ hàng</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="products-slider__slide">
+              <div class="card product-card">
+                <div class="product-card__img">
+                  <img
+                    src="./images/products/ysl-libre-edt.webp"
+                    class="card-img-top"
+                    alt="dg-the-only-one"
+                  />
+
+                  <div class="product-card__wishlist">
+                    <span
+                      class="iconify wishlist-icon--empty"
+                      data-icon="clarity:heart-line"
+                      data-inline="false"
+                    ></span>
+                    <span
+                      class="iconify wishlist-icon--filled"
+                      data-icon="clarity:heart-solid"
+                      data-inline="false"
+                    ></span>
+                  </div>
+
+                  <button class="btn-detail product-card__btn">
+                    <a href="./product-detail.html">XEM CHI TIẾT</a>
+                  </button>
+                </div>
+
+                <div class="card-body">
+                  <h5 class="card-title product-card__brand">
+                    YVES SAINT LAURENT
+                  </h5>
+                  <p class="card-text product-card__name">Libre EDT</p>
+                  <p class="card-text product-card__price">2,850,000₫</p>
+                  <button class="btn-addtocart product-card__btn">
+                    <span
+                      class="iconify cart-icon"
+                      data-icon="clarity:shopping-cart-line"
+                      data-inline="false"
+                    ></span>
+                    <span>Thêm vào giỏ hàng</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="products-slider__slide">
+              <div class="card product-card">
+                <div class="product-card__img">
+                  <img
+                    src="./images/products/ysl-mon-paris-intense.webp"
+                    class="card-img-top"
+                    alt="/ysl-mon-paris-intense"
+                  />
+
+                  <div class="product-card__wishlist">
+                    <span
+                      class="iconify wishlist-icon--empty"
+                      data-icon="clarity:heart-line"
+                      data-inline="false"
+                    ></span>
+                    <span
+                      class="iconify wishlist-icon--filled"
+                      data-icon="clarity:heart-solid"
+                      data-inline="false"
+                    ></span>
+                  </div>
+
+                  <button class="btn-detail product-card__btn">
+                    <a href="./product-detail.html">XEM CHI TIẾT</a>
+                  </button>
+                </div>
+
+                <div class="card-body">
+                  <h5 class="card-title product-card__brand">
+                    YVES SAINT LAURENT
+                  </h5>
+                  <p class="card-text product-card__name">
+                    Mon Paris Intense EDP
+                  </p>
+                  <p class="card-text product-card__price">3,890,000₫</p>
+                  <button class="btn-addtocart product-card__btn">
+                    <span
+                      class="iconify cart-icon"
+                      data-icon="clarity:shopping-cart-line"
+                      data-inline="false"
+                    ></span>
+                    <span>Thêm vào giỏ hàng</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="products-slider__slide">
+              <div class="card product-card">
+                <div class="product-card__img">
+                  <img
+                    src="./images/products/ysl-black-optium-intense.webp"
+                    class="card-img-top"
+                    alt="ysl-black-optium-intense"
+                  />
+
+                  <div class="product-card__wishlist">
+                    <span
+                      class="iconify wishlist-icon--empty"
+                      data-icon="clarity:heart-line"
+                      data-inline="false"
+                    ></span>
+                    <span
+                      class="iconify wishlist-icon--filled"
+                      data-icon="clarity:heart-solid"
+                      data-inline="false"
+                    ></span>
+                  </div>
+
+                  <button class="btn-detail product-card__btn">
+                    <a href="./product-detail.html">XEM CHI TIẾT</a>
+                  </button>
+                </div>
+
+                <div class="card-body">
+                  <h5 class="card-title product-card__brand">
+                    YVES SAINT LAURENT
+                  </h5>
+                  <p class="card-text product-card__name">Optium Intense EDP</p>
+                  <p class="card-text product-card__price">3,650,000₫</p>
+                  <button class="btn-addtocart product-card__btn">
+                    <span
+                      class="iconify cart-icon"
+                      data-icon="clarity:shopping-cart-line"
+                      data-inline="false"
+                    ></span>
+                    <span>Thêm vào giỏ hàng</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="products-slider__slide">
+              <div class="card product-card">
+                <div class="product-card__img">
+                  <img
+                    src="./images/products/ysl-mon-paris-couture.webp"
+                    class="card-img-top"
+                    alt="ysl-mon-paris-couture"
+                  />
+
+                  <div class="product-card__wishlist">
+                    <span
+                      class="iconify wishlist-icon--empty"
+                      data-icon="clarity:heart-line"
+                      data-inline="false"
+                    ></span>
+                    <span
+                      class="iconify wishlist-icon--filled"
+                      data-icon="clarity:heart-solid"
+                      data-inline="false"
+                    ></span>
+                  </div>
+
+                  <button class="btn-detail product-card__btn">
+                    <a href="./product-detail.html">XEM CHI TIẾT</a>
+                  </button>
+                </div>
+
+                <div class="card-body">
+                  <h5 class="card-title product-card__brand">
+                    YVES SAINT LAURENT
+                  </h5>
+                  <p class="card-text product-card__name">
+                    Mon Paris Couture EDP
+                  </p>
+                  <p class="card-text product-card__price">2,870,000₫</p>
+                  <button class="btn-addtocart product-card__btn">
+                    <span
+                      class="iconify cart-icon"
+                      data-icon="clarity:shopping-cart-line"
+                      data-inline="false"
+                    ></span>
+                    <span>Thêm vào giỏ hàng</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="products-slider__slide">
+              <div class="card product-card">
+                <div class="product-card__img">
+                  <img
+                    src="./images/products/ysl-libre-edp-big.webp"
+                    class="card-img-top"
+                    alt="ysl-libre-edp-big"
+                  />
+
+                  <div class="product-card__wishlist">
+                    <span
+                      class="iconify wishlist-icon--empty"
+                      data-icon="clarity:heart-line"
+                      data-inline="false"
+                    ></span>
+                    <span
+                      class="iconify wishlist-icon--filled"
+                      data-icon="clarity:heart-solid"
+                      data-inline="false"
+                    ></span>
+                  </div>
+
+                  <button class="btn-detail product-card__btn">
+                    <a href="./product-detail.html">XEM CHI TIẾT</a>
+                  </button>
+                </div>
+
+                <div class="card-body">
+                  <h5 class="card-title product-card__brand">
+                    YVES SAINT LAURENT
+                  </h5>
+                  <p class="card-text product-card__name">Libre EDP</p>
+                  <p class="card-text product-card__price">2,980,000₫</p>
+                  <button class="btn-addtocart product-card__btn">
+                    <span
+                      class="iconify cart-icon"
+                      data-icon="clarity:shopping-cart-line"
+                      data-inline="false"
+                    ></span>
+                    <span>Thêm vào giỏ hàng</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="products-slider__slide">
+              <div class="card product-card">
+                <div class="product-card__img">
+                  <img
+                    src="./images/products/ysl-y.webp"
+                    class="card-img-top"
+                    alt="ysl-y"
+                  />
+
+                  <div class="product-card__wishlist">
+                    <span
+                      class="iconify wishlist-icon--empty"
+                      data-icon="clarity:heart-line"
+                      data-inline="false"
+                    ></span>
+                    <span
+                      class="iconify wishlist-icon--filled"
+                      data-icon="clarity:heart-solid"
+                      data-inline="false"
+                    ></span>
+                  </div>
+
+                  <button class="btn-detail product-card__btn">
+                    <a href="./product-detail.html">XEM CHI TIẾT</a>
+                  </button>
+                </div>
+
+                <div class="card-body">
+                  <h5 class="card-title product-card__brand">
+                    YVES SAINT LAURENT
+                  </h5>
+                  <p class="card-text product-card__name">Y EDP</p>
+                  <p class="card-text product-card__price">2,685,000₫</p>
+                  <button class="btn-addtocart product-card__btn">
+                    <span
+                      class="iconify cart-icon"
+                      data-icon="clarity:shopping-cart-line"
+                      data-inline="false"
+                    ></span>
+                    <span>Thêm vào giỏ hàng</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="section__btn section-same-brands__btn">
+          <a href="./brand-products.html">XEM THÊM SẢN PHẨM</a>
+        </button>
+      </section>
+
+      <!-- Section Recent Viewed Products -->
+      <section class="section section-recent-view section-product-carousel">
+        <h2 class="section__title section-recent-view__title">
+          SẢN PHẨM VỪA&nbsp;XEM
+        </h2>
+
+        <div class="container">
+          <div class="products-slider products-slider--recent-view">
+            <div class="products-slider__slide">
+              <div class="card product-card">
+                <div class="product-card__img">
+                  <img
+                    src="./images/products/dg-the-only-one.webp"
+                    class="card-img-top"
+                    alt="dg-the-only-one"
+                  />
+
+                  <div class="product-card__wishlist">
+                    <span
+                      class="iconify wishlist-icon--empty"
+                      data-icon="clarity:heart-line"
+                      data-inline="false"
+                    ></span>
+                    <span
+                      class="iconify wishlist-icon--filled"
+                      data-icon="clarity:heart-solid"
+                      data-inline="false"
+                    ></span>
+                  </div>
+
+                  <button class="btn-detail product-card__btn">
+                    <a href="./product-detail.html">XEM CHI TIẾT</a>
+                  </button>
+                </div>
+
+                <div class="card-body">
+                  <h5 class="card-title product-card__brand">DOLCE&GABBANA</h5>
+                  <p class="card-text product-card__name">The Only One EDP</p>
+                  <p class="card-text product-card__price">3,250,000₫</p>
+                  <button class="btn-addtocart product-card__btn">
+                    <span
+                      class="iconify cart-icon"
+                      data-icon="clarity:shopping-cart-line"
+                      data-inline="false"
+                    ></span>
+                    <span>Thêm vào giỏ hàng</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="products-slider__slide">
+              <div class="card product-card">
+                <div class="product-card__img">
+                  <img
+                    src="./images/products/guerlain-mon.webp"
+                    class="card-img-top"
+                    alt="guerlain-mon-edp"
+                  />
+
+                  <div class="product-card__wishlist">
+                    <span
+                      class="iconify wishlist-icon--empty"
+                      data-icon="clarity:heart-line"
+                      data-inline="false"
+                    ></span>
+                    <span
+                      class="iconify wishlist-icon--filled"
+                      data-icon="clarity:heart-solid"
+                      data-inline="false"
+                    ></span>
+                  </div>
+
+                  <button class="btn-detail product-card__btn">
+                    <a href="./product-detail.html">XEM CHI TIẾT</a>
+                  </button>
+                </div>
+
+                <div class="card-body">
+                  <h5 class="card-title product-card__brand">GUERLAIN</h5>
+                  <p class="card-text product-card__name">Mon EDP</p>
+                  <p class="card-text product-card__price">2,890,000₫</p>
+                  <button class="btn-addtocart product-card__btn">
+                    <span
+                      class="iconify cart-icon"
+                      data-icon="clarity:shopping-cart-line"
+                      data-inline="false"
+                    ></span>
+                    <span>Thêm vào giỏ hàng</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="products-slider__slide">
+              <div class="card product-card">
+                <div class="product-card__img">
+                  <img
+                    src="./images/products/ysl-mon-paris-couture.webp"
+                    class="card-img-top"
+                    alt="ysl-mon-paris-couture"
+                  />
+
+                  <div class="product-card__wishlist">
+                    <span
+                      class="iconify wishlist-icon--empty"
+                      data-icon="clarity:heart-line"
+                      data-inline="false"
+                    ></span>
+                    <span
+                      class="iconify wishlist-icon--filled"
+                      data-icon="clarity:heart-solid"
+                      data-inline="false"
+                    ></span>
+                  </div>
+
+                  <button class="btn-detail product-card__btn">
+                    <a href="./product-detail.html">XEM CHI TIẾT</a>
+                  </button>
+                </div>
+
+                <div class="card-body">
+                  <h5 class="card-title product-card__brand">
+                    YVES SAINT LAURENT
+                  </h5>
+                  <p class="card-text product-card__name">
+                    Mon Paris Couture EDP
+                  </p>
+                  <p class="card-text product-card__price">2,870,000₫</p>
+                  <button class="btn-addtocart product-card__btn">
+                    <span
+                      class="iconify cart-icon"
+                      data-icon="clarity:shopping-cart-line"
+                      data-inline="false"
+                    ></span>
+                    <span>Thêm vào giỏ hàng</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-xl-4">
+              <div class="card product-card">
+                <div class="product-card__img">
+                  <img
+                    src="./images/products/armani-acqua-di-gioia.webp"
+                    class="card-img-top"
+                    alt="armani-acqua-di-gioia"
+                  />
+
+                  <div class="product-card__wishlist">
+                    <span
+                      class="iconify wishlist-icon--empty"
+                      data-icon="clarity:heart-line"
+                      data-inline="false"
+                    ></span>
+                    <span
+                      class="iconify wishlist-icon--filled"
+                      data-icon="clarity:heart-solid"
+                      data-inline="false"
+                    ></span>
+                  </div>
+
+                  <button class="btn-detail product-card__btn">
+                    <a href="./product-detail.html">XEM CHI TIẾT</a>
+                  </button>
+                </div>
+
+                <div class="card-body">
+                  <h5 class="card-title product-card__brand">GIORGIO ARMANI</h5>
+                  <p class="card-text product-card__name">Acqua di Gioia EDT</p>
+                  <p class="card-text product-card__price">2,700,000₫</p>
+                  <button class="btn-addtocart product-card__btn">
+                    <span
+                      class="iconify cart-icon"
+                      data-icon="clarity:shopping-cart-line"
+                      data-inline="false"
+                    ></span>
+                    <span>Thêm vào giỏ hàng</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="products-slider__slide">
+              <div class="card product-card">
+                <div class="product-card__img">
+                  <img
+                    src="./images/products/gucci-flora.webp"
+                    class="card-img-top"
+                    alt="gucci-flora"
+                  />
+
+                  <div class="product-card__wishlist">
+                    <span
+                      class="iconify wishlist-icon--empty"
+                      data-icon="clarity:heart-line"
+                      data-inline="false"
+                    ></span>
+                    <span
+                      class="iconify wishlist-icon--filled"
+                      data-icon="clarity:heart-solid"
+                      data-inline="false"
+                    ></span>
+                  </div>
+
+                  <button class="btn-detail product-card__btn">
+                    <a href="./product-detail.html">XEM CHI TIẾT</a>
+                  </button>
+                </div>
+
+                <div class="card-body">
+                  <h5 class="card-title product-card__brand">GUCCI</h5>
+                  <p class="card-text product-card__name">Flora Gardenia EDP</p>
+                  <p class="card-text product-card__price">2,980,000₫</p>
+                  <button class="btn-addtocart product-card__btn">
+                    <span
+                      class="iconify cart-icon"
+                      data-icon="clarity:shopping-cart-line"
+                      data-inline="false"
+                    ></span>
+                    <span>Thêm vào giỏ hàng</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="products-slider__slide">
+              <div class="card product-card">
+                <div class="product-card__img">
+                  <img
+                    src="./images/products/marc-jacobs-daisy.webp"
+                    class="card-img-top"
+                    alt="marc-jacobs-daisy"
+                  />
+
+                  <div class="product-card__wishlist">
+                    <span
+                      class="iconify wishlist-icon--empty"
+                      data-icon="clarity:heart-line"
+                      data-inline="false"
+                    ></span>
+                    <span
+                      class="iconify wishlist-icon--filled"
+                      data-icon="clarity:heart-solid"
+                      data-inline="false"
+                    ></span>
+                  </div>
+
+                  <button class="btn-detail product-card__btn">
+                    <a href="./product-detail.html">XEM CHI TIẾT</a>
+                  </button>
+                </div>
+
+                <div class="card-body">
+                  <h5 class="card-title product-card__brand">MARC JACOBS</h5>
+                  <p class="card-text product-card__name">Daisy EDP</p>
+                  <p class="card-text product-card__price">2,685,000₫</p>
+                  <button class="btn-addtocart product-card__btn">
+                    <span
+                      class="iconify cart-icon"
+                      data-icon="clarity:shopping-cart-line"
+                      data-inline="false"
+                    ></span>
+                    <span>Thêm vào giỏ hàng</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="products-slider__slide">
+              <div class="card product-card">
+                <div class="product-card__img">
+                  <img
+                    src="./images/products/hermes-eau-des-erveilles-bleue.webp"
+                    class="card-img-top"
+                    alt="hermes-eau-des-erveilles-bleue"
+                  />
+
+                  <div class="product-card__wishlist">
+                    <span
+                      class="iconify wishlist-icon--empty"
+                      data-icon="clarity:heart-line"
+                      data-inline="false"
+                    ></span>
+                    <span
+                      class="iconify wishlist-icon--filled"
+                      data-icon="clarity:heart-solid"
+                      data-inline="false"
+                    ></span>
+                  </div>
+
+                  <button class="btn-detail product-card__btn">
+                    <a href="./product-detail.html">XEM CHI TIẾT</a>
+                  </button>
+                </div>
+
+                <div class="card-body">
+                  <h5 class="card-title product-card__brand">HERMÈS</h5>
+                  <p class="card-text product-card__name">
+                    Merveilles Bleue EDT
+                  </p>
+                  <p class="card-text product-card__price">3,650,000₫</p>
+                  <button class="btn-addtocart product-card__btn">
+                    <span
+                      class="iconify cart-icon"
+                      data-icon="clarity:shopping-cart-line"
+                      data-inline="false"
+                    ></span>
+                    <span>Thêm vào giỏ hàng</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section Newsletters -->
+      <section class="section section-newsletters container-fluid">
+        <div class="newsletter__content container">
+          <div class="newsletters__voucher">
+            <span class="voucher">NHẬN</span>
+            <span class="voucher-rate">10%</span>
+            <span class="voucher">VOUCHER</span>
+          </div>
+
+          <div class="newsletters__email">
+            <h4 class="newsletters__intro">Đăng ký nhận tin khuyến&nbsp;mãi</h4>
+
+            <div class="newsletters__email-holder">
+              <form method="GET">
+                <input
+                  type="email"
+                  required
+                  class="newsletters__input"
+                  name="subscribe-email"
+                  placeholder="Nhập địa chỉ email..."
+                />
+
+                <button type="submit" class="newsletters__btn">
+                  <span
+                    class="iconify send-icon"
+                    data-icon="carbon:send-alt-filled"
+                    data-inline="false"
+                  ></span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer">
+      <div class="footer__info">
+        <div class="container">
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4">
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="footer-info__item">
+                <h4 class="footer-info__title">THÔNG TIN LIÊN&nbsp;HỆ</h4>
+
+                <ul class="footer-info__list">
+                  <li class="footer-info__list-item">
+                    <span
+                      class="iconify"
+                      data-icon="entypo:location-pin"
+                      data-inline="false"
+                    ></span>
+                    <span>ĐC: 15 Trần Phú, Hoàn Kiếm, HN</span>
+                  </li>
+
+                  <li class="footer-info__list-item">
+                    <span
+                      class="iconify"
+                      data-icon="icomoon-free:mobile"
+                      data-inline="false"
+                    ></span>
+                    <span>Hotline: 0123456789</span>
+                  </li>
+
+                  <li class="footer-info__list-item">
+                    <span
+                      class="iconify"
+                      data-icon="carbon:email"
+                      data-inline="false"
+                    ></span>
+                    <span>Email: laparfumania@gmail.com</span>
+                  </li>
+                </ul>
+
+                <div class="footer-info__social-icons info-bar__social-icons">
+                  <a href="#"
+                    ><span
+                      class="iconify youtube-icon"
+                      data-icon="carbon:logo-youtube"
+                      data-inline="false"
+                    ></span
+                  ></a>
+                  <a href="#">
+                    <span
+                      class="iconify facebook-icon"
+                      data-icon="bx:bxl-facebook"
+                      data-inline="false"
+                    ></span>
+                  </a>
+                  <a href="#">
+                    <span
+                      class="iconify email-icon"
+                      data-icon="carbon:email"
+                      data-inline="false"
+                    ></span>
+                  </a>
+                  <a href="#">
+                    <span
+                      class="iconify instagram-icon"
+                      data-icon="carbon:logo-instagram"
+                      data-inline="false"
+                    ></span>
+                  </a>
+                  <a href="#">
+                    <span
+                      class="iconify pinterest-icon"
+                      data-icon="bx:bxl-pinterest-alt"
+                      data-inline="false"
+                    ></span>
+                  </a>
+                  <a href="#">
+                    <span
+                      class="iconify twitter-icon"
+                      data-icon="bx:bxl-twitter"
+                      data-inline="false"
+                    ></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="footer-info__item">
+                <h4 class="footer-info__title">THỜI GIAN LÀM&nbsp;VIỆC</h4>
+
+                <ul class="footer-info__list">
+                  <li class="footer-info__list-item">
+                    Thứ 2 - Thứ 6: 8AM - 11PM
+                  </li>
+
+                  <li class="footer-info__list-item">
+                    Thứ 7, Chủ Nhật: 9AM - 9PM
+                  </li>
+
+                  <li class="footer-info__list-item">Nghỉ các ngày lễ, Tết</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="footer-info__item">
+                <h4 class="footer-info__title">DỊCH VỤ KHÁCH&nbsp;HÀNG</h4>
+
+                <ul class="footer-info__list">
+                  <li class="footer-info__list-item">
+                    <a href="#">Câu hỏi thường gặp</a>
+                  </li>
+
+                  <li class="footer-info__list-item">
+                    <a href="#">Hướng dẫn mua hàng online</a>
+                  </li>
+
+                  <li class="footer-info__list-item">
+                    <a href="#">Chính sách bảo mật</a>
+                  </li>
+
+                  <li class="footer-info__list-item">
+                    <a href="#">Liên hệ & góp ý</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-3">
+              <div class="footer-info__item">
+                <h4 class="footer-info__title">CHÍNH SÁCH MUA&nbsp;HÀNG</h4>
+
+                <ul class="footer-info__list">
+                  <li class="footer-info__list-item">
+                    <a href="#">Chính sách bảo hành, đổi trả</a>
+                  </li>
+
+                  <li class="footer-info__list-item">
+                    <a href="#">Chính sách giao hàng, hoàn hủy</a>
+                  </li>
+
+                  <li class="footer-info__list-item">
+                    <a href="#">Ưu đãi thẻ thành viên</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__copyright">
+        <p class="footer__copyright-content">
+          <span>All rights reserved |</span>
+          <span
+            class="iconify"
+            data-icon="la:copyright-solid"
+            data-inline="false"
+          ></span>
+          <span>La Parfumania 2021</span>
+        </p>
+      </div>
+    </footer>
+
+    <!-- Mobile Header Components -->
+    <div class="mobile-header-components">
+      <div class="component-wrapper">
+        <div class="mobile-component mobile-home">
+          <a href="./index.html">
+            <span
+              class="iconify"
+              data-icon="fa-solid:home"
+              data-inline="false"
+            ></span>
+            <span>Home</span>
+          </a>
+        </div>
+
+        <div class="mobile-component mobile-wishlist">
+          <a href="./wishlist.html">
+            <span
+              class="iconify"
+              data-icon="clarity:heart-solid"
+              data-inline="false"
+            ></span>
+            <span>Wishlist</span>
+          </a>
+        </div>
+
+        <div class="mobile-component mobile-cart">
+          <a href="./shopping-cart.html">
+            <span
+              class="iconify"
+              data-icon="clarity:shopping-cart-solid"
+              data-inline="false"
+            ></span>
+            <span>Cart</span>
+            <!-- <span class="mobile-component__cart-badge">0</span> -->
+          </a>
+        </div>
+
+        <div class="mobile-component mobile-account">
+          <div>
+            <span
+              class="iconify"
+              data-icon="clarity:user-solid"
+              data-inline="false"
+            ></span>
+            <span>Account</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./vendor/jquery/jquery-3.6.0.min.js"></script>
+
+    <script src="./vendor/bootstrap-5.0.2/js/bootstrap.bundle.min.js"></script>
+    <script src="./vendor/slick-1.8.1/slick/slick.min.js"></script>
+
+    <script src="./js/layout.js"></script>
+    <script src="./js/product-detail.js"></script>
+  </body>
+</html>
