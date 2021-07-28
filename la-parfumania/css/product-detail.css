@@ -246,6 +246,7 @@
   line-height: 1.625rem;
   font-weight: 500;
   padding: 0 1.25rem;
+  color: rgba(18, 18, 18, 0.6);
 }
 
 .tab-pane ul,
@@ -272,7 +273,8 @@
 
 /* Nav tabs product info */
 
-.nav-pills {
+.product-content .nav-pills,
+.product-detail .nav-pills {
   margin-bottom: 1.5rem;
   align-items: center;
   text-align: left;
@@ -286,15 +288,15 @@
   margin-bottom: 1.5rem;
 }
 
-.nav-item:first-child > .nav-link {
+.section-product-detail .nav-item:first-child > .nav-link {
   padding-left: 0;
 }
 
-.nav-item:first-child > .nav-link::after {
+.section-product-detail .nav-item:first-child > .nav-link::after {
   left: calc(50% - 2.2rem);
 }
 
-.tab-pane {
+.section-product-detail .tab-pane {
   text-align: left;
   padding: 0;
 }
@@ -305,14 +307,14 @@
   background-color: rgba(18, 18, 18, 0.5);
 }
 
-.nav-pills .nav-link.active,
-.nav-pills .show > .nav-link {
+.section-product-detail .nav-pills .nav-link.active,
+.section-product-detail .nav-pills .show > .nav-link {
   color: var(--color-text);
   background-color: transparent;
   font-weight: 500;
 }
 
-.nav-link {
+.product-content .nav-link {
   padding: 0 1.5rem;
   font-size: 1.25rem;
   line-height: 1.625rem;
@@ -321,15 +323,15 @@
   color: rgba(18, 18, 18, 0.6);
 }
 
-.nav-link {
+.section-product-detail .nav-link {
   position: relative;
 }
 
-.nav-link:hover {
+.section-product-detail .nav-link:hover {
   color: inherit;
 }
 
-.nav-pills .nav-link::after {
+.section-product-detail .nav-pills .nav-link::after {
   content: "";
   position: absolute;
   left: calc(50% - 1.5rem);
@@ -341,8 +343,8 @@
   transition: all 0.35s ease-out;
 }
 
-.nav-pills .nav-link.active::after,
-.nav-item:hover .nav-link::after {
+.section-product-detail .nav-pills .nav-link.active::after,
+.section-product-detail .nav-item:hover .nav-link::after {
   transform: scale(1);
 }
 
@@ -455,15 +457,15 @@
 }
 
 /* Fix content width inside hidden tabs which contain carousel */
-.tab-content > .tab-pane,
-.pill-content > .pill-pane {
+#main .tab-content > .tab-pane,
+#main .pill-content > .pill-pane {
   display: block;
   height: 0;
   overflow-y: hidden;
 }
 
-.tab-content > .active,
-.pill-content > .active {
+#main .tab-content > .active,
+#main .pill-content > .active {
   /* Let the content decide the height, show arrows */
   height: auto;
   overflow-y: visible;
@@ -605,7 +607,7 @@
     display: inline;
   }
 
-  .nav-link,
+  .product-content .nav-link,
   .scents-info__nav .nav-link {
     font-size: 1rem;
   }
@@ -618,15 +620,15 @@
     display: none;
   }
 
-  .nav-item:not(:first-child) .nav-link {
+  .section-product-detail .nav-item:not(:first-child) .nav-link {
     padding: 0 0.5rem;
   }
 
-  .nav-item:first-child .nav-link {
+  .section-product-detail .nav-item:first-child .nav-link {
     padding-right: 0.5rem;
   }
 
-  .nav-item:first-child .nav-link::after {
+  .section-product-detail .nav-item:first-child .nav-link::after {
     left: calc(50% - 1.75rem);
   }
 

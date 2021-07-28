@@ -157,7 +157,7 @@
   margin-bottom: 2.25rem;
 }
 
-.nav-pills {
+.section .nav-pills {
   margin-bottom: 2.25rem;
   align-items: center;
 }
@@ -168,14 +168,14 @@
   background-color: rgba(18, 18, 18, 0.5);
 }
 
-.nav-pills .nav-link.active,
-.nav-pills .show > .nav-link {
+.section .nav-pills .nav-link.active,
+.section .nav-pills .show > .nav-link {
   color: var(--color-text);
   background-color: transparent;
   font-weight: 500;
 }
 
-.nav-link {
+.section .nav-link {
   padding: 0 1.5rem;
   font-size: 1.25rem;
   line-height: 1.625rem;
@@ -184,15 +184,15 @@
   color: rgba(18, 18, 18, 0.6);
 }
 
-.nav-link {
+.section .nav-link {
   position: relative;
 }
 
-.nav-link:hover {
+.section .nav-link:hover {
   color: inherit;
 }
 
-.nav-pills .nav-link::after {
+.section .nav-pills .nav-link::after {
   content: "";
   position: absolute;
   left: calc(50% - 1.25rem);
@@ -204,14 +204,14 @@
   transition: all 0.35s ease-out;
 }
 
-.nav-pills .nav-link.active::after,
-.nav-item:hover .nav-link::after {
+.section .nav-pills .nav-link.active::after,
+.section .nav-item:hover .nav-link::after {
   transform: scale(1);
 }
 
 /* Product carousel */
 
-.tab-pane.container {
+.section .tab-pane.container {
   padding: 0;
 }
 
@@ -384,15 +384,15 @@
 }
 
 /* Fix content width inside hidden tabs which contain carousel */
-.tab-content > .tab-pane,
-.pill-content > .pill-pane {
+#main .tab-content > .tab-pane,
+#main .pill-content > .pill-pane {
   display: block;
   height: 0;
   overflow-y: hidden;
 }
 
-.tab-content > .active,
-.pill-content > .active {
+#main .tab-content > .active,
+#main .pill-content > .active {
   /* Let the content decide the height, show arrows */
   height: auto;
   overflow-y: visible;

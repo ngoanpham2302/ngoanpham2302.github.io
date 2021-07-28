@@ -91,82 +91,119 @@
         </div>
       </div>
 
-      <div class="header-component container">
-        <div class="header-component__wrapper row">
-          <div class="header-component__search-box col-4">
-            <div class="header-component__inner-search d-flex">
-              <span
-                class="iconify search-icon"
-                data-icon="carbon:search"
-                data-inline="false"
-              ></span>
-              <input
-                type="search"
-                class="header-component__search-input"
-                placeholder="Tìm kiếm"
-              />
+      <!-- Desktop/Tablet Header Components -->
+      <div class="header-component-outer container-fluid">
+        <div class="header-component container">
+          <div class="header-component__wrapper row">
+            <div class="header-component__search-box col-4">
+              <div class="header-component__inner-search d-flex">
+                <span
+                  class="iconify search-icon"
+                  data-icon="carbon:search"
+                  data-inline="false"
+                ></span>
+                <input
+                  type="search"
+                  class="header-component__search-input"
+                  placeholder="Tìm kiếm"
+                />
+              </div>
             </div>
-          </div>
 
-          <div class="tablet-components col-4">
-            <button class="btn-mobile mobile-menu-icon">
-              <span
-                class="iconify"
-                data-icon="clarity:menu-line"
-                data-inline="false"
-              ></span>
-            </button>
-
-            <button class="btn-mobile mobile-search-icon">
-              <span
-                class="iconify search-icon"
-                data-icon="carbon:search"
-                data-inline="false"
-              ></span>
-            </button>
-          </div>
-
-          <div class="header-component__logo col-4 text-center">
-            <a href="index.html">
-              <img
-                class="logo"
-                src="./images/brands/logo.png"
-                alt="la-parfumania-logo"
-              />
-            </a>
-          </div>
-
-          <div class="header-component__user-items col-4">
-            <button class="header-component__btn header-component__btn-account">
-              <span
-                class="iconify account-icon"
-                data-icon="clarity:user-line"
-                data-inline="false"
-              ></span>
-            </button>
-
-            <button
-              class="header-component__btn header-component__btn-wishlist"
-            >
-              <a href="./wishlist.html">
+            <div class="tablet-components col-4">
+              <button class="btn-mobile mobile-menu-icon">
                 <span
-                  class="iconify wishlist-icon"
-                  data-icon="clarity:heart-line"
+                  class="iconify"
+                  data-icon="clarity:menu-line"
                   data-inline="false"
                 ></span>
-              </a>
-            </button>
+              </button>
 
-            <button class="header-component__btn header-component__btn-cart">
-              <a href="./shopping-cart.html">
+              <button class="btn-mobile mobile-search-icon">
+                <a href="#"
+                  ><span
+                    class="iconify search-icon mobile-search-trigger"
+                    data-icon="carbon:search"
+                    data-inline="false"
+                  ></span
+                ></a>
+
+                <div class="mobile-search-bar">
+                  <div class="btn-close-search">
+                    <span
+                      class="iconify"
+                      data-icon="clarity:window-close-line"
+                      data-inline="false"
+                    ></span>
+                  </div>
+
+                  <div class="search-box">
+                    <div class="header-component__inner-search d-flex">
+                      <input
+                        type="search"
+                        class="header-component__search-input"
+                        placeholder="Tìm kiếm"
+                      />
+
+                      <a href="#"
+                        ><span
+                          class="iconify search-icon"
+                          data-icon="carbon:search"
+                          data-inline="false"
+                        ></span
+                      ></a>
+                    </div>
+                  </div>
+                </div>
+              </button>
+            </div>
+
+            <div class="header-component__logo col-4 text-center">
+              <a href="index.html">
+                <img
+                  class="logo"
+                  src="./images/brands/logo.png"
+                  alt="la-parfumania-logo"
+                />
+              </a>
+            </div>
+
+            <div class="header-component__user-items col-4">
+              <button
+                class="header-component__btn header-component__btn-account"
+                data-bs-toggle="modal"
+                data-bs-target="#loginModal"
+              >
                 <span
-                  class="iconify cart-icon"
-                  data-icon="clarity:shopping-cart-line"
+                  class="iconify account-icon"
+                  data-icon="clarity:user-line"
                   data-inline="false"
                 ></span>
-                <span class="header-component__cart-badge">2</span>
-              </a>
-            </button>
+              </button>
+
+              <button
+                class="header-component__btn header-component__btn-wishlist"
+              >
+                <a href="./wishlist.html">
+                  <span
+                    class="iconify wishlist-icon"
+                    data-icon="clarity:heart-line"
+                    data-inline="false"
+                  ></span>
+                </a>
+              </button>
+
+              <button class="header-component__btn header-component__btn-cart">
+                <a href="./shopping-cart.html">
+                  <span
+                    class="iconify cart-icon"
+                    data-icon="clarity:shopping-cart-line"
+                    data-inline="false"
+                  ></span>
+                  <span class="header-component__cart-badge">2</span>
+                </a>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -192,11 +229,40 @@
         </div>
 
         <button class="btn-mobile mobile-search-icon">
-          <span
-            class="iconify search-icon"
-            data-icon="carbon:search"
-            data-inline="false"
-          ></span>
+          <a href="#">
+            <span
+              class="iconify search-icon mobile-search-trigger"
+              data-icon="carbon:search"
+              data-inline="false"
+            ></span>
+          </a>
+          <div class="mobile-search-bar">
+            <div class="btn-close-search">
+              <span
+                class="iconify"
+                data-icon="clarity:window-close-line"
+                data-inline="false"
+              ></span>
+            </div>
+
+            <div class="search-box">
+              <div class="header-component__inner-search d-flex">
+                <input
+                  type="search"
+                  class="header-component__search-input"
+                  placeholder="Tìm kiếm"
+                />
+
+                <a href="#"
+                  ><span
+                    class="iconify search-icon"
+                    data-icon="carbon:search"
+                    data-inline="false"
+                  ></span
+                ></a>
+              </div>
+            </div>
+          </div>
         </button>
       </div>
 
@@ -219,7 +285,7 @@
 
             <ul class="submenu products-submenu">
               <li class="submenu__item">
-                <a class="submenu__link" href="./male-products.html"
+                <a class="submenu__link" href="./female-products.html"
                   >Nước hoa nam</a
                 >
               </li>
@@ -229,7 +295,7 @@
                 >
               </li>
               <li class="submenu__item">
-                <a class="submenu__link" href="./unisex-products.html"
+                <a class="submenu__link" href="./female-products.html"
                   >Nước hoa unisex</a
                 >
               </li>
@@ -248,43 +314,43 @@
 
             <ul class="submenu scents-submenu">
               <li class="submenu__item">
-                <a class="submenu__link" href="./scent-group-products.html"
+                <a class="submenu__link" href="./female-products.html"
                   >Hương hổ phách - Amber</a
                 >
               </li>
 
               <li class="submenu__item">
-                <a class="submenu__link" href="./scent-group-products.html"
+                <a class="submenu__link" href="./female-products.html"
                   >Hương Síp - Chypre</a
                 >
               </li>
 
               <li class="submenu__item">
-                <a class="submenu__link" href="./scent-group-products.html"
+                <a class="submenu__link" href="./female-products.html"
                   >Hương cam quýt - Citrus</a
                 >
               </li>
 
               <li class="submenu__item">
-                <a class="submenu__link" href="./scent-group-products.html"
+                <a class="submenu__link" href="./female-products.html"
                   >Hương da thuộc - Leather</a
                 >
               </li>
 
               <li class="submenu__item">
-                <a class="submenu__link" href="./scent-group-products.html"
+                <a class="submenu__link" href="./female-products.html"
                   >Hương hoa - Floral</a
                 >
               </li>
 
               <li class="submenu__item">
-                <a class="submenu__link" href="./scent-group-products.html"
+                <a class="submenu__link" href="./female-products.html"
                   >Hương gỗ - Woody</a
                 >
               </li>
 
               <li class="submenu__item">
-                <a class="submenu__link" href="./scent-group-products.html"
+                <a class="submenu__link" href="./female-products.html"
                   >Hương thơm ngát - Aromatic</a
                 >
               </li>
@@ -292,24 +358,24 @@
           </li>
 
           <li class="menu__item menu__item--nochild">
-            <a href="./brands.html" class="menu__entry">Thương hiệu</a>
+            <a href="#" class="menu__entry">Thương hiệu</a>
           </li>
 
           <li class="menu__item menu__item--nochild menu__item--about">
-            <a href="./about.html" class="menu__entry">Về La Parfumania</a>
+            <a href="#" class="menu__entry">Về La Parfumania</a>
           </li>
 
           <li class="menu__item menu__item--nochild">
-            <a href="./blogs.html" class="menu__entry">Blogs</a>
+            <a href="#" class="menu__entry">Blogs</a>
           </li>
 
           <li class="menu__item menu__item--nochild">
-            <a href="./contact.html" class="menu__entry">Liên hệ</a>
+            <a href="#" class="menu__entry">Liên hệ</a>
           </li>
         </ul>
       </nav>
 
-      <!-- Mobile Navbar -->
+      <!-- Mobile/Tablet Navbar -->
       <div class="backdrop-bg">
         <div class="mobile-nav-bar">
           <div class="btn-close-menu">
@@ -360,7 +426,7 @@
                       <li class="mobile-submenu__item">
                         <a
                           class="mobile-submenu__link"
-                          href="./male-products.html"
+                          href="./female-products.html"
                           >Nước hoa nam</a
                         >
                       </li>
@@ -374,7 +440,7 @@
                       <li class="mobile-submenu__item">
                         <a
                           class="mobile-submenu__link"
-                          href="./unisex-products.html"
+                          href="./female-products.html"
                           >Nước hoa unisex</a
                         >
                       </li>
@@ -407,7 +473,7 @@
                       <li class="mobile-submenu__item">
                         <a
                           class="mobile-submenu__link"
-                          href="./scent-group-products.html"
+                          href="./female-products.html"
                           >Hương hổ phách - Amber</a
                         >
                       </li>
@@ -415,7 +481,7 @@
                       <li class="mobile-submenu__item">
                         <a
                           class="mobile-submenu__link"
-                          href="./scent-group-products.html"
+                          href="./female-products.html"
                           >Hương Síp - Chypre</a
                         >
                       </li>
@@ -423,7 +489,7 @@
                       <li class="mobile-submenu__item">
                         <a
                           class="mobile-submenu__link"
-                          href="./scent-group-products.html"
+                          href="./female-products.html"
                           >Hương cam quýt - Citrus</a
                         >
                       </li>
@@ -431,7 +497,7 @@
                       <li class="mobile-submenu__item">
                         <a
                           class="mobile-submenu__link"
-                          href="./scent-group-products.html"
+                          href="./female-products.html"
                           >Hương da thuộc - Leather</a
                         >
                       </li>
@@ -439,7 +505,7 @@
                       <li class="mobile-submenu__item">
                         <a
                           class="mobile-submenu__link"
-                          href="./scent-group-products.html"
+                          href="./female-products.html"
                           >Hương hoa - Floral</a
                         >
                       </li>
@@ -447,7 +513,7 @@
                       <li class="mobile-submenu__item">
                         <a
                           class="mobile-submenu__link"
-                          href="./scent-group-products.html"
+                          href="./female-products.html"
                           >Hương gỗ - Woody</a
                         >
                       </li>
@@ -455,7 +521,7 @@
                       <li class="mobile-submenu__item">
                         <a
                           class="mobile-submenu__link"
-                          href="./scent-group-products.html"
+                          href="./female-products.html"
                           >Hương thơm ngát - Aromatic</a
                         >
                       </li>
@@ -466,23 +532,316 @@
             </div>
 
             <li class="mobile-menu__item mobile-menu__item--nochild">
-              <a href="./index.html" class="mobile-menu__entry">Thương hiệu</a>
+              <a href="#" class="mobile-menu__entry">Thương hiệu</a>
             </li>
 
             <li class="mobile-menu__item mobile-menu__item--nochild">
-              <a href="./index.html" class="mobile-menu__entry"
-                >Về La Parfumania</a
-              >
+              <a href="#" class="mobile-menu__entry">Về La Parfumania</a>
             </li>
 
             <li class="mobile-menu__item mobile-menu__item--nochild">
-              <a href="./index.html" class="mobile-menu__entry">Blogs</a>
+              <a href="#" class="mobile-menu__entry">Blogs</a>
             </li>
 
             <li class="mobile-menu__item mobile-menu__item--nochild">
-              <a href="./index.html" class="mobile-menu__entry">Liên hệ</a>
+              <a href="#" class="mobile-menu__entry">Liên hệ</a>
             </li>
           </ul>
+        </div>
+      </div>
+
+      <!-- Mobile Header Components -->
+      <div class="mobile-header-components">
+        <div class="component-wrapper">
+          <div class="mobile-component mobile-home">
+            <a href="./index.html">
+              <span
+                class="iconify"
+                data-icon="fa-solid:home"
+                data-inline="false"
+              ></span>
+              <span>Home</span>
+            </a>
+          </div>
+
+          <div class="mobile-component mobile-wishlist">
+            <a href="./wishlist.html">
+              <span
+                class="iconify"
+                data-icon="clarity:heart-solid"
+                data-inline="false"
+              ></span>
+              <span>Wishlist</span>
+            </a>
+          </div>
+
+          <div class="mobile-component mobile-cart">
+            <a href="./shopping-cart.html">
+              <span class="mobile-cart-icon">
+                <span
+                  class="iconify"
+                  data-icon="clarity:shopping-cart-solid"
+                  data-inline="false"
+                ></span>
+                <span class="mobile-component__cart-badge">2</span>
+              </span>
+              <span>Cart</span>
+            </a>
+          </div>
+
+          <div
+            class="mobile-component mobile-account"
+            data-bs-toggle="modal"
+            data-bs-target="#loginModal"
+          >
+            <div>
+              <span
+                class="iconify"
+                data-icon="clarity:user-solid"
+                data-inline="false"
+              ></span>
+              <span>Account</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Login/Signup -->
+      <div class="login-modal">
+        <div
+          class="login modal fade"
+          id="loginModal"
+          tabindex="-1"
+          aria-labelledby="loginModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="login-container">
+                <ul class="nav nav-tabs" id="tabs" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link active"
+                      id="login-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#login"
+                      type="button"
+                      role="tab"
+                      aria-controls="login"
+                      aria-selected="true"
+                    >
+                      Đăng nhập
+                    </button>
+                  </li>
+
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link"
+                      id="signup-tab"
+                      data-bs-toggle="tab"
+                      data-bs-target="#signup"
+                      type="button"
+                      role="tab"
+                      aria-controls="signup"
+                      aria-selected="false"
+                    >
+                      Đăng ký
+                    </button>
+                  </li>
+                </ul>
+
+                <!-- Tab Content -->
+
+                <div class="tab-content px-3 py-3" id="tabContent">
+                  <div
+                    class="tab-pane fade show active"
+                    id="login"
+                    role="tabpanel"
+                    aria-labelledby="login-tab"
+                  >
+                    <form class="row needs-validation">
+                      <div class="error-noti error mb-3 text-danger"></div>
+
+                      <div class="form-input mb-3">
+                        <input
+                          class="form-control"
+                          type="text"
+                          id="login-email"
+                          placeholder="Email"
+                          autocomplete="email"
+                        />
+                        <small class="email-error error text-danger"
+                          >Error message</small
+                        >
+                      </div>
+
+                      <div class="form-input mb-3">
+                        <input
+                          class="form-control"
+                          type="password"
+                          id="login-password"
+                          placeholder="Mật khẩu"
+                          autocomplete="current-password"
+                        />
+                        <small class="pass-error error text-danger"
+                          >Error message</small
+                        >
+                      </div>
+
+                      <div class="form-check mb-3 remember-acc">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value="remember-acc"
+                          id="remember-acc"
+                        />
+                        <label class="form-check-label" for="remember-acc">
+                          Ghi nhớ tài khoản
+                        </label>
+                      </div>
+
+                      <div class="col-12 mb-3">
+                        <button
+                          class="section__btn btn-login d-block w-100"
+                          type="button"
+                        >
+                          ĐĂNG NHẬP
+                        </button>
+                      </div>
+
+                      <div
+                        class="forgot-password"
+                        type="button"
+                        data-bs-toggle="modal"
+                        data-bs-dismiss="modal"
+                        data-bs-target="#forgotPassModal"
+                      >
+                        <span
+                          class="iconify"
+                          data-icon="codicon:question"
+                          data-inline="false"
+                        ></span>
+                        <span>Quên mật khẩu?</span>
+                      </div>
+                    </form>
+                  </div>
+
+                  <div
+                    class="tab-pane fade"
+                    id="signup"
+                    role="tabpanel"
+                    aria-labelledby="signup-tab"
+                  >
+                    <div class="form-input mb-3">
+                      <input
+                        class="form-control"
+                        type="text"
+                        id="signup-email"
+                        placeholder="Email"
+                        autocomplete="email"
+                      />
+                      <small class="error">Error message</small>
+                    </div>
+
+                    <div class="form-input mb-3">
+                      <input
+                        class="form-control"
+                        type="password"
+                        id="signup-password"
+                        placeholder="Mật khẩu"
+                        autocomplete="new-password"
+                      />
+                      <small class="error">Error message</small>
+                    </div>
+
+                    <form class="row needs-validation" novalidate>
+                      <div class="form-input mb-3">
+                        <input
+                          class="form-control"
+                          type="text"
+                          id="signup-first-name"
+                          placeholder="Họ tên"
+                        />
+                        <small class="error">Error message</small>
+                      </div>
+
+                      <div class="form-input mb-3">
+                        <input
+                          class="form-control"
+                          type="text"
+                          id="signup-phone"
+                          placeholder="Số điện thoại"
+                          autocomplete="phone"
+                        />
+                        <small class="error">Error message</small>
+                      </div>
+
+                      <div class="col-12">
+                        <button
+                          class="section__btn btn-signup d-block w-100"
+                          type="button"
+                        >
+                          ĐĂNG KÝ
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Forgot Password -->
+      <div class="forgotpass-modal">
+        <div
+          class="forgotpass modal fade"
+          id="forgotPassModal"
+          tabindex="-1"
+          aria-labelledby="forgotPassModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="forgotPassModalLabel">
+                  Quên mật khẩu?
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+
+              <div class="modal-body p-3">
+                <form>
+                  <div class="form-input mb-3">
+                    <input
+                      class="form-control"
+                      type="text"
+                      id="email"
+                      placeholder="Email"
+                      required
+                    />
+                    <small class="error">Error message</small>
+                  </div>
+
+                  <div class="col-12">
+                    <button
+                      class="section__btn btn-send-email d-block w-100"
+                      type="button"
+                      data-bs-dismiss="modal"
+                    >
+                      GỬI EMAIL TRỢ GIÚP
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -864,56 +1223,6 @@
         </p>
       </div>
     </footer>
-
-    <!-- Mobile Header Components -->
-    <div class="mobile-header-components">
-      <div class="component-wrapper">
-        <div class="mobile-component mobile-home">
-          <a href="./index.html">
-            <span
-              class="iconify"
-              data-icon="fa-solid:home"
-              data-inline="false"
-            ></span>
-            <span>Home</span>
-          </a>
-        </div>
-
-        <div class="mobile-component mobile-wishlist">
-          <a href="./wishlist.html">
-            <span
-              class="iconify"
-              data-icon="clarity:heart-solid"
-              data-inline="false"
-            ></span>
-            <span>Wishlist</span>
-          </a>
-        </div>
-
-        <div class="mobile-component mobile-cart">
-          <a href="./shopping-cart.html">
-            <span
-              class="iconify"
-              data-icon="clarity:shopping-cart-solid"
-              data-inline="false"
-            ></span>
-            <span>Cart</span>
-            <!-- <span class="mobile-component__cart-badge">0</span> -->
-          </a>
-        </div>
-
-        <div class="mobile-component mobile-account">
-          <div>
-            <span
-              class="iconify"
-              data-icon="clarity:user-solid"
-              data-inline="false"
-            ></span>
-            <span>Account</span>
-          </div>
-        </div>
-      </div>
-    </div>
 
     <script src="./vendor/jquery/jquery-3.6.0.min.js"></script>
 

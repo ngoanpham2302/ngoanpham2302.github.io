@@ -86,6 +86,17 @@ img {
   font-weight: 500;
 }
 
+.form-check-input:checked {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  box-shadow: none;
+}
+
+.form-check-input:focus {
+  box-shadow: none;
+  border-color: var(--color-primary);
+}
+
 /*------------ START: HEADER ----------- */
 
 /* ----- Start: Info bar ----- */
@@ -211,14 +222,18 @@ img {
   margin-right: 1.5rem;
 }
 
-.header-component__btn {
+.header-component__btn,
+.mobile-menu-icon,
+.mobile-search-icon {
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
   transition: all 0.3s ease;
 }
 
-.header-component__btn:hover {
+.header-component__btn:hover,
+.mobile-menu-icon:hover,
+.mobile-search-icon:hover {
   background-color: var(--color-secondary);
 }
 
@@ -226,7 +241,8 @@ img {
   position: relative;
 }
 
-.header-component__cart-badge {
+.header-component__cart-badge,
+.mobile-component__cart-badge {
   font-size: 0.75rem;
   line-height: 0.75rem;
   width: 1rem;
@@ -812,6 +828,15 @@ img {
   margin-top: 0.1rem;
 }
 
+.mobile-cart > a > .mobile-cart-icon {
+  position: relative;
+}
+
+.mobile-component__cart-badge {
+  top: -0.28rem;
+  right: -0.66rem;
+}
+
 /* ----- End: Mobile Components ----- */
 
 /* ----- Start: Mobile Logo Bar ----- */
@@ -967,9 +992,150 @@ img {
   font-size: 1.5rem;
 }
 
+/* Mobile Search */
+
+.mobile-logo-bar,
+.header-component-outer {
+  position: relative;
+}
+
+.mobile-search-bar {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff;
+  padding: 1rem;
+  padding-top: 2.25rem;
+  left: 0;
+  z-index: 1050;
+  opacity: 0;
+  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.16);
+  transform: translate(0, 2rem);
+  -webkit-transform: translate(0, 2rem);
+  -ms-transform: translate(0, 2rem);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  background-image: url(../images/decors/newsletter-bg.webp);
+  background-size: cover;
+}
+
+.mobile-search-icon.open-search .mobile-search-bar {
+  transform: translate(0, 0);
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  opacity: 1;
+  z-index: 1050;
+}
+
+.mobile-search-bar .search-box {
+  background-color: #fff;
+}
+
+.btn-close-search {
+  position: absolute;
+  top: 0.25rem;
+  right: 0.25rem;
+  transition: 0.2s ease;
+}
+
+.btn-close-search:hover {
+  color: var(--color-primary);
+}
+
+.mobile-search-bar .header-component__inner-search {
+  max-width: 100%;
+  padding: 0.5rem;
+  height: auto;
+}
+
+.mobile-search-icon .search-icon {
+  color: var(--color-text-light);
+}
+
+.mobile-search-icon .search-icon:hover {
+  color: var(--color-text);
+}
+
 /* ----- End: Mobile Menu ----- */
 
 /*------------ END: MOBILE MENU ----------- */
+
+/* ----- Start: Login/Signup Modal ----- */
+
+.modal-content,
+.login-container {
+  border-radius: 0;
+}
+
+.modal-content {
+  background-image: url(../images/decors/feedback-bg.webp);
+  background-size: cover;
+}
+
+.login-modal .nav-item {
+  flex: 1;
+  background-color: var(--color-neutral-bg);
+}
+
+.login-modal .nav-tabs .nav-link {
+  width: 100%;
+  color: #495057;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.login-modal .nav-link:hover {
+  color: #222;
+}
+
+.login-modal .nav-tabs .nav-link.active {
+  display: block;
+  color: var(--color-primary);
+}
+
+.login-modal .modal-dialog,
+.forgotpass-modal .modal-dialog {
+  max-width: 280px;
+  margin: 3rem auto;
+}
+
+.remember-acc label {
+  font-size: 0.93rem;
+}
+
+.forgot-password {
+  text-align: left;
+  font-size: 0.93rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.forgot-password:hover {
+  color: var(--color-primary);
+}
+
+.forgotpass-modal .modal-title {
+  font-size: 1.125rem;
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.error {
+  font-style: italic;
+  font-size: 0.8rem;
+  display: none;
+}
+
+.login-modal .form-input > input::placeholder {
+  font-size: 0.95rem;
+}
+
+.btn-login,
+.btn-signup,
+.btn-send-email {
+  padding: 0.5rem;
+}
+
+/* ----- End: Login/Signup Modal ----- */
 
 /* ------------ START: RESPONSIVE ----------- */
 
