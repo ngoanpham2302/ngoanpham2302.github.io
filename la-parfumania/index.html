@@ -21,7 +21,10 @@
 
     <link rel="stylesheet" href="./vendor/slick-1.8.1/slick/slick.css" />
     <link rel="stylesheet" href="./vendor/slick-1.8.1/slick/slick-theme.css" />
+
     <link rel="stylesheet" href="./vendor/animate/animate.min.css" />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <link
       rel="stylesheet"
@@ -926,30 +929,39 @@
     <!-- Main Content -->
     <main id="main">
       <!-- Section About -->
-      <section class="section section-about">
-        <h2 class="section__title section-about__title">
-          VỀ LA&nbsp;PARFUMANIA
-        </h2>
+      <section
+        class="section section-about"
+        data-aos="fade-up"
+        data-aos-duration="1200"
+      >
+        <div class="container justify-content-between">
+          <div class="section-about__content">
+            <h2 class="section__title section-about__title">
+              VỀ LA&nbsp;PARFUMANIA
+            </h2>
 
-        <div class="section-about__content container">
-          <p>
-            La Parfumania cung cấp đa dạng các thương hiệu nước hoa, từ designer
-            cho đến niche. Cho dù bạn đang tìm kiếm một mùi hương tươi mới, mát
-            mẻ, tràn đầy năng lượng hay dịu dàng, ấm áp, ngọt ngào, từ hương
-            trái cây, hương hoa cho đến hương gỗ, hương da thuộc, La Parfumania
-            đều có một mùi hương phù hợp với&nbsp;bạn.
-          </p>
-          <p>
-            Tại La Parfumania, chúng tôi luôn tin rằng, mỗi mùi hương là một
-            cuộc hành trình. Chúng lặn sâu vào quá khứ, dạo chơi trong kí ức.
-            Chúng khám phá những chân trời đầy cảm hứng và chưa được biết tới,
-            và sẵn sàng cho những cuộc phiêu lưu&nbsp;mới.
-          </p>
+            <div class="section-about__detail">
+              <p>
+                La Parfumania cung cấp đa dạng các thương hiệu nước hoa, từ
+                designer cho đến niche. Cho dù bạn đang tìm kiếm một mùi hương
+                tươi mới, mát mẻ, tràn đầy năng lượng hay dịu dàng, ấm áp, ngọt
+                ngào, từ hương trái cây, hương hoa cho đến hương gỗ, hương da
+                thuộc, La&nbsp;Parfumania đều có một mùi hương phù hợp
+                với&nbsp;bạn.
+              </p>
+              <p class="mb-0">
+                Tại La Parfumania, chúng tôi luôn tin rằng, mỗi mùi hương là một
+                cuộc hành trình. Chúng lặn sâu vào quá khứ, dạo chơi trong kí
+                ức. Chúng khám phá những chân trời đầy cảm hứng và chưa được
+                biết tới, và sẵn sàng cho những cuộc phiêu lưu&nbsp;mới.
+              </p>
+            </div>
+          </div>
+
+          <div class="section-about__img">
+            <img src="./images/decors/about-us.webp" alt="about-us" />
+          </div>
         </div>
-
-        <button class="section__btn section-about__btn">
-          <a href="#">ĐỌC THÊM</a>
-        </button>
       </section>
 
       <!-- Section Best Sellers  -->
@@ -2635,7 +2647,11 @@
         </h2>
 
         <div class="blogs container">
-          <div class="blog first-blog row row-cols-1 row-cols-md-2">
+          <div
+            class="blog first-blog row row-cols-1 row-cols-md-2"
+            data-aos="fade-up"
+            data-aos-duration="1300"
+          >
             <div class="blog__content col-12 col-lg-5 col-xl-4">
               <h3 class="blog__title">
                 Giorgio Armani Light di Gioia - Ngày rực&nbsp;sáng
@@ -2660,7 +2676,11 @@
             </div>
           </div>
 
-          <div class="blog second-blog row row-cols-1 row-cols-md-2">
+          <div
+            class="blog second-blog row row-cols-1 row-cols-md-2"
+            data-aos="fade-up"
+            data-aos-duration="1300"
+          >
             <div class="blog__img col-12 col-lg-7 col-xl-8">
               <img
                 src="./images/banners/blog-armani-si-fiori.webp"
@@ -2758,7 +2778,11 @@
           CẢM NHẬN KHÁCH&nbsp;HÀNG
         </h2>
 
-        <div class="feedbacks container">
+        <div
+          class="feedbacks container"
+          data-aos="fade-up"
+          data-aos-duration="1300"
+        >
           <div
             id="carouselCustomerFeebacks"
             class="carousel carousel-dark slide"
@@ -3206,12 +3230,14 @@
 
     <script src="./vendor/slick-1.8.1/slick/slick.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script src="./js/layout.js"></script>
     <script src="./js/index.js"></script>
 
-    <!-- <script>
+    <script>
       AOS.init();
-    </script> -->
+      window.addEventListener("load", AOS.refresh);
+    </script>
   </body>
 </html>

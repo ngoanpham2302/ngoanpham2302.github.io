@@ -6,23 +6,34 @@ $(function () {
   $(".banner-slider").slick({
     autoplay: true,
     autoplaySpeed: 8000,
-    speed: 1500,
+    speed: 1300,
     slidesToShow: 1,
     arrows: false,
     dots: true,
     fade: true,
     pauseOnFocus: false,
     pauseOnHover: false,
+    draggable: true,
+    swipe: true,
 
     responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          fade: false,
+        },
+      },
       {
         breakpoint: 576,
         settings: {
           slidesToShow: 1,
           arrows: false,
           dots: true,
+          fade: false,
           autoplaySpeed: 5000,
-          speed: 1300,
+          speed: 900,
+          draggable: true,
+          swipe: true,
         },
       },
     ],
@@ -32,12 +43,12 @@ $(function () {
 
   $(".products-slider").slick({
     autoplay: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 4000,
     speed: 1200,
     slidesToShow: 4,
     slidesToScroll: 1,
-    arrows: false,
-    dots: true,
+    arrows: true,
+    dots: false,
     pauseOnFocus: false,
     pauseOnHover: false,
     prevArrow:
@@ -47,14 +58,21 @@ $(function () {
 
     responsive: [
       {
-        breakpoint: 1240,
+        breakpoint: 1430,
         settings: {
           arrows: false,
           dots: true,
         },
       },
       {
-        breakpoint: 1200,
+        breakpoint: 1390,
+        settings: {
+          arrows: true,
+          dots: false,
+        },
+      },
+      {
+        breakpoint: 1260,
         settings: {
           slidesToShow: 3,
           arrows: false,
@@ -65,6 +83,8 @@ $(function () {
         breakpoint: 992,
         settings: {
           slidesToShow: 2,
+          arrows: false,
+          dots: true,
         },
       },
 

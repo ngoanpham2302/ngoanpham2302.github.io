@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="./vendor/slick-1.8.1/slick/slick-theme.css" />
 
     <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="./css/layout.css" />
     <link rel="stylesheet" href="./css/product-detail.css" />
@@ -1276,7 +1277,11 @@
                 role="tabpanel"
                 aria-labelledby="description-tab"
               >
-                <div class="product-des-wrapper row">
+                <div
+                  class="product-des-wrapper row"
+                  data-aos="fade-up"
+                  data-aos-duration="1200"
+                >
                   <div class="product-des col-12 col-lg-6">
                     <h5 class="product-des__title">
                       Sự gợi cảm tinh tế, thanh lịch và tươi&nbsp;mới
@@ -1308,11 +1313,19 @@
                   </div>
                 </div>
 
-                <h5 class="product-des__title note-title">
+                <h5
+                  class="product-des__title note-title"
+                  data-aos="fade-up"
+                  data-aos-duration="1200"
+                >
                   Hương thơm của sự tự do - YSL&nbsp;Libre&nbsp;EDP
                 </h5>
 
-                <div class="product-notes row">
+                <div
+                  class="product-notes row"
+                  data-aos="fade-up"
+                  data-aos-duration="1200"
+                >
                   <div class="product-note col-12 col-md-6 col-xl-4">
                     <div class="product-note__img">
                       <img
@@ -2617,8 +2630,14 @@
 
     <script src="./vendor/bootstrap-5.0.2/js/bootstrap.bundle.min.js"></script>
     <script src="./vendor/slick-1.8.1/slick/slick.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
     <script src="./js/layout.js"></script>
     <script src="./js/product-detail.js"></script>
+
+    <script>
+      AOS.init();
+      window.addEventListener("load", AOS.refresh);
+    </script>
   </body>
 </html>

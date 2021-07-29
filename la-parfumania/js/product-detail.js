@@ -29,12 +29,12 @@ $(function () {
 
   $(".products-slider").slick({
     autoplay: true,
-    autoplaySpeed: 5000,
+    autoplaySpeed: 4000,
     speed: 1200,
     slidesToShow: 4,
     slidesToScroll: 1,
-    arrows: false,
-    dots: true,
+    arrows: true,
+    dots: false,
     pauseOnFocus: false,
     pauseOnHover: false,
     prevArrow:
@@ -44,14 +44,21 @@ $(function () {
 
     responsive: [
       {
-        breakpoint: 1240,
+        breakpoint: 1430,
         settings: {
           arrows: false,
           dots: true,
         },
       },
       {
-        breakpoint: 1200,
+        breakpoint: 1390,
+        settings: {
+          arrows: true,
+          dots: false,
+        },
+      },
+      {
+        breakpoint: 1260,
         settings: {
           slidesToShow: 3,
           arrows: false,
@@ -62,6 +69,8 @@ $(function () {
         breakpoint: 992,
         settings: {
           slidesToShow: 2,
+          arrows: false,
+          dots: true,
         },
       },
 
