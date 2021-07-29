@@ -1026,8 +1026,8 @@ img {
   position: relative;
 }
 
-.mobile-search-icon,
-.mobile-menu-icon {
+.mobile-search-icon .iconify,
+.mobile-menu-icon .iconify {
   font-size: 2rem;
 }
 

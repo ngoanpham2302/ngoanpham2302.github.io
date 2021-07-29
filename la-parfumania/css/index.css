@@ -21,6 +21,12 @@
   z-index: 10;
 }
 
+.banner-slider__slide img {
+  height: 680px;
+  width: 100%;
+  object-fit: cover;
+}
+
 .banner-slider__content {
   width: 50%;
   position: absolute;
@@ -841,9 +847,19 @@
   }
 }
 
+@media (min-width: 1460px) {
+  .banner-slider__slide img {
+    height: 750px;
+  }
+}
+
 /* Responsive CSS */
 
 @media (max-width: 1399px) {
+  .banner-slider__slide img {
+    height: 620px;
+  }
+
   .brands-slider__link {
     height: 164px;
   }
@@ -862,6 +878,10 @@
 }
 
 @media (max-width: 1199px) {
+  .banner-slider__slide img {
+    height: 550px;
+  }
+
   .services.row {
     --bs-gutter-y: 2.5rem;
   }
@@ -876,6 +896,10 @@
 }
 
 @media (max-width: 992px) {
+  .banner-slider__slide img {
+    height: 460px;
+  }
+
   .banner-slider__info {
     font-size: 1.75rem;
     margin-bottom: 1.5rem;
@@ -909,6 +933,14 @@
 }
 
 @media (max-width: 768px) {
+  .banner-slider__slide img {
+    height: 410px;
+  }
+
+  .banner-slider .slick-dots {
+    bottom: 0.75rem;
+  }
+
   .section-about__title {
     margin-bottom: 1.5rem;
   }
@@ -956,23 +988,13 @@
   .mobile-slider__img,
   .slick-slide .mobile-slider__img {
     display: block;
-    height: 400px;
+    height: 380px;
     width: 100%;
     object-fit: cover;
   }
 
-  .banner-slider .slick-dots {
-    bottom: 0.5rem;
-  }
-
   .banner-slider .slick-dots li {
     margin: 0 0.15rem;
-  }
-
-  .banner-slider .slick-dots li button:before {
-    font-size: 0.5rem;
-    color: var(--color-logo);
-    opacity: 0.2;
   }
 }
 
@@ -998,6 +1020,11 @@
 @media (max-width: 500px) {
   .brands-slider__link {
     height: 124px;
+  }
+
+  #header,
+  .section-about {
+    margin-bottom: 3.5rem;
   }
 }
 
