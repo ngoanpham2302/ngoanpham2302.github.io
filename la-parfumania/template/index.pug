@@ -1,0 +1,883 @@
+extends template-part/layout.pug
+
+block vendor-css
+
+    link(rel='stylesheet' href='./vendor/slick-1.8.1/slick/slick.css')
+    link(rel='stylesheet' href='./vendor/slick-1.8.1/slick/slick-theme.css')
+    
+    link(rel='stylesheet' href='./vendor/animate/animate.min.css')
+    link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.css')
+
+block important-css
+
+    link(rel='stylesheet' href='./css/index.css')
+
+
+block title
+
+    title La Parfumania - Perfume Gallery
+
+block head-banner
+
+    include template-part/home-banner.pug
+
+block content
+
+    // Section About
+    section.section.section-about
+        h2.section__title.section-about__title
+            | VỀ LA PARFUMANIA
+
+        .section-about__content.container
+            p
+                | La Parfumania cung cấp đa dạng các thương hiệu nước hoa, từ designer
+                | cho đến niche. Cho dù bạn đang tìm kiếm một mùi hương tươi mới, mát
+                | mẻ, tràn đầy năng lượng hay dịu dàng, ấm áp, ngọt ngào, từ hương
+                | trái cây, hương hoa cho đến hương gỗ, hương da thuộc, La Parfumania
+                | đều có một mùi hương phù hợp với bạn.
+            p
+                | Tại La Parfumania, chúng tôi luôn tin rằng, mỗi mùi hương là một
+                | cuộc hành trình. Chúng lặn sâu vào quá khứ, dạo chơi trong kí ức.
+                | Chúng khám phá những chân trời đầy cảm hứng và chưa được biết tới,
+                | và sẵn sàng cho những cuộc phiêu lưu mới.
+        button.section__btn.section-about__btn
+            a(href='./about.html') ĐỌC THÊM
+
+    
+    // Section Best Sellers
+
+    section.section.section-bestsellers.container-fluid
+        h2.section__title.section-bestsellers__title
+            | SẢN PHẨM BÁN CHẠY
+
+        .section-bestsellers__nav
+            ul#bestSellersTab.nav.nav-pills.justify-content-center(role='tablist')
+                li.nav-item(role='presentation')
+                    button#male-tab.nav-link.active(data-bs-toggle='tab' data-bs-target='#male' type='button' role='tab' aria-controls='male' aria-selected='true')
+                        | Nam
+
+                .vertical-line
+
+                li.nav-item(role='presentation')
+                    button#female-tab.nav-link(data-bs-toggle='tab' data-bs-target='#female' type='button' role='tab' aria-controls='female' aria-selected='false')
+                        | Nữ
+
+                .vertical-line
+
+                li.nav-item(role='presentation')
+                    button#unisex-tab.nav-link(data-bs-toggle='tab' data-bs-target='#unisex' type='button' role='tab' aria-controls='unisex' aria-selected='false')
+                        | Unisex
+
+            #bestSellersTabContent.tab-content
+                #male.tab-pane.fade.show.active.container(role='tabpanel' aria-labelledby='male-tab')
+                    .products-slider.products-slider--male
+                        .products-slider__slide
+                            .card.product-card
+                                .product-card__img
+                                    img.card-img-top(src='./images/products/dior-homme-intense.webp' alt='dior-homme-intense')
+
+                                    .product-card__wishlist
+                                        span.iconify.wishlist-icon--empty(data-icon='clarity:heart-line' data-inline='false')
+                                        span.iconify.wishlist-icon--filled(data-icon='clarity:heart-solid' data-inline='false')
+
+                                    button.btn-detail.product-card__btn
+                                        a(href='./product-detail.html') XEM CHI TIẾT
+
+                                .card-body
+                                    h5.card-title.product-card__brand
+                                        | CHRISTIAN DIOR
+                                    p.card-text.product-card__name
+                                        | Homme Intense EDP
+
+                                    p.card-text.product-card__price 2,800,000₫
+                                    button.btn-addtocart.product-card__btn
+                                        span.iconify.cart-icon(data-icon='clarity:shopping-cart-line' data-inline='false')
+                                        span Thêm vào giỏ hàng
+
+                        .products-slider__slide
+                            .card.product-card
+                                .product-card__img
+                                    img.card-img-top(src='./images/products/armani-profondo-light.webp' alt='armani-profondo-light')
+                                    .product-card__wishlist
+                                        span.iconify.wishlist-icon--empty(data-icon='clarity:heart-line' data-inline='false')
+                                        span.iconify.wishlist-icon--filled(data-icon='clarity:heart-solid' data-inline='false')
+                                    button.btn-detail.product-card__btn
+                                        a(href='./product-detail.html') XEM CHI TIẾT
+
+                                .card-body
+                                    h5.card-title.product-card__brand
+                                        | GIORGIO ARMANI
+                                    p.card-text.product-card__name
+                                        | Profondo Lights EDT
+
+                                    p.card-text.product-card__price 3,150,000₫
+                                    button.btn-addtocart.product-card__btn
+                                        span.iconify.cart-icon(data-icon='clarity:shopping-cart-line' data-inline='false')
+                                        span Thêm vào giỏ hàng
+
+                        .products-slider__slide
+                            .card.product-card
+                                .product-card__img
+                                    img.card-img-top(src='./images/products/dg-the-one-edp.webp' alt='dg-the-one-edp')
+                                    .product-card__wishlist
+                                        span.iconify.wishlist-icon--empty(data-icon='clarity:heart-line' data-inline='false')
+                                        span.iconify.wishlist-icon--filled(data-icon='clarity:heart-solid' data-inline='false')
+                                    button.btn-detail.product-card__btn
+                                        a(href='./product-detail.html') XEM CHI TIẾT
+
+                                .card-body
+                                    h5.card-title.product-card__brand
+                                        | DOLCE&GABBANA
+                                    p.card-text.product-card__name The One EDP
+                                    p.card-text.product-card__price 2,275,000₫
+                                    button.btn-addtocart.product-card__btn
+                                        span.iconify.cart-icon(data-icon='clarity:shopping-cart-line' data-inline='false')
+                                        span Thêm vào giỏ hàng
+
+                        .products-slider__slide
+                            .card.product-card
+                                .product-card__img
+                                    img.card-img-top(src='./images/products/ysl-la-nuit.webp' alt='ysl-lanuit-de-lhomme')
+                                    .product-card__wishlist
+                                        span.iconify.wishlist-icon--empty(data-icon='clarity:heart-line' data-inline='false')
+                                        span.iconify.wishlist-icon--filled(data-icon='clarity:heart-solid' data-inline='false')
+                                    button.btn-detail.product-card__btn
+                                        a(href='./product-detail.html') XEM CHI TIẾT
+
+                                .card-body
+                                    h5.card-title.product-card__brand
+                                        | YVES SAINT LAURENT
+                                    p.card-text.product-card__name
+                                        | La Nuit de L’Homme EDT
+                                    p.card-text.product-card__price 2,580,000₫
+                                    button.btn-addtocart.product-card__btn
+                                        span.iconify.cart-icon(data-icon='clarity:shopping-cart-line' data-inline='false')
+                                        span Thêm vào giỏ hàng
+
+                        .products-slider__slide
+                            .card.product-card
+                                .product-card__img
+                                    img.card-img-top(src='./images/products/paco-rabanne-invictus.webp' alt='paco-rabanne-invictus')
+                                    .product-card__wishlist
+                                        span.iconify.wishlist-icon--empty(data-icon='clarity:heart-line' data-inline='false')
+                                        span.iconify.wishlist-icon--filled(data-icon='clarity:heart-solid' data-inline='false')
+                                    button.btn-detail.product-card__btn
+                                        a(href='./product-detail.html') XEM CHI TIẾT
+
+                                .card-body
+                                    h5.card-title.product-card__brand
+                                        | PACO RABANNE
+                                    p.card-text.product-card__name Invictus EDP
+                                    p.card-text.product-card__price 2,560,000₫
+                                    button.btn-addtocart.product-card__btn
+                                        span.iconify.cart-icon(data-icon='clarity:shopping-cart-line' data-inline='false')
+                                        span Thêm vào giỏ hàng
+
+                        .products-slider__slide
+                            .card.product-card
+                                .product-card__img
+                                    img.card-img-top(src='./images/products/bvlgari-man-wood-neroli.webp' alt='bvlgari-man-wood-neroli')
+                                    .product-card__wishlist
+                                        span.iconify.wishlist-icon--empty(data-icon='clarity:heart-line' data-inline='false')
+                                        span.iconify.wishlist-icon--filled(data-icon='clarity:heart-solid' data-inline='false')
+                                    button.btn-detail.product-card__btn
+                                        a(href='./product-detail.html') XEM CHI TIẾT
+
+                                .card-body
+                                    h5.card-title.product-card__brand BVLGARI
+                                    p.card-text.product-card__name
+                                        | Man Wood Neroli EDT
+                                    p.card-text.product-card__price 1,590,000₫
+                                    button.btn-addtocart.product-card__btn
+                                        span.iconify.cart-icon(data-icon='clarity:shopping-cart-line' data-inline='false')
+                                        span Thêm vào giỏ hàng
+
+                        .products-slider__slide
+                            .card.product-card
+                                .product-card__img
+                                    img.card-img-top(src='./images/products/versace-pour-homme.webp' alt='versace-pour-homme')
+                                    .product-card__wishlist
+                                        span.iconify.wishlist-icon--empty(data-icon='clarity:heart-line' data-inline='false')
+                                        span.iconify.wishlist-icon--filled(data-icon='clarity:heart-solid' data-inline='false')
+                                    button.btn-detail.product-card__btn
+                                        a(href='./product-detail.html') XEM CHI TIẾT
+
+                                .card-body
+                                    h5.card-title.product-card__brand VERSACE
+                                    p.card-text.product-card__name Pour Homme EDT
+                                    p.card-text.product-card__price 2,140,000₫
+                                    button.btn-addtocart.product-card__btn
+                                        span.iconify.cart-icon(data-icon='clarity:shopping-cart-line' data-inline='false')
+                                        span Thêm vào giỏ hàng
+
+                    button.section__btn.section-bestsellers__btn
+                        a(href='./male-products.html') XEM THÊM SẢN PHẨM
+
+                #female.tab-pane.fade.container(role='tabpanel' aria-labelledby='female-tab')
+                    .products-slider.products-slider--female
+                        .products-slider__slide
+                            .card.product-card
+                                .product-card__img
+                                    img.card-img-top(src='./images/products/guerlain-coconut.webp' alt='guerlain-allegoria-coconut')
+                                    .product-card__wishlist
+                                        span.iconify.wishlist-icon--empty(data-icon='clarity:heart-line' data-inline='false')
+                                        span.iconify.wishlist-icon--filled(data-icon='clarity:heart-solid' data-inline='false')
+                                    button.btn-detail.product-card__btn
+                                        a(href='./product-detail.html') XEM CHI TIẾT
+
+                                .card-body
+                                    h5.card-title.product-card__brand GUERLAIN
+                                    p.card-text.product-card__name
+                                        | Allegoria Coconut EDT
+                                    p.card-text.product-card__price 3,120,000₫
+                                    button.btn-addtocart.product-card__btn
+                                        span.iconify.cart-icon(data-icon='clarity:shopping-cart-line' data-inline='false')
+                                        span Thêm vào giỏ hàng
+
+                        .products-slider__slide
+                            .card.product-card
+                                .product-card__img
+                                    img.card-img-top(src='./images/products/dg-the-only-one.webp' alt='dg-the-only-one')
+                                    .product-card__wishlist
+                                        span.iconify.wishlist-icon--empty(data-icon='clarity:heart-line' data-inline='false')
+                                        span.iconify.wishlist-icon--filled(data-icon='clarity:heart-solid' data-inline='false')
+                                    button.btn-detail.product-card__btn
+                                        a(href='./product-detail.html') XEM CHI TIẾT
+
+                                .card-body
+                                    h5.card-title.product-card__brand
+                                        | DOLCE&GABBANA
+                                    p.card-text.product-card__name
+                                        | The Only One EDP
+                                    p.card-text.product-card__price 3,250,000₫
+                                    button.btn-addtocart.product-card__btn
+                                        span.iconify.cart-icon(data-icon='clarity:shopping-cart-line' data-inline='false')
+                                        span Thêm vào giỏ hàng
+
+                        .products-slider__slide
+                            .card.product-card
+                                .product-card__img
+                                    img.card-img-top(src='./images/products/guerlain-mon.webp' alt='guerlain-mon-edp')
+                                    .product-card__wishlist
+                                        span.iconify.wishlist-icon--empty(data-icon='clarity:heart-line' data-inline='false')
+                                        span.iconify.wishlist-icon--filled(data-icon='clarity:heart-solid' data-inline='false')
+                                    button.btn-detail.product-card__btn
+                                        a(href='./product-detail.html') XEM CHI TIẾT
+
+                                .card-body
+                                    h5.card-title.product-card__brand GUERLAIN
+                                    p.card-text.product-card__name Mon EDP
+                                    p.card-text.product-card__price 2,890,000₫
+                                    button.btn-addtocart.product-card__btn
+                                        span.iconify.cart-icon(data-icon='clarity:shopping-cart-line' data-inline='false')
+                                        span Thêm vào giỏ hàng
+
+                        .products-slider__slide
+                            .card.product-card
+                                .product-card__img
+                                    img.card-img-top(src='./images/products/hermes-eau-des-erveilles-bleue.webp' alt='hermes-eau-des-erveilles-bleue')
+                                    .product-card__wishlist
+                                        span.iconify.wishlist-icon--empty(data-icon='clarity:heart-line' data-inline='false')
+                                        span.iconify.wishlist-icon--filled(data-icon='clarity:heart-solid' data-inline='false')
+                                    button.btn-detail.product-card__btn
+                                        a(href='./product-detail.html') XEM CHI TIẾT
+
+                                .card-body
+                                    h5.card-title.product-card__brand HERMÈS
+                                    p.card-text.product-card__name
+                                        | Merveilles Bleue EDT
+                                    p.card-text.product-card__price 3,650,000₫
+                                    button.btn-addtocart.product-card__btn
+                                        span.iconify.cart-icon(data-icon='clarity:shopping-cart-line' data-inline='false')
+                                        span Thêm vào giỏ hàng
+
+                        .products-slider__slide
+                            .card.product-card
+                                .product-card__img
+                                    img.card-img-top(src='./images/products/ysl-mon-paris-couture.webp' alt='ysl-mon-paris-couture')
+                                    .product-card__wishlist
+                                        span.iconify.wishlist-icon--empty(data-icon='clarity:heart-line' data-inline='false')
+                                        span.iconify.wishlist-icon--filled(data-icon='clarity:heart-solid' data-inline='false')
+                                    button.btn-detail.product-card__btn
+                                        a(href='./product-detail.html') XEM CHI TIẾT
+
+                                .card-body
+                                    h5.card-title.product-card__brand
+                                        | YVES SAINT LAURENT
+                                    p.card-text.product-card__name
+                                        | Mon Paris Couture EDP
+                                    p.card-text.product-card__price 2,870,000₫
+                                    button.btn-addtocart.product-card__btn
+                                        span.iconify.cart-icon(data-icon='clarity:shopping-cart-line' data-inline='false')
+                                        span Thêm vào giỏ hàng
+
+                        .products-slider__slide
+                            .card.product-card
+                                .product-card__img
+                                    img.card-img-top(src='./images/products/gucci-flora.webp' alt='gucci-flora')
+                                    .product-card__wishlist
+                                        span.iconify.wishlist-icon--empty(data-icon='clarity:heart-line' data-inline='false')
+                                        span.iconify.wishlist-icon--filled(data-icon='clarity:heart-solid' data-inline='false')
+                                    button.btn-detail.product-card__btn
+                                        a(href='./product-detail.html') XEM CHI TIẾT
+
+                                .card-body
+                                    h5.card-title.product-card__brand GUCCI
+                                    p.card-text.product-card__name
+                                        | Flora Gardenia EDP
+                                    p.card-text.product-card__price 2,980,000₫
+                                    button.btn-addtocart.product-card__btn
+                                        span.iconify.cart-icon(data-icon='clarity:shopping-cart-line' data-inline='false')
+                                        span Thêm vào giỏ hàng
+
+                        .products-slider__slide
+                            .card.product-card
+                                .product-card__img
+                                    img.card-img-top(src='./images/products/marc-jacobs-daisy.webp' alt='marc-jacobs-daisy')
+                                    .product-card__wishlist
+                                        span.iconify.wishlist-icon--empty(data-icon='clarity:heart-line' data-inline='false')
+                                        span.iconify.wishlist-icon--filled(data-icon='clarity:heart-solid' data-inline='false')
+                                    button.btn-detail.product-card__btn
+                                        a(href='./product-detail.html') XEM CHI TIẾT
+
+                                .card-body
+                                    h5.card-title.product-card__brand
+                                        | MARC JACOBS
+                                    p.card-text.product-card__name Daisy EDP
+                                    p.card-text.product-card__price 2,685,000₫
+                                    button.btn-addtocart.product-card__btn
+                                        span.iconify.cart-icon(data-icon='clarity:shopping-cart-line' data-inline='false')
+                                        span Thêm vào giỏ hàng
+
+                    button.section__btn.section-bestsellers__btn
+                        a(href='./female-products.html') XEM THÊM SẢN PHẨM
+
+                #unisex.tab-pane.fade.container(role='tabpanel' aria-labelledby='unisex-tab')
+                    .products-slider.products-slider--unisex
+                        .products-slider__slide
+                            .card.product-card
+                                .product-card__img
+                                    img.card-img-top(src='./images/products/jo-malone-mimosa-cardamom.webp' alt='jo-malone-mimosa-cardamom')
+                                    .product-card__wishlist
+                                        span.iconify.wishlist-icon--empty(data-icon='clarity:heart-line' data-inline='false')
+                                        span.iconify.wishlist-icon--filled(data-icon='clarity:heart-solid' data-inline='false')
+                                    button.btn-detail.product-card__btn
+                                        a(href='./product-detail.html') XEM CHI TIẾT
+
+                                .card-body
+                                    h5.card-title.product-card__brand JO MALONE
+                                    p.card-text.product-card__name
+                                        | Cardamom Cologne
+                                    p.card-text.product-card__price 3,270,000₫
+                                    button.btn-addtocart.product-card__btn
+                                        span.iconify.cart-icon(data-icon='clarity:shopping-cart-line' data-inline='false')
+                                        span Thêm vào giỏ hàng
+
+                        .products-slider__slide
+                            .card.product-card
+                                .product-card__img
+                                    img.card-img-top(src='./images/products/kilian-straight-to-heaven.webp' alt='kilian-straight-to-heaven')
+                                    .product-card__wishlist
+                                        span.iconify.wishlist-icon--empty(data-icon='clarity:heart-line' data-inline='false')
+                                        span.iconify.wishlist-icon--filled(data-icon='clarity:heart-solid' data-inline='false')
+                                    button.btn-detail.product-card__btn
+                                        a(href='./product-detail.html') XEM CHI TIẾT
+
+                                .card-body
+                                    h5.card-title.product-card__brand KILIAN
+                                    p.card-text.product-card__name
+                                        | Straight to Heaven EDP
+                                    p.card-text.product-card__price 6,850,000₫
+                                    button.btn-addtocart.product-card__btn
+                                        span.iconify.cart-icon(data-icon='clarity:shopping-cart-line' data-inline='false')
+                                        span Thêm vào giỏ hàng
+
+                        .products-slider__slide
+                            .card.product-card
+                                .product-card__img
+                                    img.card-img-top(src='./images/products/hermes-jardin-en-mediterrannee.webp' alt='hermes-jardin-en-mediterrannee')
+                                    .product-card__wishlist
+                                        span.iconify.wishlist-icon--empty(data-icon='clarity:heart-line' data-inline='false')
+                                        span.iconify.wishlist-icon--filled(data-icon='clarity:heart-solid' data-inline='false')
+                                    button.btn-detail.product-card__btn
+                                        a(href='./product-detail.html') XEM CHI TIẾT
+
+                                .card-body
+                                    h5.card-title.product-card__brand HERMÈS
+                                    p.card-text.product-card__name
+                                        | Jardin Méditerrannée EDT
+                                    p.card-text.product-card__price 3,460,000₫
+                                    button.btn-addtocart.product-card__btn
+                                        span.iconify.cart-icon(data-icon='clarity:shopping-cart-line' data-inline='false')
+                                        span Thêm vào giỏ hàng
+
+                        .products-slider__slide
+                            .card.product-card
+                                .product-card__img
+                                    img.card-img-top(src='./images/products/maison-margiela-autumn-vibes.webp' alt='maison-margiela-autumn-vibes')
+                                    .product-card__wishlist
+                                        span.iconify.wishlist-icon--empty(data-icon='clarity:heart-line' data-inline='false')
+                                        span.iconify.wishlist-icon--filled(data-icon='clarity:heart-solid' data-inline='false')
+                                    button.btn-detail.product-card__btn
+                                        a(href='./product-detail.html') XEM CHI TIẾT
+
+                                .card-body
+                                    h5.card-title.product-card__brand
+                                        | MAISON MARGIELA
+                                    p.card-text.product-card__name
+                                        | Autumn Vibes EDT
+                                    p.card-text.product-card__price 4,725,000₫
+                                    button.btn-addtocart.product-card__btn
+                                        span.iconify.cart-icon(data-icon='clarity:shopping-cart-line' data-inline='false')
+                                        span Thêm vào giỏ hàng
+
+                        .products-slider__slide
+                            .card.product-card
+                                .product-card__img
+                                    img.card-img-top(src='./images/products/bvlgari-eau-parfumee-the-vert.webp' alt='bvlgari-eau-parfumee-the-vert')
+                                    .product-card__wishlist
+                                        span.iconify.wishlist-icon--empty(data-icon='clarity:heart-line' data-inline='false')
+                                        span.iconify.wishlist-icon--filled(data-icon='clarity:heart-solid' data-inline='false')
+                                    button.btn-detail.product-card__btn
+                                        a(href='./product-detail.html') XEM CHI TIẾT
+
+                                .card-body
+                                    h5.card-title.product-card__brand BVLGARI
+                                    p.card-text.product-card__name
+                                        | Parfumee Eau Vert EDT
+                                    p.card-text.product-card__price 4,820,000₫
+                                    button.btn-addtocart.product-card__btn
+                                        span.iconify.cart-icon(data-icon='clarity:shopping-cart-line' data-inline='false')
+                                        span Thêm vào giỏ hàng
+
+                        .products-slider__slide
+                            .card.product-card
+                                .product-card__img
+                                    img.card-img-top(src='./images/products/tom-ford-mandarino-di-amalfi.webp' alt='tom-ford-mandarino-di-amalfi')
+                                    .product-card__wishlist
+                                        span.iconify.wishlist-icon--empty(data-icon='clarity:heart-line' data-inline='false')
+                                        span.iconify.wishlist-icon--filled(data-icon='clarity:heart-solid' data-inline='false')
+                                    button.btn-detail.product-card__btn
+                                        a(href='./product-detail.html') XEM CHI TIẾT
+
+                                .card-body
+                                    h5.card-title.product-card__brand TOM FORD
+                                    p.card-text.product-card__name
+                                        | Mandarino Di Amalfi EDT
+                                    p.card-text.product-card__price 6,430,000₫
+                                    button.btn-addtocart.product-card__btn
+                                        span.iconify.cart-icon(data-icon='clarity:shopping-cart-line' data-inline='false')
+                                        span Thêm vào giỏ hàng
+
+                        .products-slider__slide
+                            .card.product-card
+                                .product-card__img
+                                    img.card-img-top(src='./images/products/hermes-jardin-sur-le-toit.webp' alt='hermes-jardin-sur-le-toit')
+                                    .product-card__wishlist
+                                        span.iconify.wishlist-icon--empty(data-icon='clarity:heart-line' data-inline='false')
+                                        span.iconify.wishlist-icon--filled(data-icon='clarity:heart-solid' data-inline='false')
+                                    button.btn-detail.product-card__btn
+                                        a(href='./product-detail.html') XEM CHI TIẾT
+
+                                .card-body
+                                    h5.card-title.product-card__brand HERMÈS
+                                    p.card-text.product-card__name
+                                        | Jardin Sur Le Toit EDT
+                                    p.card-text.product-card__price 3,185,000₫
+                                    button.btn-addtocart.product-card__btn
+                                        span.iconify.cart-icon(data-icon='clarity:shopping-cart-line' data-inline='false')
+                                        span Thêm vào giỏ hàng
+                    button.section__btn.section-bestsellers__btn
+                        a(href='./unisex-products.html') XEM THÊM SẢN PHẨM
+
+
+    // Section Fragrance Families
+    section.section.section-frag-families.container
+        h2.section__title.section-frag-families__title
+            | NHÓM HƯƠNG CHỦ ĐẠO
+        .frag-families.row.row-cols-1.row-cols-sm-2.row-cols-lg-3
+            .frag-family.col-12.col-lg-8.amber-family
+                a(href='./fragrance-family-products.html')
+                    .frag-family__wrapper
+                        .frag-family__info Hương hổ phách
+                        .frag-family__top-bottom
+                        .frag-family__left-right
+                        .frag-family__img
+                            img(src='./images/decors/frag-family-amber.webp' alt='frag-family-amber')
+
+            .frag-family.col-12.col-sm-6.col-lg-4.chypre-family
+                a(href='./fragrance-family-products.html')
+                    .frag-family__wrapper
+                        .frag-family__info Hương Chypre
+                        .frag-family__top-bottom
+                        .frag-family__left-right
+                        .frag-family__img
+                            img(src='./images/decors/frag-family-chypre.webp' alt='frag-family-amber')
+
+            .frag-family.col-12.col-sm-6.col-lg-4.citrus-family
+                a(href='./fragrance-family-products.html')
+                    .frag-family__wrapper
+                        .frag-family__info Hương cam quýt
+                        .frag-family__top-bottom
+                        .frag-family__left-right
+                        .frag-family__img
+                            img(src='./images/decors/frag-family-citrus.webp' alt='frag-family-amber')
+
+            .frag-family.col-12.col-lg-4.leather-family
+                a(href='./fragrance-family-products.html')
+                    .frag-family__wrapper
+                        .frag-family__info Hương da thuộc
+                        .frag-family__top-bottom
+                        .frag-family__left-right
+                        .frag-family__img
+                            img(src='./images/decors/frag-family-leather.webp' alt='frag-family-amber')
+
+            .frag-family.col-12.col-sm-6.col-lg-4.floral-family
+                a(href='./fragrance-family-products.html')
+                    .frag-family__wrapper
+                        .frag-family__info Hương hoa
+                        .frag-family__top-bottom
+                        .frag-family__left-right
+                        .frag-family__img
+                            img(src='./images/decors/frag-family-floral.webp' alt='frag-family-amber')
+
+            .frag-family.col-12.col-sm-6.col-lg-4.woody-family
+                a(href='./fragrance-family-products.html')
+                    .frag-family__wrapper
+                        .frag-family__info Hương gỗ
+                        .frag-family__top-bottom
+                        .frag-family__left-right
+                        .frag-family__img
+                            img(src='./images/decors/frag-family-woody.webp' alt='frag-family-amber')
+
+            .frag-family.col-12.col-lg-8.aromatic-family
+                a(href='./fragrance-family-products.html')
+                    .frag-family__wrapper
+                        .frag-family__info Hương thơm ngát
+                        .frag-family__top-bottom
+                        .frag-family__left-right
+                        .frag-family__img
+                            img(src='./images/decors/frag-family-aromatic.webp' alt='frag-family-amber')
+
+    // Section Featured Brands
+    section.section.section-featured-brands
+        h2.section__title.section-featured-brands__title
+            | THƯƠNG HIỆU NỔI BẬT
+
+        .featured-brands__nav
+            ul#brandsTab.nav.nav-pills.justify-content-center(role='tablist')
+                li.nav-item(role='presentation')
+                    button#niche-tab.nav-link.active(data-bs-toggle='tab' data-bs-target='#niche' type='button' role='tab' aria-controls='niche' aria-selected='true')
+                        | Niche
+
+                .vertical-line
+
+                li.nav-item(role='presentation')
+                    button#designer-tab.nav-link(data-bs-toggle='tab' data-bs-target='#designer' type='button' role='tab' aria-controls='designer' aria-selected='false')
+                        | Designer
+
+            #brandsTabContent.tab-content
+                #niche.tab-pane.fade.show.active.container(role='tabpanel' aria-labelledby='niche-tab')
+                    .brands-slider.brands-slider--niche
+                        .brands-slider__slide
+                            .brands-slider__img
+                                a.brands-slider__link(href='./brand-products.html')
+                                    img.brand-img(src='./images/brands/molinard.webp' alt='molinard')
+                                a.brands-slider__link(href='./brand-products.html')
+                                    img.brand-img(src='./images/brands/amouroud.webp' alt='amouroud')
+
+                        .brands-slider__slide
+                            .brands-slider__img
+                                a.brands-slider__link(href='./brand-products.html')
+                                    img.brand-img(src='./images/brands/acqua-di-parma.webp' alt='acqua-di-parma')
+                                a.brands-slider__link(href='./brand-products.html')
+                                    img.brand-img(src='./images/brands/phaedon.webp' alt='phaedon')
+
+                        .brands-slider__slide
+                            .brands-slider__img
+                                a.brands-slider__link(href='./brand-products.html')
+                                    img.brand-img(src='./images/brands/parfums-de-marly.webp' alt='parfums-de-marly')
+                                a.brands-slider__link(href='./brand-products.html')
+                                    img.brand-img(src='./images/brands/roja.webp' alt='roja')
+
+                        .brands-slider__slide
+                            .brands-slider__img
+                                a.brands-slider__link(href='./brand-products.html')
+                                    img.brand-img(src='./images/brands/amouage.webp' alt='amouage')
+                                a.brands-slider__link(href='./brand-products.html')
+                                    img.brand-img(src='./images/brands/creed.webp' alt='creed')
+
+                        .brands-slider__slide
+                            .brands-slider__img
+                                a.brands-slider__link(href='./brand-products.html')
+                                    img.brand-img(src='./images/brands/boadicea.webp' alt='boadicea')
+                                a.brands-slider__link(href='./brand-products.html')
+                                    img.brand-img(src='./images/brands/nasomatto.webp' alt='nasomatto')
+
+                        .brands-slider__slide
+                            .brands-slider__img
+                                a.brands-slider__link(href='./brand-products.html')
+                                    img.brand-img(src='./images/brands/kilian.webp' alt='kilian')
+                                a.brands-slider__link(href='./brand-products.html')
+                                    img.brand-img(src='./images/brands/alysonoldoini.webp' alt='alysonoldoini')
+
+                        .brands-slider__slide
+                            .brands-slider__img
+                                a.brands-slider__link(href='./brand-products.html')
+                                    img.brand-img(src='./images/brands/diptyque.webp' alt='diptyque')
+                                a.brands-slider__link(href='./brand-products.html')
+                                    img.brand-img(src='./images/brands/jo-malone.webp' alt='jo-malone')
+
+                        .brands-slider__slide
+                            .brands-slider__img
+                                a.brands-slider__link(href='./brand-products.html')
+                                    img.brand-img(src='./images/brands/nishane.webp' alt='nishane')
+                                a.brands-slider__link(href='./brand-products.html')
+                                    img.brand-img(src='./images/brands/le-labo.webp' alt='le-labo')
+
+                #designer.tab-pane.fade.container(role='tabpanel' aria-labelledby='designer-tab')
+                    .brands-slider.brands-slider--designer
+                        .brands-slider__slide
+                            .brands-slider__img
+                                a.brands-slider__link(href='./brand-products.html')
+                                    img.brand-img(src='./images/brands/ysl.webp' alt='ysl')
+                                a.brands-slider__link(href='./brand-products.html')
+                                    img.brand-img(src='./images/brands/dior.webp' alt='dior')
+
+                        .brands-slider__slide
+                            .brands-slider__img
+                                a.brands-slider__link(href='./brand-products.html')
+                                    img.brand-img(src='./images/brands/guerlain.webp' alt='guerlain')
+                                a.brands-slider__link(href='./brand-products.html')
+                                    img.brand-img(src='./images/brands/bvlgari.webp' alt='bvlgari')
+
+                        .brands-slider__slide
+                            .brands-slider__img
+                                a.brands-slider__link(href='./brand-products.html')
+                                    img.brand-img(src='./images/brands/chanel.webp' alt='chanel')
+                                a.brands-slider__link(href='./brand-products.html')
+                                    img.brand-img(src='./images/brands/hermes.webp' alt='hermes')
+
+                        .brands-slider__slide
+                            .brands-slider__img
+                                a.brands-slider__link(href='./brand-products.html')
+                                    img.brand-img(src='./images/brands/giorgio-armani.webp' alt='giorgio-armani')
+                                a.brands-slider__link(href='./brand-products.html')
+                                    img.brand-img(src='./images/brands/jean-paul-gaultier.webp' alt='jean-paul-gaultier')
+
+                        .brands-slider__slide
+                            .brands-slider__img
+                                a.brands-slider__link(href='./brand-products.html')
+                                    img.brand-img(src='./images/brands/givenchy.webp' alt='givenchy')
+                                a.brands-slider__link(href='./brand-products.html')
+                                    img.brand-img(src='./images/brands/burberry.webp' alt='burberry')
+
+                        .brands-slider__slide
+                            .brands-slider__img
+                                a.brands-slider__link(href='./brand-products.html')
+                                    img.brand-img(src='./images/brands/calvin-klein.webp' alt='calvin-klein')
+                                a.brands-slider__link(href='./brand-products.html')
+                                    img.brand-img(src='./images/brands/dolce_gabbana.webp' alt='dolce_gabbana')
+
+                        .brands-slider__slide
+                            .brands-slider__img
+                                a.brands-slider__link(href='./brand-products.html')
+                                    img.brand-img(src='./images/brands/hugo-boss.webp' alt='hugo-boss')
+                                a.brands-slider__link(href='./brand-products.html')
+                                    img.brand-img(src='./images/brands/paco_rabanne.webp' alt='paco_rabanne')
+
+                        .brands-slider__slide
+                            .brands-slider__img
+                                a.brands-slider__link(href='./brand-products.html')
+                                    img.brand-img(src='./images/brands/valentino.webp' alt='valentino')
+                                a.brands-slider__link(href='./brand-products.html')
+                                    img.brand-img(src='./images/brands/gucci.webp' alt='gucci')
+
+        button.section__btn.section-bestsellers__btn
+            a(href='./brand-products.html') XEM TẤT CẢ THƯƠNG HIỆU
+
+    // Section Latest Blogs
+    section.section.section-latest-blogs
+        h2.section__title.section-latest-blogs__title
+            | BLOG MỚI NHẤT
+
+        .blogs.container
+            .blog.first-blog.row.row-cols-1.row-cols-md-2
+                .blog__content.col-12.col-lg-5.col-xl-4
+                    h3.blog__title
+                        | Giorgio Armani Light di Gioia - Ngày rực sáng
+                    p.blog__intro
+                        | Thời tiết mùa đông có thể ảm đạm, u sầu như địa ngục nhưng với
+                        | chút hương phảng phất của hoa nhài và hoa dành dành sẽ đem đến
+                        | cho bạn sự ấm áp, rực rỡ như đang tận hưởng hoàng hôn rạng ngời
+                        | ngay tại Địa Trung Hải[...]
+
+                    p.blog__date 20 July, 2021
+
+                    button.section__btn.readmore__btn
+                        a(href='./blog-detail.html') ĐỌC THÊM
+
+                .blog__img.col-12.col-lg-7.col-xl-8
+                    img(src='./images/banners/blog-armani-light-di-gioia.webp' alt='blog-armani-light-di-gioia')
+
+            .blog.second-blog.row.row-cols-1.row-cols-md-2
+                .blog__img.col-12.col-lg-7.col-xl-8
+                    img(src='./images/banners/blog-armani-si-fiori.webp' alt='blog-armani-si-fiori')
+
+                .blog__content.col-12.col-lg-5.col-xl-4
+                    h3.blog__title
+                        | Armani Sì Fiori - Đam mê và đầy nhiệt huyết
+                    p.blog__intro
+                        | Sì Fiori gây chú ý bởi sự trẻ trung, nữ tính với hương nho đen
+                        | cùng quýt. Dường như tôi nghĩ mình đã ngửi thấy mùi hương của
+                        | hoa cam, cái thứ hương quyến luyến khó cưỡng ấy, nâng đỡ đầy
+                        | nhịp nhàng với hoa hồng miên man[...]
+
+                    p.blog__date 18 July, 2021
+
+                    button.section__btn.readmore__btn
+                        a(href='./blog-detail.html') ĐỌC THÊM
+
+        button.section__btn.readmore__btn
+            a(href='./blogs.html') XEM TẤT CẢ BLOGS
+
+    // Section Services
+    section.section.section-services.container
+        h2.section__title.section-services__title
+            | TẠI SAO CHỌN LA PARFUMANIA
+
+        .services.row.row-cols-4
+            .service.col-12.col-sm-6.col-xl-3
+                img.service__icon(src='./images/icons/authentic-products.svg' alt='authentic-products')
+                h4.service__title Sản phẩm chính hãng
+                p.service__content
+                    | Sản phẩm nước hoa được mua trực tiếp tại Sephora và store chính
+                    | hãng ở Pháp và Ý
+
+            .service.col-12.col-sm-6.col-xl-3
+                img.service__icon(src='./images/icons/gift-box.svg' alt='gift-box')
+                h4.service__title Miễn phí bọc quà
+                p.service__content
+                    | Miễn phí hộp quà và thiệp với đơn hàng trên 800,000VND cho tất cả
+                    | các khách hàng
+
+            .service.col-12.col-sm-6.col-xl-3
+                img.service__icon(src='./images/icons/free-sample.svg' alt='free-sample')
+                h4.service__title Free sample
+                p.service__content
+                    | Tặng kèm một sample chính hãng với các đơn hàng có giá trị từ
+                    | 2,000,000VND trở lên
+
+            .service.col-12.col-sm-6.col-xl-3
+                img.service__icon(src='./images/icons/gift-card.svg' alt='gift-card')
+                h4.service__title Ưu đãi thành viên
+                p.service__content
+                    | Thành viên vàng được giảm 5%, thành viên bạc được giảm 3% cho tất
+                    | cả các đơn hàng
+
+    // Section Customer Feedbacks
+    section.section.section-feedbacks.container-fluid
+        h2.section__title.section-feedbacks__title
+            | CẢM NHẬN KHÁCH HÀNG
+
+        .feedbacks.container
+            #carouselCustomerFeebacks.carousel.carousel-dark.slide(data-bs-ride='carousel' data-bs-interval='false')
+                .carousel-indicators
+                    img(type='button' data-bs-target='#carouselCustomerFeebacks' data-bs-slide-to='0' aria-label='Slide 1' src='./images/customers/customer-01.webp' alt='customer-avatar')
+                    img.active(type='button' data-bs-target='#carouselCustomerFeebacks' data-bs-slide-to='1' aria-current='true' aria-label='Slide 2' src='./images/customers/customer-02.webp' alt='customer-avatar')
+                    img(type='button' data-bs-target='#carouselCustomerFeebacks' data-bs-slide-to='2' aria-label='Slide 3' src='./images/customers/customer-03.webp' alt='customer-avatar')
+
+                .carousel-inner
+                    .carousel-item.feedback
+                        .feedback__quote-icon
+                            span.iconify(data-icon='bx:bxs-quote-alt-left' data-inline='false')
+                        p.feedback__content
+                            | Cảm ơn La Parfumania đã giúp mình chọn các món quà ý nghĩa
+                            | dành tặng cho bạn bè và đối tác. Showroom sang trọng, dịch vụ
+                            | chuyên nghiệp, ship hàng nhanh, nhân viên siêu dễ thương, tư
+                            | vấn nhiệt tình, mình thấy rất hài lòng. Từ bây giờ, mình đã có
+                            | thể sở hữu được sản phẩm nước hoa ưng ý với giá cả tốt mà
+                            | không phải lo lắng về chất lượng.
+                        p.feedback__name
+                            | Hoàng Nhật Minh, 
+                            span.feedback__job-title Sale Manager Halgitech
+                        .feedback__quote-icon
+                            span.iconify(data-icon='bx:bxs-quote-alt-right' data-inline='false')
+
+                    .carousel-item.feedback.active
+                        .feedback__quote-icon
+                            span.iconify(data-icon='bx:bxs-quote-alt-left' data-inline='false')
+                        p.feedback__content
+                            | Hành trình đi tìm mùi hương hợp với phong cách của mình thật
+                            | không hề dễ dàng. Mình đã từng thử qua khá nhiều mùi hương
+                            | nhưng có vẻ như vẫn chưa thực sự ưng ý. Thế rồi tình cờ đến
+                            | với La Parfumania, mình đã gặp Rose Of No Man’s Land của
+                            | Byredo, một mùi hương hoa hồng sớm mai dịu dàng, đầy tinh tế,
+                            | đúng như ý mình muốn.
+                        p.feedback__name
+                            | Phạm Hoài An, 
+                            span.feedback__job-title Giám đốc Marketing Liant
+                        .feedback__quote-icon
+                            span.iconify(data-icon='bx:bxs-quote-alt-right' data-inline='false')
+
+                    .carousel-item.feedback
+                        .feedback__quote-icon
+                            span.iconify(data-icon='bx:bxs-quote-alt-left' data-inline='false')
+                        p.feedback__content
+                            | Khi mua hàng ở đây là feeling like a queen! Các bạn bán hàng
+                            | và tư vấn hết sức nhiệt tình chiều khách! Dù biết mũi mình có
+                            | hạn mà thật sự mê đắm khám phá tất cả những mùi hương. Nếu bạn
+                            | muốn tìm mùi hương phù hợp với tính cách của mình, hãy đến với
+                            | La Parfumania nhé. Highly recommend! Chắc chắn mình sẽ quay
+                            | lại thật nhiều.
+                        p.feedback__name
+                            | Trịnh Hương Giang, 
+                            span.feedback__job-title Nhà thiết kế Lascent
+                        .feedback__quote-icon
+                            span.iconify(data-icon='bx:bxs-quote-alt-right' data-inline='false')
+
+    // Section Customer Pictures
+    section.section.section-customer-pictures
+        h2.section__title.section-customer-pictures__title
+            | HÌNH ẢNH TỪ KHÁCH HÀNG
+
+        .customer-pictures.container-fluid
+            .picture-gallery
+                a(data-fancybox='gallery' href='./images/decors/customer-picture-01.webp' data-caption='Từ irisloves, 20-07-2021')
+                    img(src='./images/decors/customer-picture-01.webp' alt='customer-picture')
+
+                a(data-fancybox='gallery' href='./images/decors/customer-picture-02.webp' data-caption='Từ hoangnguyen, 15-07-2021')
+                    img(src='./images/decors/customer-picture-02.webp' alt='customer-picture')
+
+                a(data-fancybox='gallery' href='./images/decors/customer-picture-03.webp' data-caption='Từ hoaian90, 29-06-2021')
+                    img(src='./images/decors/customer-picture-03.webp' alt='customer-picture')
+
+                a(data-fancybox='gallery' href='./images/decors/customer-picture-04.webp' data-caption='Từ nhatnam34, 20-06-2021')
+                    img(src='./images/decors/customer-picture-04.webp' alt='customer-picture')
+
+                a(data-fancybox='gallery' href='./images/decors/customer-picture-05.webp' data-caption='Từ baoanh8x, 16-06-2021')
+                    img(src='./images/decors/customer-picture-05.webp' alt='customer-picture')
+
+                a(data-fancybox='gallery' href='./images/decors/customer-picture-06.webp' data-caption='Từ lanthien128, 08-06-2021')
+                    img(src='./images/decors/customer-picture-06.webp' alt='customer-picture')
+                    
+                a(data-fancybox='gallery' href='./images/decors/customer-picture-07.webp' data-caption='Từ hannahpham98, 28-05-2021')
+                    img(src='./images/decors/customer-picture-07.webp' alt='customer-picture')
+
+                a(data-fancybox='gallery' href='./images/decors/customer-picture-08.webp' data-caption='Từ minhoang, 10-05-2021')
+                    img(src='./images/decors/customer-picture-08.webp' alt='customer-picture')
+
+                a(data-fancybox='gallery' href='./images/decors/customer-picture-09.webp' data-caption='Từ lamkhe8x, 01-05-2021')
+                    img(src='./images/decors/customer-picture-09.webp' alt='customer-picture')
+
+                a(data-fancybox='gallery' href='./images/decors/customer-picture-10.webp' data-caption='Từ ngocanh88, 26-04-2021')
+                    img(src='./images/decors/customer-picture-10.webp' alt='customer-picture')
+
+block vendor-script
+
+    script(src='./vendor/slick-1.8.1/slick/slick.min.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.3.5/jquery.fancybox.min.js')
+
+
+block important-script
+    script(src='./js/index.js')

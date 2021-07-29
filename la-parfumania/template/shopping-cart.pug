@@ -1,0 +1,136 @@
+extends template-part/layout.pug
+
+block vendor-css
+
+block important-css
+
+    link(rel='stylesheet' href='./css/shopping-cart.css')
+
+block title
+
+    title Giỏ hàng - La Parfumania Perfume Gallery
+
+block head-banner
+
+    // Header Page Banner
+    .page-banner.container-fluid
+        .page-banner__content
+            h2.page-banner__title GIỎ HÀNG
+            .page-banner__hr-line
+            .page-banner__breadcrumb
+                nav(aria-label='breadcrumb')
+                    ol.breadcrumb
+                        li.breadcrumb-item
+                            a(href='./index.html') Trang chủ
+                        li.breadcrumb-divider
+                            span.iconify(data-icon='carbon:chevron-right' data-inline='false')
+                        li.breadcrumb-item.active(aria-current='page')
+                            | Giỏ hàng
+
+
+block content
+
+    // Section Shopping Cart
+    section.section.section-cart.container-fluid
+        .section-cart-inner.container
+            .cart-container
+                .cart-table
+                    .cart-header-entries.mobile-hidden
+                        .cart-entry.img-entry SẢN PHẨM
+                        .product-col-entries
+                            .cart-entry.name-entry TÊN SẢN PHẨM
+                            .cart-entry.volume-entry.medium-col
+                                | DUNG TÍCH
+                            .cart-entry.unit-entry.medium-col ĐƠN GIÁ
+                            .cart-entry.quantity-entry.medium-col
+                                | SỐ LƯỢNG
+                            .cart-entry.total-entry.medium-col
+                                | THÀNH TIỀN
+                            .cart-entry.remove-entry.medium-col
+                    .cart-body
+                        .product-row
+                            .pro-img
+                                a(href='./product-detail.html')
+                                    img(src='./images/products/cart-ysl-libre.webp' alt='cart-ysl-libre')
+                            .product-cols
+                                .pro-name.mobile-flex
+                                    a(href='./product-detail.html') Yves Saint Laurent Libre EDP
+                                    button.btn-remove-product.btn-remove-mobile
+                                        span.iconify.remove-icon(data-icon='icomoon-free:bin' data-inline='false')
+                                .pro-volume.medium-col 30ml
+                                .unit-price.medium-col.mobile-flex
+                                    span.col-name Đơn giá
+                                    span.col-value 1.850.000đ
+                                .pro-quantity.medium-col.mobile-flex
+                                    span.col-name Số lượng
+                                    .cart__quantity
+                                        button.quantity-btn.quantity-decrease-btn
+                                            | -
+                                        input.quantity-input(type='text' value='1')
+                                        button.quantity-btn.quantity-increase-btn
+                                            | +
+                                .total-price.medium-col.mobile-flex
+                                    span.col-name Thành tiền
+                                    span.col-value 1.850.000đ
+                                .pro-remove.text-center.mobile-hidden
+                                    button.btn-remove-product
+                                        span.iconify.remove-icon(data-icon='icomoon-free:bin' data-inline='false')
+                        .product-row
+                            .pro-img
+                                a(href='./product-detail.html')
+                                    img(src='./images/products/cart-armani-si.webp' alt='cart-armani-si')
+                            .product-cols
+                                .pro-name.mobile-flex
+                                    a(href='./product-detail.html') Giorgio Armani Sì EDP
+                                    button.btn-remove-product.btn-remove-mobile
+                                        span.iconify.remove-icon(data-icon='icomoon-free:bin' data-inline='false')
+                                .pro-volume.medium-col 100ml
+                                .unit-price.medium-col.mobile-flex
+                                    span.col-name Đơn giá
+                                    span.col-value 3.580.000đ
+                                .pro-quantity.medium-col.mobile-flex
+                                    span.col-name Số lượng
+                                    .cart__quantity
+                                        button.quantity-btn.quantity-decrease-btn
+                                            | -
+                                        input.quantity-input(type='text' value='1')
+                                        button.quantity-btn.quantity-increase-btn
+                                            | +
+                                .total-price.medium-col.mobile-flex
+                                    span.col-name Thành tiền
+                                    span.col-value 3.580.000đ
+                                .pro-remove.text-center.mobile-hidden
+                                    button.btn-remove-product
+                                        span.iconify.remove-icon(data-icon='icomoon-free:bin' data-inline='false')
+                .cart-btns
+                    button.section__btn.btn-continue-shopping
+                        a(href='./female-products.html') TIẾP TỤC MUA HÀNG
+                    button.section__btn.btn-remove-all XÓA TOÀN BỘ
+            .order-container
+                .order-discount
+                    h4.order__title MÃ GIẢM GIÁ
+                    input.form-control.form-control-lg.discount-input(type='text' placeholder='Nhập mã giảm giá')
+                    button.section__btn.btn-apply-discount
+                        | ÁP DỤNG MÃ GIẢM GIÁ
+                .order-subtotal
+                    h4.order__title TỔNG TIỀN
+                    .order__temp-price.order-row
+                        p.order__entry Tạm tính
+                        p.order__temp-value 5.430.000₫
+                    .order__discount.order-row
+                        p.order__entry Giảm giá
+                        p.order__discount-value
+                            | - 
+                            span.discount-amount 200.000₫
+                    .order__subtotal.order-row
+                        p.order__entry Tổng tiền
+                        p.order__subtotal-value 5.230.000₫
+                    button.section__btn.btn-checkout
+                        a(href='./payment.html') TIẾN HÀNH ĐẶT HÀNG
+
+
+block vendor-script
+
+block important-script
+
+    script(src='./js/shopping-cart.js')

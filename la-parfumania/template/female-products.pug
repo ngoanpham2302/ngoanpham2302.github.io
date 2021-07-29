@@ -1,0 +1,532 @@
+extends template-part/layout.pug
+
+block vendor-css
+
+block important-css
+
+    link(rel='stylesheet' href='./css/female-products.css')
+
+block title
+
+    title Nước hoa nữ - La Parfumania Perfume Gallery
+
+block head-banner
+
+    // Header Page Banner
+    .page-banner.container-fluid
+        .page-banner__content
+            h2.page-banner__title Nước hoa nữ
+            .page-banner__hr-line
+            .page-banner__breadcrumb
+                nav(aria-label='breadcrumb')
+                    ol.breadcrumb
+                        li.breadcrumb-item
+                            a(href='./index.html') Trang chủ
+                        li.breadcrumb-divider
+                            span.iconify(data-icon='carbon:chevron-right' data-inline='false')
+                        li.breadcrumb-item.active(aria-current='page')
+                            | Nước hoa nữ
+
+
+block content
+
+    // Section Products List
+    section.section.section-products-list.container-fluid
+        .products__container.container
+            .products__filter
+                h4.section-title.filter-title TÌM SẢN PHẨM
+
+                .header-component__inner-search.product__search.d-flex
+                    span.iconify.search-icon(data-icon='carbon:search' data-inline='false')
+                    input.header-component__search-input(type='search' placeholder='Tìm kiếm')
+
+                .remove-filter-container
+                    button.section__btn.remove-filter__btn XÓA LỌC
+
+                .filter-entry.filter__brands
+                    h4.section-title.filter-title LỌC THEO THƯƠNG HIỆU
+
+                    ul.filter__brands-list.filter__list
+                        li.filter__item.filter__brand-item Chanel
+                        li.filter__item.filter__brand-item Christian Dior
+                        li.filter__item.filter__brand-item Dolce&Gabbana
+                        li.filter__item.filter__brand-item Giorgio Armani
+                        li.filter__item.filter__brand-item Givenchy
+                        li.filter__item.filter__brand-item Gucci
+                        li.filter__item.filter__brand-item Guerlain
+                        li.filter__item.filter__brand-item Marc Jocobs
+                        li.filter__item.filter__brand-item Viktor&Rolf
+                        li.filter__item.filter__brand-item
+                            | Yves Saint Laurent
+                        li.filter__item.filter__brand-item Marc Jocobs
+                        li.filter__item.filter__brand-item Viktor&Rolf
+                        li.filter__item.filter__brand-item Dolce&Gabbana
+                        li.filter__item.filter__brand-item Giorgio Armani
+
+                .filter-entry.filter__gender
+                    h4.section-title.filter-title LỌC THEO GIỚI TÍNH
+
+                    ul.filter__gender-list.filter__list
+                        li.filter__item.filter__gender-item Nam
+                        li.filter__item.filter__gender-item.filter__gender-item--female
+                            | Nữ
+                        li.filter__item.filter__gender-item Unisex
+
+                .filter-entry.filter__scents
+                    h4.section-title.filter-title LỌC THEO NHÓM HƯƠNG
+
+                    ul.filter__scents-list.filter__list
+                        li.filter__item.filter__scents-item
+                            | Hương hổ phách - Amber
+                        li.filter__item.filter__scents-item
+                            | Hương Síp - Chypre
+                        li.filter__item.filter__scents-item
+                            | Hương cam quýt - Citrus
+                        li.filter__item.filter__scents-item
+                            | Hương da thuộc - Leather
+                        li.filter__item.filter__scents-item
+                            | Hương hoa - Floral
+                        li.filter__item.filter__scents-item
+                            | Hương gỗ - Woody
+                        li.filter__item.filter__scents-item
+                            | Hương thơm ngát - Aromatic
+
+                .filter-entry.filter__types
+                    h4.section-title.filter-title LỌC THEO NỒNG ĐỘ
+
+                    ul.filter__types-list.filter__list
+                        li.filter__item.filter__types-item Eau Fraiche
+                        li.filter__item.filter__types-item
+                            | Eau de Cologne - EDC
+                        li.filter__item.filter__types-item
+                            | Eau de Toilette - EDT
+                        li.filter__item.filter__types-item
+                            | Eau de Parfum - EDP
+                        li.filter__item.filter__types-item
+                            | Parfum - Extrait de Parfum
+
+                .filter-entry.filter__longevity
+                    h4.section-title.filter-title LỌC THEO ĐỘ LƯU HƯƠNG
+
+                    ul.filter__longevity-list.filter__list
+                        li.filter__item.filter__longevity-item
+                            | Tạm ổn - 3h đến 6h
+                        li.filter__item.filter__longevity-item
+                            | Lâu - 7h đến 12h
+                        li.filter__item.filter__longevity-item
+                            | Rất lâu - Trên 12h
+
+                .filter-entry.filter__season
+                    h4.section-title.filter-title LỌC THEO MÙA
+
+                    ul.filter__season-list.filter__list
+                        li.filter__item.filter__season-item Mùa xuân
+                        li.filter__item.filter__season-item Mùa hạ
+                        li.filter__item.filter__season-item Mùa thu
+                        li.filter__item.filter__season-item Mùa đông
+
+                .filter-entry.filter__price
+                    h4.section-title.filter-title LỌC THEO GIÁ
+
+                    ul.filter__season-list.filter__list
+                        li.filter__item.filter__season-item
+                            | Dưới 2,000,000₫
+                        li.filter__item.filter__season-item
+                            | 2,000,001₫ - 5,000,000₫
+                        li.filter__item.filter__season-item
+                            | 5,000,001₫ - 8,000,000₫
+                        li.filter__item.filter__season-item
+                            | 8,000,001₫ - 20,000,000₫
+                        li.filter__item.filter__season-item
+                            | 20,000,001₫ - 50,000,000₫
+                        li.filter__item.filter__season-item
+                            | Trên 50,000,000₫
+
+                .filter-btn-container
+                    button.section__btn.filter__btn LỌC
+
+            .products__wrapper
+                .mobile-filter-icon
+                    button.section__btn.mobile-filter__btn
+                        span.iconify(data-icon='clarity:filter-solid' data-inline='false')
+                        span LỌC SẢN PHẨM
+
+                .products__sorts
+                    .products__sort-item.products__sort-order
+                        select.form-select(aria-label='select-sort-order')
+                            option(selected='') Sắp xếp sản phẩm
+                            option(value='1') Theo mức độ phổ biến
+                            option(value='2') Theo giá từ thấp đến cao
+                            option(value='3') Theo giá từ cao đến thấp
+
+                    .products__sort-item.products__sort-page-items
+                        select.form-select(aria-label='select-page-items')
+                            option(value='1') 9 sản phẩm/trang
+                            option(selected='' value='2') 12 sản phẩm/trang
+                            option(value='3') 15 sản phẩm/trang
+
+                .products-list
+                    .row.products-list__inner
+                        .col-12.col-sm-6.col-xl-4
+                            .card.product-card
+                                .product-card__img
+                                    img.card-img-top(src='./images/products/guerlain-coconut.webp' alt='guerlain-allegoria-coconut')
+
+                                    .product-card__wishlist
+                                        span.iconify.wishlist-icon--empty(data-icon='clarity:heart-line' data-inline='false')
+                                        span.iconify.wishlist-icon--filled(data-icon='clarity:heart-solid' data-inline='false')
+
+                                    button.btn-detail.product-card__btn
+                                        a(href='./product-detail.html') XEM CHI TIẾT
+
+                                .card-body
+                                    h5.card-title.product-card__brand GUERLAIN
+                                    p.card-text.product-card__name
+                                        | Allegoria Coconut EDT
+                                    p.card-text.product-card__price 3,120,000₫
+                                    button.btn-addtocart.product-card__btn
+                                        span.iconify.cart-icon(data-icon='clarity:shopping-cart-line' data-inline='false')
+                                        span Thêm vào giỏ hàng
+
+                        .col-12.col-sm-6.col-xl-4
+                            .card.product-card
+                                .product-card__img
+                                    img.card-img-top(src='./images/products/dg-the-only-one.webp' alt='dg-the-only-one')
+                                    .product-card__wishlist
+                                        span.iconify.wishlist-icon--empty(data-icon='clarity:heart-line' data-inline='false')
+                                        span.iconify.wishlist-icon--filled(data-icon='clarity:heart-solid' data-inline='false')
+                                    button.btn-detail.product-card__btn
+                                        a(href='./product-detail.html') XEM CHI TIẾT
+
+                                .card-body
+                                    h5.card-title.product-card__brand
+                                        | DOLCE&GABBANA
+                                    p.card-text.product-card__name
+                                        | The Only One EDP
+                                    p.card-text.product-card__price 3,250,000₫
+                                    button.btn-addtocart.product-card__btn
+                                        span.iconify.cart-icon(data-icon='clarity:shopping-cart-line' data-inline='false')
+                                        span Thêm vào giỏ hàng
+
+                        .col-12.col-sm-6.col-xl-4
+                            .card.product-card
+                                .product-card__img
+                                    img.card-img-top(src='./images/products/givenchy-linterdit.webp' alt='givenchy-linterdit')
+                                    .product-card__wishlist
+                                        span.iconify.wishlist-icon--empty(data-icon='clarity:heart-line' data-inline='false')
+                                        span.iconify.wishlist-icon--filled(data-icon='clarity:heart-solid' data-inline='false')
+                                    button.btn-detail.product-card__btn
+                                        a(href='./product-detail.html') XEM CHI TIẾT
+
+                                .card-body
+                                    h5.card-title.product-card__brand GIVENCHY
+                                    p.card-text.product-card__name L’Interdit EDP
+                                    p.card-text.product-card__price 2,650,000₫
+                                    button.btn-addtocart.product-card__btn
+                                        span.iconify.cart-icon(data-icon='clarity:shopping-cart-line' data-inline='false')
+                                        span Thêm vào giỏ hàng
+
+                        .col-12.col-sm-6.col-xl-4
+                            .card.product-card
+                                .product-card__img
+                                    img.card-img-top(src='./images/products/ysl-libre-edp.webp' alt='ysl-libre-edp')
+                                    .product-card__wishlist
+                                        span.iconify.wishlist-icon--empty(data-icon='clarity:heart-line' data-inline='false')
+                                        span.iconify.wishlist-icon--filled(data-icon='clarity:heart-solid' data-inline='false')
+                                    button.btn-detail.product-card__btn
+                                        a(href='./product-detail.html') XEM CHI TIẾT
+
+                                .card-body
+                                    h5.card-title.product-card__brand
+                                        | YVES SAINT LAURENT
+                                    p.card-text.product-card__name Libre EDP
+                                    p.card-text.product-card__price 1,850,000₫
+                                    button.btn-addtocart.product-card__btn
+                                        span.iconify.cart-icon(data-icon='clarity:shopping-cart-line' data-inline='false')
+                                        span Thêm vào giỏ hàng
+
+                        .col-12.col-sm-6.col-xl-4
+                            .card.product-card
+                                .product-card__img
+                                    img.card-img-top(src='./images/products/gucci-flora.webp' alt='gucci-flora')
+                                    .product-card__wishlist
+                                        span.iconify.wishlist-icon--empty(data-icon='clarity:heart-line' data-inline='false')
+                                        span.iconify.wishlist-icon--filled(data-icon='clarity:heart-solid' data-inline='false')
+                                    button.btn-detail.product-card__btn
+                                        a(href='./product-detail.html') XEM CHI TIẾT
+
+                                .card-body
+                                    h5.card-title.product-card__brand GUCCI
+                                    p.card-text.product-card__name
+                                        | Flora Gardenia EDP
+                                    p.card-text.product-card__price 2,980,000₫
+                                    button.btn-addtocart.product-card__btn
+                                        span.iconify.cart-icon(data-icon='clarity:shopping-cart-line' data-inline='false')
+                                        span Thêm vào giỏ hàng
+
+                        .col-12.col-sm-6.col-xl-4
+                            .card.product-card
+                                .product-card__img
+                                    img.card-img-top(src='./images/products/marc-jacobs-daisy.webp' alt='marc-jacobs-daisy')
+                                    .product-card__wishlist
+                                        span.iconify.wishlist-icon--empty(data-icon='clarity:heart-line' data-inline='false')
+                                        span.iconify.wishlist-icon--filled(data-icon='clarity:heart-solid' data-inline='false')
+                                    button.btn-detail.product-card__btn
+                                        a(href='./product-detail.html') XEM CHI TIẾT
+
+                                .card-body
+                                    h5.card-title.product-card__brand
+                                        | MARC JACOBS
+                                    p.card-text.product-card__name Daisy EDP
+                                    p.card-text.product-card__price 2,685,000₫
+                                    button.btn-addtocart.product-card__btn
+                                        span.iconify.cart-icon(data-icon='clarity:shopping-cart-line' data-inline='false')
+                                        span Thêm vào giỏ hàng
+
+                        .col-12.col-sm-6.col-xl-4
+                            .card.product-card
+                                .product-card__img
+                                    img.card-img-top(src='./images/products/guerlain-mon.webp' alt='guerlain-mon-edp')
+                                    .product-card__wishlist
+                                        span.iconify.wishlist-icon--empty(data-icon='clarity:heart-line' data-inline='false')
+                                        span.iconify.wishlist-icon--filled(data-icon='clarity:heart-solid' data-inline='false')
+                                    button.btn-detail.product-card__btn
+                                        a(href='./product-detail.html') XEM CHI TIẾT
+
+                                .card-body
+                                    h5.card-title.product-card__brand GUERLAIN
+                                    p.card-text.product-card__name Mon EDP
+                                    p.card-text.product-card__price 2,890,000₫
+                                    button.btn-addtocart.product-card__btn
+                                        span.iconify.cart-icon(data-icon='clarity:shopping-cart-line' data-inline='false')
+                                        span Thêm vào giỏ hàng
+
+                        .col-12.col-sm-6.col-xl-4
+                            .card.product-card
+                                .product-card__img
+                                    img.card-img-top(src='./images/products/armani-acqua-di-gioia.webp' alt='armani-acqua-di-gioia')
+                                    .product-card__wishlist
+                                        span.iconify.wishlist-icon--empty(data-icon='clarity:heart-line' data-inline='false')
+                                        span.iconify.wishlist-icon--filled(data-icon='clarity:heart-solid' data-inline='false')
+                                    button.btn-detail.product-card__btn
+                                        a(href='./product-detail.html') XEM CHI TIẾT
+
+                                .card-body
+                                    h5.card-title.product-card__brand
+                                        | GIORGIO ARMANI
+                                    p.card-text.product-card__name
+                                        | Acqua di Gioia EDT
+                                    p.card-text.product-card__price 2,700,000₫
+                                    button.btn-addtocart.product-card__btn
+                                        span.iconify.cart-icon(data-icon='clarity:shopping-cart-line' data-inline='false')
+                                        span Thêm vào giỏ hàng
+
+                        .col-12.col-sm-6.col-xl-4
+                            .card.product-card
+                                .product-card__img
+                                    img.card-img-top(src='./images/products/ysl-mon-paris-couture.webp' alt='ysl-mon-paris-couture')
+                                    .product-card__wishlist
+                                        span.iconify.wishlist-icon--empty(data-icon='clarity:heart-line' data-inline='false')
+                                        span.iconify.wishlist-icon--filled(data-icon='clarity:heart-solid' data-inline='false')
+                                    button.btn-detail.product-card__btn
+                                        a(href='./product-detail.html') XEM CHI TIẾT
+
+                                .card-body
+                                    h5.card-title.product-card__brand
+                                        | YVES SAINT LAURENT
+                                    p.card-text.product-card__name
+                                        | Mon Paris Couture EDP
+                                    p.card-text.product-card__price 2,870,000₫
+                                    button.btn-addtocart.product-card__btn
+                                        span.iconify.cart-icon(data-icon='clarity:shopping-cart-line' data-inline='false')
+                                        span Thêm vào giỏ hàng
+
+                        .col-12.col-sm-6.col-xl-4
+                            .card.product-card
+                                .product-card__img
+                                    img.card-img-top(src='./images/products/armani-my-way.webp' alt='armani-my-way')
+                                    .product-card__wishlist
+                                        span.iconify.wishlist-icon--empty(data-icon='clarity:heart-line' data-inline='false')
+                                        span.iconify.wishlist-icon--filled(data-icon='clarity:heart-solid' data-inline='false')
+                                    button.btn-detail.product-card__btn
+                                        a(href='./product-detail.html') XEM CHI TIẾT
+
+                                .card-body
+                                    h5.card-title.product-card__brand
+                                        | GIORGIO ARMANI
+                                    p.card-text.product-card__name My Way EDP
+                                    p.card-text.product-card__price 2,590,000₫
+                                    button.btn-addtocart.product-card__btn
+                                        span.iconify.cart-icon(data-icon='clarity:shopping-cart-line' data-inline='false')
+                                        span Thêm vào giỏ hàng
+
+                        .col-12.col-sm-6.col-xl-4
+                            .card.product-card
+                                .product-card__img
+                                    img.card-img-top(src='./images/products/dg-dolce-green.webp' alt='dg-dolce-green')
+                                    .product-card__wishlist
+                                        span.iconify.wishlist-icon--empty(data-icon='clarity:heart-line' data-inline='false')
+                                        span.iconify.wishlist-icon--filled(data-icon='clarity:heart-solid' data-inline='false')
+                                    button.btn-detail.product-card__btn
+                                        a(href='./product-detail.html') XEM CHI TIẾT
+
+                                .card-body
+                                    h5.card-title.product-card__brand
+                                        | DOLCE&GABBANA
+                                    p.card-text.product-card__name Dolce EDP
+                                    p.card-text.product-card__price 2,870,000₫
+                                    button.btn-addtocart.product-card__btn
+                                        span.iconify.cart-icon(data-icon='clarity:shopping-cart-line' data-inline='false')
+                                        span Thêm vào giỏ hàng
+
+                        .col-12.col-sm-6.col-xl-4
+                            .card.product-card
+                                .product-card__img
+                                    img.card-img-top(src='./images/products/chanel-gabrielle.webp' alt='chanel-gabrielle')
+                                    .product-card__wishlist
+                                        span.iconify.wishlist-icon--empty(data-icon='clarity:heart-line' data-inline='false')
+                                        span.iconify.wishlist-icon--filled(data-icon='clarity:heart-solid' data-inline='false')
+                                    button.btn-detail.product-card__btn
+                                        a(href='./product-detail.html') XEM CHI TIẾT
+
+                                .card-body
+                                    h5.card-title.product-card__brand CHANEL
+                                    p.card-text.product-card__name Gabrielle EDP
+                                    p.card-text.product-card__price 3,570,000₫
+                                    button.btn-addtocart.product-card__btn
+                                        span.iconify.cart-icon(data-icon='clarity:shopping-cart-line' data-inline='false')
+                                        span Thêm vào giỏ hàng
+
+                .products__pagination
+                    nav(aria-label='page-navigation')
+                        ul.pagination
+                            li.pagination-item
+                                a.pagination-link.page-prev(href='#' aria-label='Previous')
+                                    span.iconify(data-icon='akar-icons:chevron-left' data-inline='false')
+
+                            li.pagination-item
+                                a.pagination-link(href='#') 1
+                            li.pagination-item
+                                a.pagination-link(href='#') 2
+                            li.pagination-item
+                                a.pagination-link(href='#') 3
+                            li.pagination-item
+                                a.pagination-link(href='#') 4
+                            li.pagination-item
+                                a.pagination-link(href='#') 5
+
+                            li.pagination-item.page-next
+                                a.pagination-link(href='#' aria-label='Next')
+                                    span.iconify(data-icon='akar-icons:chevron-right' data-inline='false')
+
+        .mobile-filter-backdrop
+            .mobile-products__filter
+                .btn-close-filter
+                    span.iconify(data-icon='clarity:window-close-line' data-inline='false')
+
+                h4.section-title.filter-title LỌC SẢN PHẨM
+
+                .remove-filter-container
+                    button.section__btn.remove-filter__btn XÓA LỌC
+
+                .filter-entry.filter__brands
+                    h4.section-title.filter-title LỌC THEO THƯƠNG HIỆU
+                    ul.filter__brands-list.filter__list
+                        li.filter__item.filter__brand-item Chanel
+                        li.filter__item.filter__brand-item Christian Dior
+                        li.filter__item.filter__brand-item Dolce&Gabbana
+                        li.filter__item.filter__brand-item Giorgio Armani
+                        li.filter__item.filter__brand-item Givenchy
+                        li.filter__item.filter__brand-item Gucci
+                        li.filter__item.filter__brand-item Guerlain
+                        li.filter__item.filter__brand-item Marc Jocobs
+                        li.filter__item.filter__brand-item Viktor&Rolf
+                        li.filter__item.filter__brand-item
+                            | Yves Saint Laurent
+                        li.filter__item.filter__brand-item Marc Jocobs
+                        li.filter__item.filter__brand-item Viktor&Rolf
+                        li.filter__item.filter__brand-item Dolce&Gabbana
+                        li.filter__item.filter__brand-item Giorgio Armani
+
+                .filter-entry.filter__gender
+                    h4.section-title.filter-title LỌC THEO GIỚI TÍNH
+                    ul.filter__gender-list.filter__list
+                        li.filter__item.filter__gender-item Nam
+                        li.filter__item.filter__gender-item.filter__gender-item--female
+                            | Nữ
+                        li.filter__item.filter__gender-item Unisex
+
+                .filter-entry.filter__scents
+                    h4.section-title.filter-title LỌC THEO NHÓM HƯƠNG
+                    ul.filter__scents-list.filter__list
+                        li.filter__item.filter__scents-item
+                            | Hương hổ phách - Amber
+                        li.filter__item.filter__scents-item
+                            | Hương Síp - Chypre
+                        li.filter__item.filter__scents-item
+                            | Hương cam quýt - Citrus
+                        li.filter__item.filter__scents-item
+                            | Hương da thuộc - Leather
+                        li.filter__item.filter__scents-item
+                            | Hương hoa - Floral
+                        li.filter__item.filter__scents-item
+                            | Hương gỗ - Woody
+                        li.filter__item.filter__scents-item
+                            | Hương thơm ngát - Aromatic
+
+                .filter-entry.filter__types
+                    h4.section-title.filter-title LỌC THEO NỒNG ĐỘ
+                    ul.filter__types-list.filter__list
+                        li.filter__item.filter__types-item Eau Fraiche
+                        li.filter__item.filter__types-item
+                            | Eau de Cologne - EDC
+                        li.filter__item.filter__types-item
+                            | Eau de Toilette - EDT
+                        li.filter__item.filter__types-item
+                            | Eau de Parfum - EDP
+                        li.filter__item.filter__types-item
+                            | Parfum - Extrait de Parfum
+
+                .filter-entry.filter__longevity
+                    h4.section-title.filter-title LỌC THEO ĐỘ LƯU HƯƠNG
+                    ul.filter__longevity-list.filter__list
+                        li.filter__item.filter__longevity-item
+                            | Tạm ổn - 3h đến 6h
+                        li.filter__item.filter__longevity-item
+                            | Lâu - 7h đến 12h
+                        li.filter__item.filter__longevity-item
+                            | Rất lâu - Trên 12h
+
+                .filter-entry.filter__season
+                    h4.section-title.filter-title LỌC THEO MÙA
+                    ul.filter__season-list.filter__list
+                        li.filter__item.filter__season-item Mùa xuân
+                        li.filter__item.filter__season-item Mùa hạ
+                        li.filter__item.filter__season-item Mùa thu
+                        li.filter__item.filter__season-item Mùa đông
+
+                .filter-entry.filter__price
+                    h4.section-title.filter-title LỌC THEO GIÁ
+                    ul.filter__season-list.filter__list
+                        li.filter__item.filter__season-item
+                            | Dưới 2,000,000₫
+                        li.filter__item.filter__season-item
+                            | 2,000,001₫ - 5,000,000₫
+                        li.filter__item.filter__season-item
+                            | 5,000,001₫ - 8,000,000₫
+                        li.filter__item.filter__season-item
+                            | 8,000,001₫ - 20,000,000₫
+                        li.filter__item.filter__season-item
+                            | 20,000,001₫ - 50,000,000₫
+                        li.filter__item.filter__season-item
+                            | Trên 50,000,000₫
+                            
+                .filter-btn-container
+                    button.section__btn.filter__btn LỌC
+
+
+block vendor-script
+
+block important-script
+
+    script(src='./js/female-products.js')

@@ -1,0 +1,112 @@
+// Info bar
+.info-bar.container-fluid
+  .info-bar__wrapper
+    .info-bar__phone
+      a(href='tel:0123456789' target='_blank')
+        span.iconify.phone-icon(data-icon='carbon:phone-filled' data-inline='false')
+        span.info-bar__phone-number 0123456789
+
+    .info-bar__social-icons
+      a(href='#')
+        span.iconify.youtube-icon(data-icon='carbon:logo-youtube' data-inline='false')
+      a(href='#')
+        span.iconify.facebook-icon(data-icon='bx:bxl-facebook' data-inline='false')
+      a(href='#')
+        span.iconify.email-icon(data-icon='carbon:email' data-inline='false')
+      a(href='#')
+        span.iconify.instagram-icon(data-icon='carbon:logo-instagram' data-inline='false')
+      a(href='#')
+        span.iconify.pinterest-icon(data-icon='bx:bxl-pinterest-alt' data-inline='false')
+      a(href='#')
+        span.iconify.twitter-icon(data-icon='bx:bxl-twitter' data-inline='false')
+
+// Desktop/Tablet Header Components
+.header-component-outer.container-fluid
+  .header-component.container
+    .header-component__wrapper.row
+      .header-component__search-box.col-4
+        .header-component__inner-search.d-flex
+          span.iconify.search-icon(data-icon='carbon:search' data-inline='false')
+          input.header-component__search-input(type='search' placeholder='Tìm kiếm')
+
+      .tablet-components.col-4
+        button.btn-mobile.mobile-menu-icon
+          span.iconify(data-icon='clarity:menu-line' data-inline='false')
+
+        button.btn-mobile.mobile-search-icon
+          a(href='#')
+            span.iconify.search-icon.mobile-search-trigger(data-icon='carbon:search' data-inline='false')
+          .mobile-search-bar
+            .btn-close-search
+              span.iconify(data-icon='clarity:window-close-line' data-inline='false')
+            .search-box
+              .header-component__inner-search.d-flex
+                input.header-component__search-input(type='search' placeholder='Tìm kiếm')
+                a(href='#')
+                  span.iconify.search-icon(data-icon='carbon:search' data-inline='false')
+
+      .header-component__logo.col-4.text-center
+        a(href='index.html')
+          img.logo(src='./images/brands/logo.png' alt='la-parfumania-logo')
+
+      .header-component__user-items.col-4
+        button.header-component__btn.header-component__btn-account(data-bs-toggle='modal' data-bs-target='#loginModal')
+          span.iconify.account-icon(data-icon='clarity:user-line' data-inline='false')
+
+        button.header-component__btn.header-component__btn-wishlist
+          a(href='./wishlist.html')
+            span.iconify.wishlist-icon(data-icon='clarity:heart-line' data-inline='false')
+
+        button.header-component__btn.header-component__btn-cart
+          a(href='./shopping-cart.html')
+            span.iconify.cart-icon(data-icon='clarity:shopping-cart-line' data-inline='false')
+            span.header-component__cart-badge 2
+
+// Mobile Header Components
+.mobile-header-components
+  .component-wrapper
+    .mobile-component.mobile-home
+      a(href='./index.html')
+        span.iconify(data-icon='fa-solid:home' data-inline='false')
+        span Home
+
+    .mobile-component.mobile-wishlist
+      a(href='./wishlist.html')
+        span.iconify(data-icon='clarity:heart-solid' data-inline='false')
+        span Wishlist
+
+    .mobile-component.mobile-cart
+      a(href='./shopping-cart.html')
+        span.mobile-cart-icon
+          span.iconify(data-icon='clarity:shopping-cart-solid' data-inline='false')
+          span.mobile-component__cart-badge 2
+        span Cart
+
+    .mobile-component.mobile-account(data-bs-toggle='modal' data-bs-target='#loginModal')
+      div
+        span.iconify(data-icon='clarity:user-solid' data-inline='false')
+        span Account
+
+// Mobile Logo Bar
+.mobile-logo-bar
+  button.btn-mobile.mobile-menu-icon
+    span.iconify(data-icon='clarity:menu-line' data-inline='false')
+
+  .mobile-logo
+    a(href='index.html')
+      img.logo(src='./images/brands/logo.png' alt='la-parfumania-logo')
+      
+  button.btn-mobile.mobile-search-icon
+    a(href='#')
+      span.iconify.search-icon.mobile-search-trigger(data-icon='carbon:search' data-inline='false')
+
+    .mobile-search-bar
+      .btn-close-search
+        span.iconify(data-icon='clarity:window-close-line' data-inline='false')
+
+      .search-box
+        .header-component__inner-search.d-flex
+          input.header-component__search-input(type='search' placeholder='Tìm kiếm')
+          a(href='#')
+            span.iconify.search-icon(data-icon='carbon:search' data-inline='false')
+

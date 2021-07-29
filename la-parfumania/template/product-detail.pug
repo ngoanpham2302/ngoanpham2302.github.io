@@ -1,0 +1,701 @@
+extends template-part/layout.pug
+
+block vendor-css
+
+    link(rel='stylesheet' href='./vendor/slick-1.8.1/slick/slick.css')
+    link(rel='stylesheet' href='./vendor/slick-1.8.1/slick/slick-theme.css')
+    
+
+
+block important-css
+
+    link(rel='stylesheet' href='./css/product-detail.css')
+
+block title
+
+    title Yves Saint Laurent Libre - La Parfumania Perfume Gallery
+
+block head-banner
+
+    // Header Page Banner
+    .page-banner.container-fluid
+        .page-banner__content
+            h2.page-banner__title YVES SAINT LAURENT LIBRE
+
+            .page-banner__hr-line
+            .page-banner__breadcrumb
+                nav(aria-label='breadcrumb')
+                    ol.breadcrumb
+                        li.breadcrumb-item
+                            a(href='./index.html') Trang chủ
+
+                        li.breadcrumb-divider
+                            span.iconify(data-icon='carbon:chevron-right' data-inline='false')
+
+                        li.breadcrumb-item.active(aria-current='page')
+                            a(href='./female-products.html') Nước hoa nữ
+
+                        li.breadcrumb-divider
+                            span.iconify(data-icon='carbon:chevron-right' data-inline='false')
+
+                        li.breadcrumb-item.active(aria-current='page')
+                            | Yves Saint Laurent Libre
+
+
+block content
+
+    // Section Products Detail
+    section.section.section-product-detail.container
+        .product-detail.row
+            .product-detail__img.col-12.col-lg-6
+                .product-detail__slider
+                    .product-detail__slider-for
+                        .product-detail__slide
+                            img(src='./images/decors/libre-01.webp' alt='ysl-libre')
+                        .product-detail__slide
+                            img(src='./images/decors/libre-02.webp' alt='ysl-libre')
+                        .product-detail__slide
+                            img(src='./images/decors/libre-03.webp' alt='ysl-libre')
+                        .product-detail__slide
+                            img(src='./images/decors/libre-04.webp' alt='ysl-libre')
+                        .product-detail__slide
+                            img(src='./images/decors/libre-05.webp' alt='ysl-libre')
+                        .product-detail__slide
+                            img(src='./images/decors/libre-06.webp' alt='ysl-libre')
+
+                    .product-detail__slider-nav
+                        .product-detail__slide
+                            img(src='./images/decors/libre-01.webp' alt='ysl-libre')
+                        .product-detail__slide
+                            img(src='./images/decors/libre-02.webp' alt='ysl-libre')
+                        .product-detail__slide
+                            img(src='./images/decors/libre-03.webp' alt='ysl-libre')
+                        .product-detail__slide
+                            img(src='./images/decors/libre-04.webp' alt='ysl-libre')
+                        .product-detail__slide
+                            img(src='./images/decors/libre-05.webp' alt='ysl-libre')
+                        .product-detail__slide
+                            img(src='./images/decors/libre-06.webp' alt='ysl-libre')
+
+            .product-detail__info.col-12.col-lg-6
+                .product__brand-container.row
+                    p.product__brand.col-9.col-sm-6 YVES SAINT LAURENT
+                    .product__stars.col-3.col-sm-6.d-sm-flex
+                        .stars
+                            span.iconify(data-icon='clarity:star-solid' data-inline='false')
+                            span.iconify(data-icon='clarity:star-solid' data-inline='false')
+                            span.iconify(data-icon='clarity:star-solid' data-inline='false')
+                            span.iconify(data-icon='clarity:star-solid' data-inline='false')
+                            span.iconify(data-icon='clarity:star-line' data-inline='false')
+                        span.comment-quantity (25)
+
+                p.product-detail__name
+                    | Libre 
+                    span.product__volume 30ml
+                p.product-detail__types Eau de Parfum
+                p.product-detail__price 1.850.000₫
+
+                .product-detail__volume-btns
+                    button.btn-volume.selected(data-volume='30') 30ml
+                    button.btn-volume(data-volume='50') 50ml
+                    button.btn-volume(data-volume='90') 90ml
+                .divider-line.product-detail__hr-line
+                .product-detail-status
+                    | Tình trạng: 
+                    span Còn hàng
+
+                .product-detail__buy
+                    .product-detail__quantity
+                        button.quantity-btn.quantity-decrease-btn -
+                        input.quantity-input(type='text' value='1')
+                        button.quantity-btn.quantity-increase-btn +
+                    button.addtocart-btn.product-card__btn.section__btn
+                        span.iconify.cart-icon(data-icon='clarity:shopping-cart-line' data-inline='false')
+                        span.text-long THÊM VÀO GIỎ HÀNG
+                        span.text-short THÊM VÀO GIỎ
+                    .btn-wishlist-container
+                        button.addtowishlist-btn.inactive
+                            span.iconify.wishlist-icon--empty(data-icon='clarity:heart-line' data-inline='false')
+                            span.iconify.d-none.wishlist-icon--filled(data-icon='clarity:heart-solid' data-inline='false')
+
+                .btn-buynow-container
+                    .btn-wishlist-container
+                        button.addtowishlist-btn.inactive
+                            span.iconify.wishlist-icon--empty(data-icon='clarity:heart-line' data-inline='false')
+                            span.iconify.d-none.wishlist-icon--filled(data-icon='clarity:heart-solid' data-inline='false')
+                    button.product-card__btn.btn-buynow
+                        a(href='./shopping-cart.html') MUA NGAY
+
+                .scents-info
+                    .scents-info__nav
+                        ul#scentsInfoTab.nav.nav-pills.justify-content-start(role='tablist')
+                            li.nav-item(role='presentation')
+                                button#scent-tab.nav-link.active(data-bs-toggle='tab' data-bs-target='#scent' type='button' role='tab' aria-controls='scent' aria-selected='true')
+                                    span.scent-group Nhóm hương
+                                    span.scent Hương
+
+                            .vertical-line
+
+                            li.nav-item(role='presentation')
+                                button#feature-tab.nav-link(data-bs-toggle='tab' data-bs-target='#feature' type='button' role='tab' aria-controls='feature' aria-selected='false')
+                                    | Đặc điểm
+
+                            .vertical-line
+
+                            li.nav-item(role='presentation')
+                                button#advice-tab.nav-link(data-bs-toggle='tab' data-bs-target='#advice' type='button' role='tab' aria-controls='advice' aria-selected='false')
+                                    | Khuyên dùng
+
+                        #scentsInfoTabContent.tab-content
+                            #scent.tab-pane.fade.show.active.container(role='tabpanel' aria-labelledby='scent-tab')
+                                ul.scent-list
+                                    li.scent-item
+                                        p.scent-item__name Tone hương
+                                        p.scent-item__detail
+                                            | Hương hoa, hoa trắng
+                                    li.scent-item
+                                        p.scent-item__name Hương đầu
+                                        p.scent-item__detail
+                                            | Hoa oải hương, quýt, quả lý chua đen
+                                    li.scent-item
+                                        p.scent-item__name Hương giữa
+                                        p.scent-item__detail
+                                            | Hoa oải hương, hoa cam, hoa nhài
+                                    li.scent-item
+                                        p.scent-item__name Hương cuối
+                                        p.scent-item__detail
+                                            | Vani Madagascar, xạ hương, gỗ tuyết tùng
+
+                            #feature.tab-pane.fade.container(role='tabpanel' aria-labelledby='feature-tab')
+                                ul.scent-list.feature-list
+                                    li.scent-item
+                                        p.scent-item__name Giới tính
+                                        p.scent-item__detail Nữ
+                                    li.scent-item
+                                        p.scent-item__name Độ tuổi
+                                        p.scent-item__detail 18 - 30
+                                    li.scent-item
+                                        p.scent-item__name Độ lưu hương
+                                        p.scent-item__detail
+                                            | Lâu – 7 giờ đến 12 giờ
+                                    li.scent-item
+                                        p.scent-item__name Độ tỏa hương
+                                        p.scent-item__detail
+                                            | Xa – Toả hương trong bán kính 3 mét
+
+                            #advice.tab-pane.fade.container(role='tabpanel' aria-labelledby='advice-tab')
+                                ul.scent-list.advice-list
+                                    li.scent-item
+                                        p.scent-item__name Mùa
+                                        p.scent-item__detail Mùa xuân, mùa thu
+                                    li.scent-item
+                                        p.scent-item__name Thời gian
+                                        p.scent-item__detail Ban ngày
+        .product-content
+            .product-content__nav
+                ul#productContentTab.nav.nav-pills.justify-content-start(role='tablist')
+                    li.nav-item(role='presentation')
+                        button#description-tab.nav-link.active(data-bs-toggle='tab' data-bs-target='#description' type='button' role='tab' aria-controls='description' aria-selected='true')
+                            | MÔ TẢ
+
+                    .vertical-line
+                    li.nav-item(role='presentation')
+                        button#info-tab.nav-link(data-bs-toggle='tab' data-bs-target='#info' type='button' role='tab' aria-controls='info' aria-selected='false')
+                            | THÔNG TIN
+
+                    .vertical-line
+                    li.nav-item(role='presentation')
+                        button#comment-tab.nav-link(data-bs-toggle='tab' data-bs-target='#comment' type='button' role='tab' aria-controls='comment' aria-selected='false')
+                            | ĐÁNH GIÁ
+
+                .nav-pill-hr-line.divider-line
+                #productContentTabContent.tab-content
+                    #description.tab-pane.fade.show.active.container(role='tabpanel' aria-labelledby='description-tab')
+                        .product-des-wrapper.row
+                            .product-des.col-12.col-lg-6
+                                h5.product-des__title
+                                    | Sự gợi cảm tinh tế, thanh lịch và tươi mới
+                                p.product-des__content
+                                    | Yves Saint Laurent Libre Eau de Parfum là dòng nước hoa nữ
+                                    | được ra mắt vào năm 2019 bởi sự hợp tác giữa chai chuyên
+                                    | gia nước hoa Anne Flipo và Carlos Benaim. Thiết kế của
+                                    | Libre gây ấn tượng mạnh mẽ về tính độc đáo, sang trọng và
+                                    | tinh tế mà hãng Yves Saint Laurent vẫn thường ưu ái dành
+                                    | cho các bộ sưu tập thời trang danh tiếng của mình.
+
+                                p.product-des__content
+                                    | Libre mang một mùi hương hoa phương Đông, nổi bật với nhóm
+                                    | hương chính như hoa lavender quyến rũ kết hợp cùng hoa cam
+                                    | tươi mát và thảo mộc. Sự góp mặt của hương vani giúp cô
+                                    | nàng Libre trở nên ngọt ngào và quyến rũ hơn, nhưng vẫn
+                                    | giữ được sự thanh lịch và tươi mới khi note hương cam vẫn
+                                    | hiện hữu.
+
+                                p.product-des__content
+                                    | Sự sang trọng, gợi cảm và cá tính là điều hãng Yves Saint
+                                    | Laurent muốn gửi gắm đến cô nàng kiêu kỳ này.
+
+                            .product-des__img.col-12.col-lg-6
+                                img(src='./images/decors/libre-des.webp' alt='libre')
+
+                        h5.product-des__title.note-title
+                            | Hương thơm của sự tự do - YSL Libre EDP
+                        .product-notes.row
+                            .product-note.col-12.col-md-6.col-xl-4
+                                .product-note__img
+                                    img(src='./images/decors/libre-lavender.webp' alt='libre-lavender')
+                                h4.product-note__title DIVA LAVENDER
+
+                                p.product-note__detail
+                                    | Tầng hương đầu của Libre bao gồm hoa oải hương diva và hoa
+                                    | lavandin hoang dã, mát mẻ. Sự pha trộn đặc biệt này mang
+                                    | đến cho Libre một nốt hương đầu có chút nam tính.
+
+                            .product-note.col-12.col-md-6.col-xl-4
+                                .product-note__img
+                                    img(src='./images/decors/libre-orange.webp' alt='libre-orange')
+                                h4.product-note__title ORANGE BLOSSOM
+                                p.product-note__detail
+                                    | Libre Eau de Parfum gây ấn tượng với tầng hương giữa ngập
+                                    | tràn hoa cam. Hương thơm ấm áp, nữ tính khiến Libre mang
+                                    | một thứ hương hoa gần như gây nghiện cho mọi phụ nữ.
+
+                            .product-note.col-12.col-md-6.col-xl-4
+                                .product-note__img
+                                    img(src='./images/decors/libre-vanilla.webp' alt='libre-lavender')
+                                h4.product-note__title BOURBON VANILLA
+                                p.product-note__detail
+                                    | Hương thơm ngọt ngào của vani tạo nên tầng hương cuối của
+                                    | nước hoa. Chiết xuất vani phong phú kết hợp với hương hổ
+                                    | phách mang đến cho Libre hương thơm cuốn hút,
+                                    | nữ tính.
+
+                    #info.tab-pane.fade.container(role='tabpanel' aria-labelledby='info-tab')
+                        ul.scent-list.feature-list
+                            li.scent-item
+                                p.scent-item__name Năm phát hành
+                                p.scent-item__detail 2019
+                            li.scent-item
+                                p.scent-item__name Nhà điều chế
+                                p.scent-item__detail Anne Flipo, Carlos Benaim
+                            li.scent-item
+                                p.scent-item__name Nước sản xuất
+                                p.scent-item__detail Pháp
+                            li.scent-item
+                                p.scent-item__name Dung tích
+                                p.scent-item__detail 30ml, 50ml, 90ml
+
+                    #comment.tab-pane.fade.container(role='tabpanel' aria-labelledby='comment-tab')
+                        p.write-comment ĐÁNH GIÁ SẢN PHẨM
+                        .row.mb-4
+                            .col.me-2
+                                input.form-control(type='text' placeholder='Họ tên *' aria-label='name')
+                            .col.ms-2
+                                input.form-control(type='email' placeholder='Email *' aria-label='Email')
+                        .mb-5
+                            textarea#commentTextarea.form-control(rows='4' placeholder='Đánh giá')
+                        button.section__btn.btn-send-comment
+                            | GỬI ĐÁNH GIÁ
+
+    // Section Similar Products
+    section.section.section-similar-products.section-product-carousel
+        h2.section__title.section-similar-products__title
+            | SẢN PHẨM TƯƠNG TỰ
+        .container
+            .products-slider.products-slider--similar
+                .products-slider__slide
+                    .card.product-card
+                        .product-card__img
+                            img.card-img-top(src='./images/products/juliette-vanilla-vibes.webp' alt='juliette-vanilla-vibes')
+                            .product-card__wishlist
+                                span.iconify.wishlist-icon--empty(data-icon='clarity:heart-line' data-inline='false')
+                                span.iconify.wishlist-icon--filled(data-icon='clarity:heart-solid' data-inline='false')
+                            button.btn-detail.product-card__btn
+                                a(href='./product-detail.html') XEM CHI TIẾT
+                        .card-body
+                            h5.card-title.product-card__brand
+                                | JULIETTE HAS A GUN
+                            p.card-text.product-card__name Vanilla Vibes EDP
+                            p.card-text.product-card__price 2,120,000₫
+                            button.btn-addtocart.product-card__btn
+                                span.iconify.cart-icon(data-icon='clarity:shopping-cart-line' data-inline='false')
+                                span Thêm vào giỏ hàng
+
+                .products-slider__slide
+                    .card.product-card
+                        .product-card__img
+                            img.card-img-top(src='./images/products/guerlain-mon.webp' alt='guerlain-mon-edp')
+                            .product-card__wishlist
+                                span.iconify.wishlist-icon--empty(data-icon='clarity:heart-line' data-inline='false')
+                                span.iconify.wishlist-icon--filled(data-icon='clarity:heart-solid' data-inline='false')
+                            button.btn-detail.product-card__btn
+                                a(href='./product-detail.html') XEM CHI TIẾT
+                        .card-body
+                            h5.card-title.product-card__brand GUERLAIN
+                            p.card-text.product-card__name Mon EDP
+                            p.card-text.product-card__price 2,890,000₫
+                            button.btn-addtocart.product-card__btn
+                                span.iconify.cart-icon(data-icon='clarity:shopping-cart-line' data-inline='false')
+                                span Thêm vào giỏ hàng
+
+                .products-slider__slide
+                    .card.product-card
+                        .product-card__img
+                            img.card-img-top(src='./images/products/dg-the-only-one.webp' alt='dg-the-only-one')
+                            .product-card__wishlist
+                                span.iconify.wishlist-icon--empty(data-icon='clarity:heart-line' data-inline='false')
+                                span.iconify.wishlist-icon--filled(data-icon='clarity:heart-solid' data-inline='false')
+                            button.btn-detail.product-card__btn
+                                a(href='./product-detail.html') XEM CHI TIẾT
+                        .card-body
+                            h5.card-title.product-card__brand DOLCE&GABBANA
+                            p.card-text.product-card__name The Only One EDP
+                            p.card-text.product-card__price 3,250,000₫
+                            button.btn-addtocart.product-card__btn
+                                span.iconify.cart-icon(data-icon='clarity:shopping-cart-line' data-inline='false')
+                                span Thêm vào giỏ hàng
+
+                .products-slider__slide
+                    .card.product-card
+                        .product-card__img
+                            img.card-img-top(src='./images/products/valentino-voce-viva.webp' alt='valentino-voce-viva')
+                            .product-card__wishlist
+                                span.iconify.wishlist-icon--empty(data-icon='clarity:heart-line' data-inline='false')
+                                span.iconify.wishlist-icon--filled(data-icon='clarity:heart-solid' data-inline='false')
+                            button.btn-detail.product-card__btn
+                                a(href='./product-detail.html') XEM CHI TIẾT
+                        .card-body
+                            h5.card-title.product-card__brand VALENTINO
+                            p.card-text.product-card__name Voce Viva EDP
+                            p.card-text.product-card__price 2,750,000₫
+                            button.btn-addtocart.product-card__btn
+                                span.iconify.cart-icon(data-icon='clarity:shopping-cart-line' data-inline='false')
+                                span Thêm vào giỏ hàng
+
+                .products-slider__slide
+                    .card.product-card
+                        .product-card__img
+                            img.card-img-top(src='./images/products/ysl-mon-paris-couture.webp' alt='ysl-mon-paris-couture')
+                            .product-card__wishlist
+                                span.iconify.wishlist-icon--empty(data-icon='clarity:heart-line' data-inline='false')
+                                span.iconify.wishlist-icon--filled(data-icon='clarity:heart-solid' data-inline='false')
+                            button.btn-detail.product-card__btn
+                                a(href='./product-detail.html') XEM CHI TIẾT
+                        .card-body
+                            h5.card-title.product-card__brand
+                                | YVES SAINT LAURENT
+                            p.card-text.product-card__name
+                                | Mon Paris Couture EDP
+                            p.card-text.product-card__price 2,870,000₫
+                            button.btn-addtocart.product-card__btn
+                                span.iconify.cart-icon(data-icon='clarity:shopping-cart-line' data-inline='false')
+                                span Thêm vào giỏ hàng
+
+                .products-slider__slide
+                    .card.product-card
+                        .product-card__img
+                            img.card-img-top(src='./images/products/armani-si.webp' alt='gucci-flora')
+                            .product-card__wishlist
+                                span.iconify.wishlist-icon--empty(data-icon='clarity:heart-line' data-inline='false')
+                                span.iconify.wishlist-icon--filled(data-icon='clarity:heart-solid' data-inline='false')
+                            button.btn-detail.product-card__btn
+                                a(href='./product-detail.html') XEM CHI TIẾT
+                        .card-body
+                            h5.card-title.product-card__brand GIORGIO ARMANI
+                            p.card-text.product-card__name Sì EDP
+                            p.card-text.product-card__price 3,580,000₫
+                            button.btn-addtocart.product-card__btn
+                                span.iconify.cart-icon(data-icon='clarity:shopping-cart-line' data-inline='false')
+                                span Thêm vào giỏ hàng
+
+                .products-slider__slide
+                    .card.product-card
+                        .product-card__img
+                            img.card-img-top(src='./images/products/marc-jacobs-daisy.webp' alt='marc-jacobs-daisy')
+                            .product-card__wishlist
+                                span.iconify.wishlist-icon--empty(data-icon='clarity:heart-line' data-inline='false')
+                                span.iconify.wishlist-icon--filled(data-icon='clarity:heart-solid' data-inline='false')
+                            button.btn-detail.product-card__btn
+                                a(href='./product-detail.html') XEM CHI TIẾT
+                        .card-body
+                            h5.card-title.product-card__brand MARC JACOBS
+                            p.card-text.product-card__name Daisy EDP
+                            p.card-text.product-card__price 2,685,000₫
+                            button.btn-addtocart.product-card__btn
+                                span.iconify.cart-icon(data-icon='clarity:shopping-cart-line' data-inline='false')
+                                span Thêm vào giỏ hàng
+
+    // Section Same Brand Products
+    section.section.section-same-brands.section-product-carousel
+        h2.section__title.section-same-brands__title
+            | SẢN PHẨM CÙNG THƯƠNG HIỆU
+        .container
+            .products-slider.products-slider--same-brand
+                .products-slider__slide
+                    .card.product-card
+                        .product-card__img
+                            img.card-img-top(src='./images/products/ysl-black-optium-edp.webp' alt='ysl-black-optium-edp')
+                            .product-card__wishlist
+                                span.iconify.wishlist-icon--empty(data-icon='clarity:heart-line' data-inline='false')
+                                span.iconify.wishlist-icon--filled(data-icon='clarity:heart-solid' data-inline='false')
+                            button.btn-detail.product-card__btn
+                                a(href='./product-detail.html') XEM CHI TIẾT
+                        .card-body
+                            h5.card-title.product-card__brand
+                                | YVES SAINT LAURENT
+                            p.card-text.product-card__name Black Opium EDP
+                            p.card-text.product-card__price 3,320,000₫
+                            button.btn-addtocart.product-card__btn
+                                span.iconify.cart-icon(data-icon='clarity:shopping-cart-line' data-inline='false')
+                                span Thêm vào giỏ hàng
+
+                .products-slider__slide
+                    .card.product-card
+                        .product-card__img
+                            img.card-img-top(src='./images/products/ysl-libre-edt.webp' alt='dg-the-only-one')
+                            .product-card__wishlist
+                                span.iconify.wishlist-icon--empty(data-icon='clarity:heart-line' data-inline='false')
+                                span.iconify.wishlist-icon--filled(data-icon='clarity:heart-solid' data-inline='false')
+                            button.btn-detail.product-card__btn
+                                a(href='./product-detail.html') XEM CHI TIẾT
+                        .card-body
+                            h5.card-title.product-card__brand
+                                | YVES SAINT LAURENT
+                            p.card-text.product-card__name Libre EDT
+                            p.card-text.product-card__price 2,850,000₫
+                            button.btn-addtocart.product-card__btn
+                                span.iconify.cart-icon(data-icon='clarity:shopping-cart-line' data-inline='false')
+                                span Thêm vào giỏ hàng
+
+                .products-slider__slide
+                    .card.product-card
+                        .product-card__img
+                            img.card-img-top(src='./images/products/ysl-mon-paris-intense.webp' alt='/ysl-mon-paris-intense')
+                            .product-card__wishlist
+                                span.iconify.wishlist-icon--empty(data-icon='clarity:heart-line' data-inline='false')
+                                span.iconify.wishlist-icon--filled(data-icon='clarity:heart-solid' data-inline='false')
+                            button.btn-detail.product-card__btn
+                                a(href='./product-detail.html') XEM CHI TIẾT
+                        .card-body
+                            h5.card-title.product-card__brand
+                                | YVES SAINT LAURENT
+                            p.card-text.product-card__name
+                                | Mon Paris Intense EDP
+                            p.card-text.product-card__price 3,890,000₫
+                            button.btn-addtocart.product-card__btn
+                                span.iconify.cart-icon(data-icon='clarity:shopping-cart-line' data-inline='false')
+                                span Thêm vào giỏ hàng
+
+                .products-slider__slide
+                    .card.product-card
+                        .product-card__img
+                            img.card-img-top(src='./images/products/ysl-black-optium-intense.webp' alt='ysl-black-optium-intense')
+                            .product-card__wishlist
+                                span.iconify.wishlist-icon--empty(data-icon='clarity:heart-line' data-inline='false')
+                                span.iconify.wishlist-icon--filled(data-icon='clarity:heart-solid' data-inline='false')
+                            button.btn-detail.product-card__btn
+                                a(href='./product-detail.html') XEM CHI TIẾT
+                        .card-body
+                            h5.card-title.product-card__brand
+                                | YVES SAINT LAURENT
+                            p.card-text.product-card__name Optium Intense EDP
+                            p.card-text.product-card__price 3,650,000₫
+                            button.btn-addtocart.product-card__btn
+                                span.iconify.cart-icon(data-icon='clarity:shopping-cart-line' data-inline='false')
+                                span Thêm vào giỏ hàng
+
+                .products-slider__slide
+                    .card.product-card
+                        .product-card__img
+                            img.card-img-top(src='./images/products/ysl-mon-paris-couture.webp' alt='ysl-mon-paris-couture')
+                            .product-card__wishlist
+                                span.iconify.wishlist-icon--empty(data-icon='clarity:heart-line' data-inline='false')
+                                span.iconify.wishlist-icon--filled(data-icon='clarity:heart-solid' data-inline='false')
+                            button.btn-detail.product-card__btn
+                                a(href='./product-detail.html') XEM CHI TIẾT
+                        .card-body
+                            h5.card-title.product-card__brand
+                                | YVES SAINT LAURENT
+                            p.card-text.product-card__name
+                                | Mon Paris Couture EDP
+                            p.card-text.product-card__price 2,870,000₫
+                            button.btn-addtocart.product-card__btn
+                                span.iconify.cart-icon(data-icon='clarity:shopping-cart-line' data-inline='false')
+                                span Thêm vào giỏ hàng
+
+                .products-slider__slide
+                    .card.product-card
+                        .product-card__img
+                            img.card-img-top(src='./images/products/ysl-libre-edp-big.webp' alt='ysl-libre-edp-big')
+                            .product-card__wishlist
+                                span.iconify.wishlist-icon--empty(data-icon='clarity:heart-line' data-inline='false')
+                                span.iconify.wishlist-icon--filled(data-icon='clarity:heart-solid' data-inline='false')
+                            button.btn-detail.product-card__btn
+                                a(href='./product-detail.html') XEM CHI TIẾT
+                        .card-body
+                            h5.card-title.product-card__brand
+                                | YVES SAINT LAURENT
+                            p.card-text.product-card__name Libre EDP
+                            p.card-text.product-card__price 2,980,000₫
+                            button.btn-addtocart.product-card__btn
+                                span.iconify.cart-icon(data-icon='clarity:shopping-cart-line' data-inline='false')
+                                span Thêm vào giỏ hàng
+
+                .products-slider__slide
+                    .card.product-card
+                        .product-card__img
+                            img.card-img-top(src='./images/products/ysl-y.webp' alt='ysl-y')
+                            .product-card__wishlist
+                                span.iconify.wishlist-icon--empty(data-icon='clarity:heart-line' data-inline='false')
+                                span.iconify.wishlist-icon--filled(data-icon='clarity:heart-solid' data-inline='false')
+                            button.btn-detail.product-card__btn
+                                a(href='./product-detail.html') XEM CHI TIẾT
+                        .card-body
+                            h5.card-title.product-card__brand
+                                | YVES SAINT LAURENT
+                            p.card-text.product-card__name Y EDP
+                            p.card-text.product-card__price 2,685,000₫
+                            button.btn-addtocart.product-card__btn
+                                span.iconify.cart-icon(data-icon='clarity:shopping-cart-line' data-inline='false')
+                                span Thêm vào giỏ hàng
+        button.section__btn.section-same-brands__btn
+            a(href='./brand-products.html') XEM THÊM SẢN PHẨM
+
+    // Section Recent Viewed Products
+    section.section.section-recent-view.section-product-carousel
+        h2.section__title.section-recent-view__title
+            | SẢN PHẨM VỪA XEM
+
+        .container
+            .products-slider.products-slider--recent-view
+                .products-slider__slide
+                    .card.product-card
+                        .product-card__img
+                            img.card-img-top(src='./images/products/dg-the-only-one.webp' alt='dg-the-only-one')
+                            .product-card__wishlist
+                                span.iconify.wishlist-icon--empty(data-icon='clarity:heart-line' data-inline='false')
+                                span.iconify.wishlist-icon--filled(data-icon='clarity:heart-solid' data-inline='false')
+                            button.btn-detail.product-card__btn
+                                a(href='./product-detail.html') XEM CHI TIẾT
+                        .card-body
+                            h5.card-title.product-card__brand DOLCE&GABBANA
+                            p.card-text.product-card__name The Only One EDP
+                            p.card-text.product-card__price 3,250,000₫
+                            button.btn-addtocart.product-card__btn
+                                span.iconify.cart-icon(data-icon='clarity:shopping-cart-line' data-inline='false')
+                                span Thêm vào giỏ hàng
+
+                .products-slider__slide
+                    .card.product-card
+                        .product-card__img
+                            img.card-img-top(src='./images/products/guerlain-mon.webp' alt='guerlain-mon-edp')
+                            .product-card__wishlist
+                                span.iconify.wishlist-icon--empty(data-icon='clarity:heart-line' data-inline='false')
+                                span.iconify.wishlist-icon--filled(data-icon='clarity:heart-solid' data-inline='false')
+                            button.btn-detail.product-card__btn
+                                a(href='./product-detail.html') XEM CHI TIẾT
+                        .card-body
+                            h5.card-title.product-card__brand GUERLAIN
+                            p.card-text.product-card__name Mon EDP
+                            p.card-text.product-card__price 2,890,000₫
+                            button.btn-addtocart.product-card__btn
+                                span.iconify.cart-icon(data-icon='clarity:shopping-cart-line' data-inline='false')
+                                span Thêm vào giỏ hàng
+
+                .products-slider__slide
+                    .card.product-card
+                        .product-card__img
+                            img.card-img-top(src='./images/products/ysl-mon-paris-couture.webp' alt='ysl-mon-paris-couture')
+                            .product-card__wishlist
+                                span.iconify.wishlist-icon--empty(data-icon='clarity:heart-line' data-inline='false')
+                                span.iconify.wishlist-icon--filled(data-icon='clarity:heart-solid' data-inline='false')
+                            button.btn-detail.product-card__btn
+                                a(href='./product-detail.html') XEM CHI TIẾT
+                        .card-body
+                            h5.card-title.product-card__brand
+                                | YVES SAINT LAURENT
+                            p.card-text.product-card__name
+                                | Mon Paris Couture EDP
+                            p.card-text.product-card__price 2,870,000₫
+                            button.btn-addtocart.product-card__btn
+                                span.iconify.cart-icon(data-icon='clarity:shopping-cart-line' data-inline='false')
+                                span Thêm vào giỏ hàng
+                                
+                .col-12.col-sm-6.col-xl-4
+                    .card.product-card
+                        .product-card__img
+                            img.card-img-top(src='./images/products/armani-acqua-di-gioia.webp' alt='armani-acqua-di-gioia')
+                            .product-card__wishlist
+                                span.iconify.wishlist-icon--empty(data-icon='clarity:heart-line' data-inline='false')
+                                span.iconify.wishlist-icon--filled(data-icon='clarity:heart-solid' data-inline='false')
+                            button.btn-detail.product-card__btn
+                                a(href='./product-detail.html') XEM CHI TIẾT
+                        .card-body
+                            h5.card-title.product-card__brand GIORGIO ARMANI
+                            p.card-text.product-card__name Acqua di Gioia EDT
+                            p.card-text.product-card__price 2,700,000₫
+                            button.btn-addtocart.product-card__btn
+                                span.iconify.cart-icon(data-icon='clarity:shopping-cart-line' data-inline='false')
+                                span Thêm vào giỏ hàng
+
+                .products-slider__slide
+                    .card.product-card
+                        .product-card__img
+                            img.card-img-top(src='./images/products/gucci-flora.webp' alt='gucci-flora')
+                            .product-card__wishlist
+                                span.iconify.wishlist-icon--empty(data-icon='clarity:heart-line' data-inline='false')
+                                span.iconify.wishlist-icon--filled(data-icon='clarity:heart-solid' data-inline='false')
+                            button.btn-detail.product-card__btn
+                                a(href='./product-detail.html') XEM CHI TIẾT
+                        .card-body
+                            h5.card-title.product-card__brand GUCCI
+                            p.card-text.product-card__name Flora Gardenia EDP
+                            p.card-text.product-card__price 2,980,000₫
+                            button.btn-addtocart.product-card__btn
+                                span.iconify.cart-icon(data-icon='clarity:shopping-cart-line' data-inline='false')
+                                span Thêm vào giỏ hàng
+
+                .products-slider__slide
+                    .card.product-card
+                        .product-card__img
+                            img.card-img-top(src='./images/products/marc-jacobs-daisy.webp' alt='marc-jacobs-daisy')
+                            .product-card__wishlist
+                                span.iconify.wishlist-icon--empty(data-icon='clarity:heart-line' data-inline='false')
+                                span.iconify.wishlist-icon--filled(data-icon='clarity:heart-solid' data-inline='false')
+                            button.btn-detail.product-card__btn
+                                a(href='./product-detail.html') XEM CHI TIẾT
+                        .card-body
+                            h5.card-title.product-card__brand MARC JACOBS
+                            p.card-text.product-card__name Daisy EDP
+                            p.card-text.product-card__price 2,685,000₫
+                            button.btn-addtocart.product-card__btn
+                                span.iconify.cart-icon(data-icon='clarity:shopping-cart-line' data-inline='false')
+                                span Thêm vào giỏ hàng
+
+                .products-slider__slide
+                    .card.product-card
+                        .product-card__img
+                            img.card-img-top(src='./images/products/hermes-eau-des-erveilles-bleue.webp' alt='hermes-eau-des-erveilles-bleue')
+                            .product-card__wishlist
+                                span.iconify.wishlist-icon--empty(data-icon='clarity:heart-line' data-inline='false')
+                                span.iconify.wishlist-icon--filled(data-icon='clarity:heart-solid' data-inline='false')
+                            button.btn-detail.product-card__btn
+                                a(href='./product-detail.html') XEM CHI TIẾT
+                        .card-body
+                            h5.card-title.product-card__brand HERMÈS
+                            p.card-text.product-card__name
+                                | Merveilles Bleue EDT
+                            p.card-text.product-card__price 3,650,000₫
+                            button.btn-addtocart.product-card__btn
+                                span.iconify.cart-icon(data-icon='clarity:shopping-cart-line' data-inline='false')
+                                span Thêm vào giỏ hàng
+
+
+block vendor-script
+
+    script(src='./vendor/slick-1.8.1/slick/slick.min.js')
+
+
+block important-script
+
+    script(src='./js/product-detail.js')

@@ -1,0 +1,76 @@
+// Modal Login/Signup
+.login-modal
+  #loginModal.login.modal.fade(tabindex='-1' aria-labelledby='loginModalLabel' aria-hidden='true')
+    .modal-dialog
+      .modal-content
+        .login-container
+          ul#tabs.nav.nav-tabs(role='tablist')
+            li.nav-item(role='presentation')
+              button#login-tab.nav-link.active(data-bs-toggle='tab' data-bs-target='#login' type='button' role='tab' aria-controls='login' aria-selected='true') Đăng nhập
+
+            li.nav-item(role='presentation')
+              button#signup-tab.nav-link(data-bs-toggle='tab' data-bs-target='#signup' type='button' role='tab' aria-controls='signup' aria-selected='false') Đăng ký
+
+          // Tab Content
+          #tabContent.tab-content.px-3.py-3
+            #login.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='login-tab')
+              form.row.needs-validation
+                .error-noti.error.mb-3.text-danger
+                .form-input.mb-3
+                  input#login-email.form-control(type='text' placeholder='Email' autocomplete='email')
+                  small.email-error.error.text-danger Error message
+
+                .form-input.mb-3
+                  input#login-password.form-control(type='password' placeholder='Mật khẩu' autocomplete='current-password')
+                  small.pass-error.error.text-danger Error message
+
+                .form-check.mb-3.remember-acc
+                  input#remember-acc.form-check-input(type='checkbox' value='remember-acc')
+                  label.form-check-label(for='remember-acc') Ghi nhớ tài khoản
+
+                .col-12.mb-3
+                  button.section__btn.btn-login.d-block.w-100(type='button') ĐĂNG NHẬP
+
+                .forgot-password(type='button' data-bs-toggle='modal' data-bs-dismiss='modal' data-bs-target='#forgotPassModal')
+                  span.iconify(data-icon='codicon:question' data-inline='false')
+                  span Quên mật khẩu?
+
+            #signup.tab-pane.fade(role='tabpanel' aria-labelledby='signup-tab')
+              .form-input.mb-3
+                input#signup-email.form-control(type='text' placeholder='Email' autocomplete='email')
+                small.error Error message
+
+              .form-input.mb-3
+                input#signup-password.form-control(type='password' placeholder='Mật khẩu' autocomplete='new-password')
+                small.error Error message
+
+              form.row.needs-validation(novalidate='')
+                .form-input.mb-3
+                  input#signup-first-name.form-control(type='text' placeholder='Họ tên')
+                  small.error Error message
+
+                .form-input.mb-3
+                  input#signup-phone.form-control(type='text' placeholder='Số điện thoại' autocomplete='phone')
+                  small.error Error message
+
+                .col-12
+                  button.section__btn.btn-signup.d-block.w-100(type='button') ĐĂNG KÝ
+
+// Modal Forgot Password
+.forgotpass-modal
+  #forgotPassModal.forgotpass.modal.fade(tabindex='-1' aria-labelledby='forgotPassModalLabel' aria-hidden='true')
+    .modal-dialog
+      .modal-content
+        .modal-header
+          h5#forgotPassModalLabel.modal-title Quên mật khẩu?
+
+          button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+
+        .modal-body.p-3
+          form
+            .form-input.mb-3
+              input#email.form-control(type='text' placeholder='Email' required='')
+              small.error Error message
+
+            .col-12
+              button.section__btn.btn-send-email.d-block.w-100(type='button' data-bs-dismiss='modal') GỬI EMAIL TRỢ GIÚP

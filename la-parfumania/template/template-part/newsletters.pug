@@ -1,0 +1,18 @@
+// Section Newsletters
+
+section.section.section-newsletters.container-fluid
+  .newsletter__content.container
+    .newsletters__voucher
+      span.voucher NHẬN
+      span.voucher-rate 10%
+      span.voucher VOUCHER
+
+    .newsletters__email
+      h4.newsletters__intro Đăng ký nhận tin khuyến mãi
+
+      .newsletters__email-holder
+        form(method='GET')
+          input.newsletters__input(type='email' required='' name='subscribe-email' placeholder='Nhập địa chỉ email...')
+          
+          button.newsletters__btn(type='submit')
+            span.iconify.send-icon(data-icon='carbon:send-alt-filled' data-inline='false')

@@ -1,0 +1,131 @@
+// Desktop Navbar
+nav.nav-bar.container-fluid.desktop-navbar
+  ul.menu.desktop-menu
+    li.menu__item.menu__item--nochild
+      a.menu__entry(href='./index.html') Trang chủ
+
+    li.menu__item.menu__item--haschild
+      .menu__entry
+        span.menu__text Sản phẩm
+        span.iconify.caret-down(data-icon='bi:caret-down-fill' data-inline='false')
+
+      ul.submenu.products-submenu
+        li.submenu__item
+          a.submenu__link(href='./female-products.html') Nước hoa nam
+
+        li.submenu__item
+          a.submenu__link(href='./female-products.html') Nước hoa nữ
+          
+        li.submenu__item
+          a.submenu__link(href='./female-products.html') Nước hoa unisex
+
+    li.menu__item.menu__item--haschild
+      .menu__entry
+        span.menu__text Nhóm hương
+        span.iconify.caret-down(data-icon='bi:caret-down-fill' data-inline='false')
+
+      ul.submenu.scents-submenu
+        li.submenu__item
+          a.submenu__link(href='./female-products.html') Hương hổ phách - Amber
+
+        li.submenu__item
+          a.submenu__link(href='./female-products.html') Hương Síp - Chypre
+
+        li.submenu__item
+          a.submenu__link(href='./female-products.html') Hương cam quýt - Citrus
+
+        li.submenu__item
+          a.submenu__link(href='./female-products.html') Hương da thuộc - Leather
+
+        li.submenu__item
+          a.submenu__link(href='./female-products.html') Hương hoa - Floral
+
+        li.submenu__item
+          a.submenu__link(href='./female-products.html') Hương gỗ - Woody
+
+        li.submenu__item
+          a.submenu__link(href='./female-products.html') Hương thơm ngát - Aromatic
+
+    li.menu__item.menu__item--nochild
+      a.menu__entry(href='#') Thương hiệu
+
+    li.menu__item.menu__item--nochild.menu__item--about
+      a.menu__entry(href='#') Về La Parfumania
+
+    li.menu__item.menu__item--nochild
+      a.menu__entry(href='#') Blogs
+
+    li.menu__item.menu__item--nochild
+      a.menu__entry(href='#') Liên hệ
+
+
+// Mobile/Tablet Navbar
+.backdrop-bg
+  .mobile-nav-bar
+    .btn-close-menu
+      span.iconify(data-icon='clarity:window-close-line' data-inline='false')
+
+    .mobile-menu__logo
+      a(href='index.html')
+        img.logo(src='./images/brands/logo.png' alt='la-parfumania-logo')
+
+    ul.menu.mobile-menu
+      li.mobile-menu__item.mobile-menu__item--nochild
+        a.mobile-menu__entry(href='./index.html') Trang chủ
+        
+      #menuItemHasChild.accordion.accordion-flush
+        .accordion-item
+          h2#flush-headingOne.accordion-header
+            button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#flush-collapseOne' aria-expanded='false' aria-controls='flush-collapseOne') SẢN PHẨM
+
+          #flush-collapseOne.accordion-collapse.collapse(aria-labelledby='flush-headingOne' data-bs-parent='#menuItemHasChild')
+            .accordion-body
+              ul.mobile-submenu.products-mobile-submenu
+                li.mobile-submenu__item
+                  a.mobile-submenu__link(href='./female-products.html') Nước hoa nam
+
+                li.mobile-submenu__item
+                  a.mobile-submenu__link(href='./female-products.html') Nước hoa nữ
+
+                li.mobile-submenu__item
+                  a.mobile-submenu__link(href='./female-products.html') Nước hoa unisex
+                  
+        .accordion-item
+          h2#flush-headingTwo.accordion-header
+            button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#flush-collapseTwo' aria-expanded='false' aria-controls='flush-collapseTwo') NHÓM HƯƠNG
+
+          #flush-collapseTwo.accordion-collapse.collapse(aria-labelledby='flush-headingTwo' data-bs-parent='#menuItemHasChild')
+            .accordion-body
+              ul.mobile-submenu.scents-mobile-submenu
+                li.mobile-submenu__item
+                  a.mobile-submenu__link(href='./female-products.html') Hương hổ phách - Amber
+
+                li.mobile-submenu__item
+                  a.mobile-submenu__link(href='./female-products.html') Hương Síp - Chypre
+
+                li.mobile-submenu__item
+                  a.mobile-submenu__link(href='./female-products.html') Hương cam quýt - Citrus
+
+                li.mobile-submenu__item
+                  a.mobile-submenu__link(href='./female-products.html') Hương da thuộc - Leather
+
+                li.mobile-submenu__item
+                  a.mobile-submenu__link(href='./female-products.html') Hương hoa - Floral
+
+                li.mobile-submenu__item
+                  a.mobile-submenu__link(href='./female-products.html') Hương gỗ - Woody
+
+                li.mobile-submenu__item
+                  a.mobile-submenu__link(href='./female-products.html') Hương thơm ngát - Aromatic
+
+      li.mobile-menu__item.mobile-menu__item--nochild
+        a.mobile-menu__entry(href='#') Thương hiệu
+
+      li.mobile-menu__item.mobile-menu__item--nochild
+        a.mobile-menu__entry(href='#') Về La Parfumania
+
+      li.mobile-menu__item.mobile-menu__item--nochild
+        a.mobile-menu__entry(href='#') Blogs
+
+      li.mobile-menu__item.mobile-menu__item--nochild
+        a.mobile-menu__entry(href='#') Liên hệ

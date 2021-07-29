@@ -830,11 +830,13 @@ img {
 
 .mobile-cart > a > .mobile-cart-icon {
   position: relative;
+  line-height: 1;
+  max-height: 1.25rem;
 }
 
 .mobile-component__cart-badge {
-  top: -0.28rem;
-  right: -0.66rem;
+  top: -0.4rem;
+  right: -0.7rem;
 }
 
 /* ----- End: Mobile Components ----- */
@@ -1107,10 +1109,15 @@ img {
   font-size: 0.93rem;
   cursor: pointer;
   transition: all 0.3s ease;
+  width: fit-content;
 }
 
 .forgot-password:hover {
   color: var(--color-primary);
+}
+
+.btn-close:focus {
+  box-shadow: none;
 }
 
 .forgotpass-modal .modal-title {

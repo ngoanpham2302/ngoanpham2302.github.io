@@ -30,6 +30,7 @@
   <body>
     <!-- Header -->
     <header id="header">
+      <!-- Header Info bar -->
       <div class="info-bar container-fluid">
         <div class="info-bar__wrapper">
           <div class="info-bar__phone">
@@ -202,6 +203,62 @@
                   <span class="header-component__cart-badge">2</span>
                 </a>
               </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Header Components -->
+      <div class="mobile-header-components">
+        <div class="component-wrapper">
+          <div class="mobile-component mobile-home">
+            <a href="./index.html">
+              <span
+                class="iconify"
+                data-icon="fa-solid:home"
+                data-inline="false"
+              ></span>
+              <span>Home</span>
+            </a>
+          </div>
+
+          <div class="mobile-component mobile-wishlist">
+            <a href="./wishlist.html">
+              <span
+                class="iconify"
+                data-icon="clarity:heart-solid"
+                data-inline="false"
+              ></span>
+              <span>Wishlist</span>
+            </a>
+          </div>
+
+          <div class="mobile-component mobile-cart">
+            <a href="./shopping-cart.html">
+              <span class="mobile-cart-icon">
+                <span
+                  class="iconify"
+                  data-icon="clarity:shopping-cart-solid"
+                  data-inline="false"
+                ></span>
+                <span class="mobile-component__cart-badge">2</span>
+              </span>
+              <span>Cart</span>
+            </a>
+          </div>
+
+          <div
+            class="mobile-component mobile-account"
+            data-bs-toggle="modal"
+            data-bs-target="#loginModal"
+          >
+            <div>
+              <span
+                class="iconify"
+                data-icon="clarity:user-solid"
+                data-inline="false"
+              ></span>
+              <span>Account</span>
             </div>
           </div>
         </div>
@@ -386,7 +443,7 @@
           </div>
 
           <div class="mobile-menu__logo">
-            <a href="index.html">
+            <a href="./index.html">
               <img
                 class="logo"
                 src="./images/brands/logo.png"
@@ -549,62 +606,6 @@
         </div>
       </div>
 
-      <!-- Mobile Header Components -->
-      <div class="mobile-header-components">
-        <div class="component-wrapper">
-          <div class="mobile-component mobile-home">
-            <a href="./index.html">
-              <span
-                class="iconify"
-                data-icon="fa-solid:home"
-                data-inline="false"
-              ></span>
-              <span>Home</span>
-            </a>
-          </div>
-
-          <div class="mobile-component mobile-wishlist">
-            <a href="./wishlist.html">
-              <span
-                class="iconify"
-                data-icon="clarity:heart-solid"
-                data-inline="false"
-              ></span>
-              <span>Wishlist</span>
-            </a>
-          </div>
-
-          <div class="mobile-component mobile-cart">
-            <a href="./shopping-cart.html">
-              <span class="mobile-cart-icon">
-                <span
-                  class="iconify"
-                  data-icon="clarity:shopping-cart-solid"
-                  data-inline="false"
-                ></span>
-                <span class="mobile-component__cart-badge">2</span>
-              </span>
-              <span>Cart</span>
-            </a>
-          </div>
-
-          <div
-            class="mobile-component mobile-account"
-            data-bs-toggle="modal"
-            data-bs-target="#loginModal"
-          >
-            <div>
-              <span
-                class="iconify"
-                data-icon="clarity:user-solid"
-                data-inline="false"
-              ></span>
-              <span>Account</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
       <!-- Modal Login/Signup -->
       <div class="login-modal">
         <div
@@ -677,7 +678,7 @@
                       <div class="form-input mb-3">
                         <input
                           class="form-control"
-                          type="password"
+                          type="text"
                           id="login-password"
                           placeholder="Mật khẩu"
                           autocomplete="current-password"
@@ -745,7 +746,7 @@
                     <div class="form-input mb-3">
                       <input
                         class="form-control"
-                        type="password"
+                        type="text"
                         id="signup-password"
                         placeholder="Mật khẩu"
                         autocomplete="new-password"

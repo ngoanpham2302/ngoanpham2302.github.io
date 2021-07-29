@@ -1,0 +1,119 @@
+extends template-part/layout.pug
+
+block vendor-css
+
+block important-css
+
+    link(rel='stylesheet' href='./css/shopping-cart.css')
+    link(rel='stylesheet' href='./css/wishlist.css')
+
+block title
+
+    title Danh sách yêu thích - La Parfumania Perfume Gallery
+
+block head-banner
+
+    // Header Page Banner
+    .page-banner.container-fluid
+        .page-banner__content
+            h2.page-banner__title DANH SÁCH YÊU THÍCH
+            .page-banner__hr-line
+            .page-banner__breadcrumb
+                nav(aria-label='breadcrumb')
+                    ol.breadcrumb
+                        li.breadcrumb-item
+                            a(href='./index.html') Trang chủ
+                        li.breadcrumb-divider
+                            span.iconify(data-icon='carbon:chevron-right' data-inline='false')
+                        li.breadcrumb-item.active(aria-current='page')
+                            | Yêu thích
+
+block content
+
+    // Section Shopping Cart
+    section.section.section-cart.container-fluid
+        .section-cart-inner.container
+            .cart-container
+                .cart-table
+                    .cart-header-entries.mobile-hidden
+                        .cart-entry.img-entry SẢN PHẨM
+
+                        .product-col-entries
+                            .cart-entry.name-entry TÊN SẢN PHẨM
+                            .cart-entry.volume-entry.medium-col
+                                | DUNG TÍCH
+                            .cart-entry.unit-entry.medium-col ĐƠN GIÁ
+                            .cart-entry.quantity-entry.medium-col.status-entry
+                                | TÌNH TRẠNG
+                            .cart-entry.total-entry.medium-col.wishtocart-entry
+                            .cart-entry.remove-entry.medium-col
+                            
+                    .cart-body
+                        .product-row
+                            .pro-img
+                                a(href='./product-detail.html')
+                                    img(src='./images/products/cart-dior-homme-intense.webp' alt='dior-homme-intense')
+                                    
+                            .product-cols
+                                .pro-name.mobile-flex
+                                    a(href='./product-detail.html') Dior Homme Intense EDP
+                                    button.btn-remove-product.btn-remove-mobile
+                                        span.iconify.remove-icon(data-icon='icomoon-free:bin' data-inline='false')
+
+                                .pro-volume.medium-col 100ml
+
+                                .unit-price.medium-col.mobile-flex
+                                    span.col-name Đơn giá
+                                    span.col-value 2.800.000đ
+
+                                .pro-quantity.medium-col.mobile-flex.status
+                                    span.col-name Tình trạng
+                                    span.col-value.status--available Còn hàng
+
+                                .total-price.medium-col.mobile-flex.wish-to-cart
+                                    button.section__btn.btn-wishtocart
+                                        | THÊM VÀO GIỎ
+
+                                .pro-remove.text-center.mobile-hidden
+                                    button.btn-remove-product
+                                        span.iconify.remove-icon(data-icon='icomoon-free:bin' data-inline='false')
+                        .product-row
+                            .pro-img
+                                a(href='./product-detail.html')
+                                    img(src='./images/products/cart-armani-my-way.webp' alt='cart-armani-my-way')
+
+                            .product-cols
+                                .pro-name.mobile-flex
+                                    a(href='./product-detail.html') Giorgio Armani My Way EDP
+
+                                    button.btn-remove-product.btn-remove-mobile
+                                        span.iconify.remove-icon(data-icon='icomoon-free:bin' data-inline='false')
+
+                                .pro-volume.medium-col 100ml
+
+                                .unit-price.medium-col.mobile-flex
+                                    span.col-name Đơn giá
+                                    span.col-value 2.590.000đ
+
+                                .pro-quantity.medium-col.mobile-flex.status
+                                    span.col-name Tình trạng
+                                    span.col-value.status--runout Hết hàng
+
+                                .total-price.medium-col.wish-to-cart.mobile-flex
+                                    button.section__btn.btn-wishtocart
+                                        | THÊM VÀO GIỎ
+
+                                .pro-remove.text-center.mobile-hidden
+                                    button.btn-remove-product
+                                        span.iconify.remove-icon(data-icon='icomoon-free:bin' data-inline='false')
+
+                .cart-btns
+                    button.section__btn.btn-continue-shopping
+                        a(href='./shopping-cart.html') ĐẾN TRANG GIỎ HÀNG
+                    button.section__btn.btn-remove-all XÓA TOÀN BỘ
+
+block vendor-script
+
+block important-script
+
+    script(src='./js/wishlist.js')

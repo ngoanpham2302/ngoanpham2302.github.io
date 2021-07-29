@@ -1,0 +1,232 @@
+extends template-part/layout.pug
+
+block vendor-css
+
+    link(href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/css/datepicker.min.css' rel='stylesheet')
+
+
+block important-css
+
+    link(rel='stylesheet' href='./css/payment.css')
+
+block title
+
+    title Thanh toán - La Parfumania Perfume Gallery
+
+block head-banner
+
+    // Header Page Banner
+    .page-banner.container-fluid
+        .page-banner__content
+            h2.page-banner__title THANH TOÁN
+            .page-banner__hr-line
+            .page-banner__breadcrumb
+                nav(aria-label='breadcrumb')
+                    ol.breadcrumb
+                        li.breadcrumb-item
+                            a(href='./index.html') Trang chủ
+
+                        li.breadcrumb-divider
+                            span.iconify(data-icon='carbon:chevron-right' data-inline='false')
+
+                        li.breadcrumb-item
+                            a(href='./shopping-cart.html') Giỏ hàng
+
+                        li.breadcrumb-divider
+                            span.iconify(data-icon='carbon:chevron-right' data-inline='false')
+
+                        li.breadcrumb-item.active(aria-current='page')
+                            | Thanh toán
+
+block content
+
+    // Section Order Info
+    section.section-order__container.container-fluid
+        .order.container
+            form.order-form.needs-validation
+                .order__payment-info
+                    h4.order__title Thông tin thanh toán
+                    .order__first-info.row.g-3
+                        .order__name
+                            input.form-control.name-input(type='text' placeholder='Họ tên *')
+                            .feedback-noti Vui lòng nhập họ tên
+
+                        .order__phone
+                            input.form-control.phone-input(type='text' placeholder='Số điện thoại *')
+                            .feedback-noti Vui lòng nhập số điện thoại
+
+                        .order__city
+                            input.form-control.city-input(type='text' placeholder='Tỉnh/Thành phố *')
+                            .feedback-noti Vui lòng nhập tỉnh/thành phố
+
+                        .order__district
+                            input.form-control.district-input(type='text' placeholder='Quận/Huyện *')
+                            .valid-feedback.feedback-noti
+                                | Vui lòng nhập quận/huyện
+
+                        .order__ward
+                            input.form-control.ward-input(type='text' placeholder='Phường/Xã *')
+                            .feedback-noti Vui lòng nhập phường/xã
+
+                        .order__address
+                            input.form-control.address-input(type='text' placeholder='Địa chỉ *')
+                            .feedback-noti Vui lòng nhập địa chỉ
+
+                        .order__ship-method
+                            select#ship-method.form-select
+                                option(selected='' disabled='' value='')
+                                    | Phương thức vận chuyển *
+                                option(value='save') Tiết kiệm
+                                option(value='standard') Tiêu chuẩn
+                                option(value='fast') Nhanh
+                                option(value='super-fast') Hỏa tốc
+                            .invalid-feedback.feedback-noti
+                                | Vui lòng chọn phương thức vận chuyển
+
+                        .mb-3
+                            textarea#order-note.form-control(rows='3' placeholder='Ghi chú đơn hàng')
+
+                    .form-check.order__other-address
+                        input#other-address.form-check-input(type='checkbox' value='other-address')
+                        label.form-check-label(for='other-address')
+                            | Giao hàng tới địa chỉ khác?
+
+                    .order__receiver-info.row.g-3.d-none
+                        .order__name
+                            input.form-control.name-input(type='text' placeholder='Họ tên *')
+                            .feedback-noti Vui lòng nhập họ tên
+
+                        .order__phone
+                            input.form-control.phone-input(type='text' placeholder='Số điện thoại *')
+                            .feedback-noti Vui lòng nhập số điện thoại
+
+                        .order__city
+                            input.form-control.city-input(type='text' placeholder='Tỉnh/Thành phố *')
+                            .feedback-noti Vui lòng nhập tỉnh/thành phố
+
+                        .order__district
+                            input.form-control.district-input(type='text' placeholder='Quận/Huyện *')
+                            .valid-feedback.feedback-noti
+                                | Vui lòng nhập quận/huyện
+
+                        .order__ward
+                            input.form-control.ward-input(type='text' placeholder='Phường/Xã *')
+                            .feedback-noti Vui lòng nhập phường/xã
+
+                        .order__address
+                            input.form-control.address-input(type='text' placeholder='Địa chỉ *')
+                            .feedback-noti Vui lòng nhập địa chỉ
+
+                .order__details
+                    h4.order__title Thông tin đơn hàng
+                    .order__list
+                        .order-header.order-row
+                            .col-left SẢN PHẨM
+                            .col-right THÀNH TIỀN
+
+                        .order-item.order-row
+                            .col-left
+                                | Yves Saint Laurent Libre EDP 30ml x
+                                span.order-item__quantity  1
+                            .col-right.order-item__unit-price 1.850.000₫
+
+                        .order-item.order-row
+                            .col-left
+                                | Giorgio Armani Sì EDP 100ml x 
+                                span.order-item__quantity 1
+                            .col-right.order-item__unit-price 3.580.000₫
+
+                        .order-price.order-row-small
+                            .col-left Tạm tính
+                            .col-right 5.430.000₫
+                            
+                        .order-discount.order-row-small
+                            .col-left Giảm giá
+                            .col-right
+                                | - 
+                                span.discount-amount 200.000₫
+
+                        .order-ship-fee.order-row-small
+                            .col-left Phí giao hàng
+                            .col-right 0₫
+
+                        .order-subtotal.order-row
+                            .col-left TỔNG TIỀN
+                            .col-right 5.230.000₫
+
+                    .order__payment-method
+                        h4.order__title Phương thức thanh toán
+                        #payment-methods.accordion
+                            .accordion-item
+                                h2#headingVisa.accordion-header
+                                    button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#visa' aria-expanded='false' aria-controls='visa')
+                                        .form-check
+                                            input#visa-pay.form-check-input.pay-radio(type='radio' name='pay-methods' value='visa-pay' checked='')
+
+                                            label.form-check-label(for='visa-pay')
+                                                | Thanh toán trực tuyến bằng thẻ Visa/MasterCard
+
+                                #visa.accordion-collapse.collapse.show(aria-labelledby='headingVisa' data-bs-parent='#payment-methods')
+                                    .accordion-body
+                                        .row.g-2
+                                            .col-12
+                                                input.form-control(type='text' placeholder='Số thẻ' aria-label='Card number')
+
+                                            .col-12
+                                                input.form-control(type='text' placeholder='Tên chủ thẻ' aria-label='Card name')
+
+                                            .col-7
+                                                input#datepicker.form-control(type='text' name='datepicker' placeholder='MM/YYYY')
+                                                
+                                            .col-5
+                                                input.form-control(type='text' placeholder='CVV/CVC' aria-label='CVV-CVC')
+                            .accordion-item
+                                h2#headingBankTransfer.accordion-header
+                                    button.accordion-button(type='button' data-bs-toggle='collapse' data-bs-target='#bankTransfer' aria-expanded='true' aria-controls='bankTransfer')
+                                        .form-check
+                                            input#bank-pay.form-check-input.pay-radio(type='radio' name='pay-methods' value='bank-pay')
+                                            label.form-check-label(for='bank-pay')
+                                                | Chuyển khoản ngân hàng
+
+                                #bankTransfer.accordion-collapse.collapse(aria-labelledby='headingBankTransfer' data-bs-parent='#payment-methods')
+                                    .accordion-body
+                                        | Thực hiện chuyển khoản vào tài khoản ngân hàng của
+                                        | La Parfumania. 
+                                        br
+                                        |                         Xem thông tin chi tiết tài khoản tại
+                                        a.text-info(href='#') đây
+                                        | . 
+                                        br
+                                        |                         Nội dung chuyển khoản:
+                                        span.text-bold.text-danger “SĐT của bạn - Mã đơn hàng”
+                                        | .
+                                        br
+                                        |                         (Ví dụ:
+                                        span.text-bold “0123456789 - 005250”
+                                        | )
+
+                            .accordion-item
+                                h2#headingCod.accordion-header
+                                    button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#cod' aria-expanded='false' aria-controls='cod')
+                                        .form-check
+                                            input#cod-pay.form-check-input.pay-radio(type='radio' name='pay-methods' value='cod-pay')
+                                            label.form-check-label(for='cod-pay')
+                                                | Thanh toán tiền mặt khi nhận hàng (COD)
+
+                                #cod.accordion-collapse.collapse(aria-labelledby='headingCod' data-bs-parent='#payment-methods')
+                                    .accordion-body
+                                        | Quý khách sẽ thanh toán tiền mặt trực tiếp cho nhân viên
+                                        | giao hàng ngay sau khi nhận hàng.
+
+                    .col-12
+                        button.section__btn.w-100(type='submit')
+                            a(href='./order-complete.html') ĐẶT HÀNG
+
+block vendor-script
+
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.2.0/js/bootstrap-datepicker.min.js')
+
+
+block important-script
+
+    script(src='./js/payment.js')

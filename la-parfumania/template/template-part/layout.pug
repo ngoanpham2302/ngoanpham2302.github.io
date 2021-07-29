@@ -1,0 +1,62 @@
+doctype html
+html(lang="en")
+
+head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+
+    link(rel='shortcut icon' href='./images/brands/brand-icon.png' type='image/x-icon')
+
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+    link(href='https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap' rel='stylesheet')
+
+    link(rel='stylesheet' href='./vendor/bootstrap-5.0.2/css/bootstrap.min.css')
+
+    block vendor-css
+
+    link(rel='stylesheet' href='./css/layout.css')
+
+    block important-css
+
+    block title
+
+    script(src='https://code.iconify.design/1/1.0.7/iconify.min.js')
+  
+body
+
+    header#header
+
+        include head-components.pug
+
+        include head-nav.pug
+
+        include login.pug
+
+        block head-banner
+
+    main#main
+
+        block content
+
+        include newsletters.pug
+
+        include pageup.pug
+
+        include messenger.pug
+
+    footer#footer
+
+        include footer.pug
+
+    script(src='./vendor/jquery/jquery-3.6.0.min.js')
+    script(src='./vendor/bootstrap-5.0.2/js/bootstrap.bundle.min.js')
+
+    block vendor-script
+
+    script(src='./js/layout.js')
+
+    block important-script
+    
+

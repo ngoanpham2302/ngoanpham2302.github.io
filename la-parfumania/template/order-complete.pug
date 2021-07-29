@@ -1,0 +1,83 @@
+extends template-part/layout.pug
+
+block vendor-css
+
+block important-css
+
+    link(rel='stylesheet' href='./css/payment.css')
+    link(rel='stylesheet' href='./css/order-complete.css')
+
+block title
+
+    title Hoàn tất đơn hàng - La Parfumania Perfume Gallery
+
+block head-banner
+
+block content
+
+    // Section Order Info
+    section.section.order--complete.container-fluid
+        .order-summary.container
+            .order-thank
+                h4.thank-you
+                    | Cảm ơn quý khách đã lựa chọn La Parfumania.
+                .order-result
+                    .order-number
+                        p Mã đơn hàng
+                        p.text-bold 367289
+                    .vertical-line
+                    .order-date
+                        p Ngày nhận đơn
+                        p.text-bold 26/07/2021
+            .order__details
+                h4.order__title Chi tiết đơn hàng
+                .order__list
+                    .order-header.order-row
+                        .col-left SẢN PHẨM
+                        .col-right THÀNH TIỀN
+                    .order-item.order-row
+                        .col-left
+                            | Yves Saint Laurent Libre EDP 30ml x
+                            span.order-item__quantity  1
+                        .col-right.order-item__unit-price 1.850.000₫
+                    .order-item.order-row
+                        .col-left
+                            | Giorgio Armani Sì EDP 100ml x 
+                            span.order-item__quantity 1
+                        .col-right.order-item__unit-price 3.580.000₫
+                    .order-price.order-row-small
+                        .col-left Tạm tính
+                        .col-right 5.430.000₫
+                    .order-discount.order-row-small
+                        .col-left Giảm giá
+                        .col-right
+                            | - 
+                            span.discount-amount 200.000₫
+                    .order-ship-fee.order-row-small
+                        .col-left Phí giao hàng
+                        .col-right 0₫
+                    .order-payment.order-row-small
+                        .col-left Phương thức thanh toán
+                        .col-right Chuyển khoản ngân hàng
+                    .order-expect.order-row-small
+                        .col-left Giao hàng dự kiến
+                        .col-right 01/08/2021
+                    .order-ship.order-row-small
+                        .col-left Phương thức vận chuyển
+                        .col-right Tiêu chuẩn
+                    .order-subtotal.order-row
+                        .col-left TỔNG CỘNG
+                        .col-right 5.230.000₫
+                p.support-info
+                    | Tổng đài hỗ trợ: 
+                    span.text-info 0123456789
+                .col-12
+                    button.section__btn(type='submit')
+                        a(href='./index.html') QUAY VỀ TRANG CHỦ
+
+
+
+block vendor-script
+
+block important-script
+
