@@ -53,11 +53,17 @@ img {
   display: none;
 }
 
-.container-fluid {
-  padding: 0;
+.container-fluid.hero-content {
+  padding-left: 0;
+  padding-right: 0;
   max-width: 1920px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.page-banner.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .row {
@@ -115,10 +121,13 @@ img {
   align-items: center;
   height: 2.5rem;
   padding: 0 0.5rem;
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .info-bar__phone-number {
-  font-size: 0.875rem;
+  font-size: 1rem;
 }
 
 .info-bar__phone:hover > a {
@@ -135,6 +144,7 @@ img {
 
 .info-bar__social-icons a {
   display: flex;
+  font-size: 1.125rem;
 }
 
 .youtube-icon:hover,
@@ -445,6 +455,11 @@ img {
   transition: all 0.2s ease;
 }
 
+.section__btn a {
+  display: block;
+  width: 100%;
+}
+
 .section__btn:hover {
   color: var(--color-secondary);
   background-color: var(--color-logo-light);
@@ -587,6 +602,11 @@ img {
   color: var(--color-primary-light);
   background-color: var(--color-highlight-bg);
   border-color: var(--color-highlight-border);
+}
+
+.product-card__btn a {
+  display: block;
+  width: 100%;
 }
 
 /* ----- Start: Product Card ----- */
@@ -1096,8 +1116,8 @@ img {
 
 .login-modal .modal-dialog,
 .forgotpass-modal .modal-dialog {
-  max-width: 280px;
-  margin: 3rem auto;
+  max-width: 330px;
+  margin: 5rem auto;
 }
 
 .remember-acc label {
@@ -1296,11 +1316,21 @@ img {
   .newsletters__input {
     width: 188px;
   }
+
+  .login-modal .modal-dialog,
+  .forgotpass-modal .modal-dialog {
+    max-width: 300px;
+  }
 }
 
 @media (max-width: 320px) {
   .newsletters__input {
     max-width: 164px;
+  }
+
+  .login-modal .modal-dialog,
+  .forgotpass-modal .modal-dialog {
+    max-width: 270px;
   }
 }
 

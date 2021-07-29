@@ -756,6 +756,11 @@
 
 /* ----- Start: Section Customer Pictures ----- */
 
+.customer-pictures.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+
 .section-customer-pictures {
   margin-bottom: 7.25rem;
 }
@@ -769,6 +774,8 @@
 .fancybox-caption:after {
   display: none;
 }
+
+
 
 /* ----- End: Section Customer Pictures ----- */
 
