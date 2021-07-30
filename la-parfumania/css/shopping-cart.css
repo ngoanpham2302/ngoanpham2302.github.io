@@ -195,7 +195,19 @@
 }
 
 .discount-input {
-  margin-bottom: 1.5rem;
+  margin-bottom: 0;
+}
+
+.btn-apply-discount {
+  margin-top: 1.5rem;
+}
+
+.order-discount .feedback-noti {
+  text-align: left;
+}
+
+.order-discount .feedback-noti.invalid-feedback {
+  display: block !important;
 }
 
 input.discount-input::placeholder {
@@ -217,7 +229,7 @@ input.discount-input::placeholder {
   font-weight: 500;
 }
 
-.order__subtotal-value {
+.order__value {
   color: #c3811d;
   font-weight: 600;
   font-size: 1.5rem;
@@ -231,6 +243,12 @@ input.discount-input::placeholder {
 
 .order__subtotal {
   margin-bottom: 1rem;
+}
+
+.empty-cart-message {
+  font-size: 1.125rem;
+  color: var(--color-danger);
+  margin: 3rem auto 0 auto;
 }
 
 /* ----- End: Section Shopping Cart ----- */

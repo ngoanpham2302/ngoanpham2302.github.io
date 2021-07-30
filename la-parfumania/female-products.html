@@ -135,7 +135,7 @@
                   <div class="search-box">
                     <div class="header-component__inner-search d-flex">
                       <input
-                        type="search"
+                        type="text"
                         class="header-component__search-input"
                         placeholder="Tìm kiếm"
                       />
@@ -174,6 +174,21 @@
                   data-icon="clarity:user-line"
                   data-inline="false"
                 ></span>
+              </button>
+
+              <button class="user-login d-none">
+                <span class="user-avatar">
+                  <img
+                    src="./images/customers/customer-02.webp"
+                    alt="user-avatar"
+                  />
+                </span>
+
+                <div class="user-dropdown">
+                  <div>Thông tin cá nhân</div>
+                  <div>Đơn hàng</div>
+                  <div class="user-logout">Đăng xuất</div>
+                </div>
               </button>
 
               <button
@@ -661,7 +676,7 @@
                           class="form-control"
                           type="text"
                           id="login-email"
-                          placeholder="Email"
+                          placeholder="Email *"
                           autocomplete="email"
                         />
                         <small class="email-error error text-danger"
@@ -672,14 +687,29 @@
                       <div class="form-input mb-3">
                         <input
                           class="form-control"
-                          type="text"
+                          type="password"
                           id="login-password"
-                          placeholder="Mật khẩu"
+                          placeholder="Mật khẩu *"
                           autocomplete="current-password"
                         />
                         <small class="pass-error error text-danger"
                           >Error message</small
                         >
+                      </div>
+
+                      <div class="form-check mb-2 show-hide-pass">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value="show-hide password"
+                          id="show-hide-pass-login"
+                        />
+                        <label
+                          class="form-check-label"
+                          for="show-hide-pass-login"
+                        >
+                          Ẩn/Hiện mật khẩu
+                        </label>
                       </div>
 
                       <div class="form-check mb-3 remember-acc">
@@ -726,29 +756,44 @@
                     role="tabpanel"
                     aria-labelledby="signup-tab"
                   >
-                    <div class="form-input mb-3">
-                      <input
-                        class="form-control"
-                        type="text"
-                        id="signup-email"
-                        placeholder="Email"
-                        autocomplete="email"
-                      />
-                      <small class="error">Error message</small>
-                    </div>
+                    <form class="row needs-validation">
+                      <div class="form-input mb-3">
+                        <input
+                          class="form-control"
+                          type="text"
+                          id="signup-email"
+                          placeholder="Email *"
+                          autocomplete="email"
+                        />
+                        <small class="error">Error message</small>
+                      </div>
 
-                    <div class="form-input mb-3">
-                      <input
-                        class="form-control"
-                        type="text"
-                        id="signup-password"
-                        placeholder="Mật khẩu"
-                        autocomplete="new-password"
-                      />
-                      <small class="error">Error message</small>
-                    </div>
+                      <div class="form-input mb-3">
+                        <input
+                          class="form-control"
+                          type="password"
+                          id="signup-password"
+                          placeholder="Mật khẩu *"
+                          autocomplete="new-password"
+                        />
+                        <small class="error">Error message</small>
+                      </div>
 
-                    <form class="row needs-validation" novalidate>
+                      <div class="form-check mb-3 show-hide-pass">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value="show-hide password"
+                          id="show-hide-pass-signup"
+                        />
+                        <label
+                          class="form-check-label"
+                          for="show-hide-pass-signup"
+                        >
+                          Ẩn/Hiện mật khẩu
+                        </label>
+                      </div>
+
                       <div class="form-input mb-3">
                         <input
                           class="form-control"
@@ -764,7 +809,7 @@
                           class="form-control"
                           type="text"
                           id="signup-phone"
-                          placeholder="Số điện thoại"
+                          placeholder="Số điện thoại *"
                           autocomplete="phone"
                         />
                         <small class="error">Error message</small>
@@ -814,11 +859,9 @@
                 <form>
                   <div class="form-input mb-3">
                     <input
-                      class="form-control"
+                      class="form-control send-recovery-email"
                       type="text"
-                      id="email"
                       placeholder="Email"
-                      required
                     />
                     <small class="error">Error message</small>
                   </div>
@@ -834,6 +877,161 @@
                   </div>
                 </form>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Login Toast -->
+      <div
+        class="position-fixed top-0 start-50 translate-middle-x p-5"
+        style="z-index: 1020"
+      >
+        <div
+          data-bs-delay="1500"
+          id="loginToast"
+          class="toast login-toast hide"
+          role="alert"
+          aria-live="assertive"
+          aria-atomic="true"
+        >
+          <div class="toast-body">
+            <p class="login-success-noti text-success">Đăng nhập thành công!</p>
+            <p class="welcome-text">
+              Chào mừng <span class="login-name"></span> quay trở lại!
+            </p>
+
+            <div class="mt-2 pt-2 border-top text-center">
+              <button
+                type="button"
+                class="btn btn-danger btn-sm"
+                data-bs-dismiss="toast"
+              >
+                Đóng
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Signup Toast -->
+      <div
+        class="position-fixed top-0 start-50 translate-middle-x p-5"
+        style="z-index: 1020"
+      >
+        <div
+          data-bs-delay="1500"
+          id="signupToast"
+          class="toast signup-toast hide"
+          role="alert"
+          aria-live="assertive"
+          aria-atomic="true"
+        >
+          <div class="toast-body">
+            <p class="signup-success-noti text-success">Đăng ký thành công!</p>
+            <p class="welcome-text">Vui lòng đăng nhập để tiếp tục.</p>
+
+            <div class="mt-2 pt-2 border-top text-center">
+              <button
+                type="button"
+                class="btn btn-danger btn-sm"
+                data-bs-dismiss="toast"
+              >
+                Đóng
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Back to top button -->
+      <button class="btn-to-top" title="Lên đầu trang">
+        <span
+          class="iconify to-top-icon"
+          data-icon="carbon:back-to-top"
+          data-inline="false"
+        ></span>
+      </button>
+
+      <!-- Wishlist Toast -->
+      <div
+        class="position-fixed top-0 start-50 translate-middle-x p-5"
+        style="z-index: 1020"
+      >
+        <div
+          data-bs-delay="1000"
+          id="wishlistToast"
+          class="toast wishlist-toast hide"
+          role="alert"
+          aria-live="assertive"
+          aria-atomic="true"
+        >
+          <div class="toast-body">
+            <p class="wishlist-noti">Đã thêm vào danh sách yêu&nbsp;thích!</p>
+            <div class="toast-detail">
+              <div class="toast-img">
+                <img
+                  src="./images/products/cart-ysl-libre.webp"
+                  alt="product-image"
+                />
+              </div>
+              <div class="toast-names">
+                <p class="toast-brand-text">Yves Saint Laurent</p>
+                <p class="toast-name-text">Libre EDP</p>
+              </div>
+            </div>
+
+            <div class="mt-2 pt-2 border-top text-center">
+              <button
+                type="button"
+                class="btn btn-danger btn-sm"
+                data-bs-dismiss="toast"
+              >
+                Đóng
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Add to cart Toast -->
+      <div
+        class="position-fixed top-0 start-50 translate-middle-x p-5"
+        style="z-index: 1020"
+      >
+        <div
+          data-bs-delay="1000"
+          id="addcartToast"
+          class="toast addcart-toast hide"
+          role="alert"
+          aria-live="assertive"
+          aria-atomic="true"
+        >
+          <div class="toast-body">
+            <p class="addcart-noti text-success">
+              Đã thêm sản phẩm vào giỏ&nbsp;hàng!
+            </p>
+            <div class="toast-detail">
+              <div class="toast-img">
+                <img
+                  src="./images/products/cart-ysl-libre.webp"
+                  alt="product-image"
+                />
+              </div>
+              <div class="toast-names">
+                <p class="toast-brand-text">Yves Saint Laurent</p>
+                <p class="toast-name-text">Libre EDP</p>
+              </div>
+            </div>
+
+            <div class="mt-2 pt-2 border-top text-center">
+              <button
+                type="button"
+                class="btn btn-danger btn-sm"
+                data-bs-dismiss="toast"
+              >
+                Đóng
+              </button>
             </div>
           </div>
         </div>
@@ -1240,7 +1438,7 @@
                         YVES SAINT LAURENT
                       </h5>
                       <p class="card-text product-card__name">Libre EDP</p>
-                      <p class="card-text product-card__price">1,850,000₫</p>
+                      <p class="card-text product-card__price">1,860,000₫</p>
                       <button class="btn-addtocart product-card__btn">
                         <span
                           class="iconify cart-icon"
@@ -2028,5 +2226,6 @@
 
     <script src="./js/layout.js"></script>
     <script src="./js/female-products.js"></script>
+    <script src="./js/add-to-cart.js"></script>
   </body>
 </html>

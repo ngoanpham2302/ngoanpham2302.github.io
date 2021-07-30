@@ -31,10 +31,15 @@
   font-weight: 500;
 }
 
-.thank-you {
+.thank-you,
+.order-complete-noti {
   color: #fff;
   font-size: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.75rem;
+}
+
+.thank-you {
+  font-size: 1.25rem;
 }
 
 .order-expect .col-left {

@@ -27,7 +27,7 @@
   <body>
     <!-- Header -->
     <header id="header">
-      <!-- Header Info bar -->
+     <!-- Header Info bar -->
       <div class="info-bar container-fluid">
         <div class="info-bar__wrapper">
           <div class="info-bar__phone">
@@ -135,7 +135,7 @@
                   <div class="search-box">
                     <div class="header-component__inner-search d-flex">
                       <input
-                        type="search"
+                        type="text"
                         class="header-component__search-input"
                         placeholder="Tìm kiếm"
                       />
@@ -174,6 +174,21 @@
                   data-icon="clarity:user-line"
                   data-inline="false"
                 ></span>
+              </button>
+
+              <button class="user-login d-none">
+                <span class="user-avatar">
+                  <img
+                    src="./images/customers/customer-02.webp"
+                    alt="user-avatar"
+                  />
+                </span>
+
+                <div class="user-dropdown">
+                  <div>Thông tin cá nhân</div>
+                  <div>Đơn hàng</div>
+                  <div class="user-logout">Đăng xuất</div>
+                </div>
               </button>
 
               <button
@@ -661,7 +676,7 @@
                           class="form-control"
                           type="text"
                           id="login-email"
-                          placeholder="Email"
+                          placeholder="Email *"
                           autocomplete="email"
                         />
                         <small class="email-error error text-danger"
@@ -672,14 +687,29 @@
                       <div class="form-input mb-3">
                         <input
                           class="form-control"
-                          type="text"
+                          type="password"
                           id="login-password"
-                          placeholder="Mật khẩu"
+                          placeholder="Mật khẩu *"
                           autocomplete="current-password"
                         />
                         <small class="pass-error error text-danger"
                           >Error message</small
                         >
+                      </div>
+
+                      <div class="form-check mb-2 show-hide-pass">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value="show-hide password"
+                          id="show-hide-pass-login"
+                        />
+                        <label
+                          class="form-check-label"
+                          for="show-hide-pass-login"
+                        >
+                          Ẩn/Hiện mật khẩu
+                        </label>
                       </div>
 
                       <div class="form-check mb-3 remember-acc">
@@ -726,29 +756,44 @@
                     role="tabpanel"
                     aria-labelledby="signup-tab"
                   >
-                    <div class="form-input mb-3">
-                      <input
-                        class="form-control"
-                        type="text"
-                        id="signup-email"
-                        placeholder="Email"
-                        autocomplete="email"
-                      />
-                      <small class="error">Error message</small>
-                    </div>
+                    <form class="row needs-validation">
+                      <div class="form-input mb-3">
+                        <input
+                          class="form-control"
+                          type="text"
+                          id="signup-email"
+                          placeholder="Email *"
+                          autocomplete="email"
+                        />
+                        <small class="error">Error message</small>
+                      </div>
 
-                    <div class="form-input mb-3">
-                      <input
-                        class="form-control"
-                        type="text"
-                        id="signup-password"
-                        placeholder="Mật khẩu"
-                        autocomplete="new-password"
-                      />
-                      <small class="error">Error message</small>
-                    </div>
+                      <div class="form-input mb-3">
+                        <input
+                          class="form-control"
+                          type="password"
+                          id="signup-password"
+                          placeholder="Mật khẩu *"
+                          autocomplete="new-password"
+                        />
+                        <small class="error">Error message</small>
+                      </div>
 
-                    <form class="row needs-validation" novalidate>
+                      <div class="form-check mb-3 show-hide-pass">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value="show-hide password"
+                          id="show-hide-pass-signup"
+                        />
+                        <label
+                          class="form-check-label"
+                          for="show-hide-pass-signup"
+                        >
+                          Ẩn/Hiện mật khẩu
+                        </label>
+                      </div>
+
                       <div class="form-input mb-3">
                         <input
                           class="form-control"
@@ -764,7 +809,7 @@
                           class="form-control"
                           type="text"
                           id="signup-phone"
-                          placeholder="Số điện thoại"
+                          placeholder="Số điện thoại *"
                           autocomplete="phone"
                         />
                         <small class="error">Error message</small>
@@ -814,11 +859,9 @@
                 <form>
                   <div class="form-input mb-3">
                     <input
-                      class="form-control"
+                      class="form-control send-recovery-email"
                       type="text"
-                      id="email"
                       placeholder="Email"
-                      required
                     />
                     <small class="error">Error message</small>
                   </div>
@@ -838,6 +881,77 @@
           </div>
         </div>
       </div>
+
+      <!-- Login Toast -->
+      <div
+        class="position-fixed top-0 start-50 translate-middle-x p-5"
+        style="z-index: 1020"
+      >
+        <div
+          data-bs-delay="1500"
+          id="loginToast"
+          class="toast login-toast hide"
+          role="alert"
+          aria-live="assertive"
+          aria-atomic="true"
+        >
+          <div class="toast-body">
+            <p class="login-success-noti text-success">Đăng nhập thành công!</p>
+            <p class="welcome-text">
+              Chào mừng <span class="login-name"></span> quay trở lại!
+            </p>
+
+            <div class="mt-2 pt-2 border-top text-center">
+              <button
+                type="button"
+                class="btn btn-danger btn-sm"
+                data-bs-dismiss="toast"
+              >
+                Đóng
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Signup Toast -->
+      <div
+        class="position-fixed top-0 start-50 translate-middle-x p-5"
+        style="z-index: 1020"
+      >
+        <div
+          data-bs-delay="1500"
+          id="signupToast"
+          class="toast signup-toast hide"
+          role="alert"
+          aria-live="assertive"
+          aria-atomic="true"
+        >
+          <div class="toast-body">
+            <p class="signup-success-noti text-success">Đăng ký thành công!</p>
+            <p class="welcome-text">Vui lòng đăng nhập để tiếp tục.</p>
+
+            <div class="mt-2 pt-2 border-top text-center">
+              <button
+                type="button"
+                class="btn btn-danger btn-sm"
+                data-bs-dismiss="toast"
+              >
+                Đóng
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Back to top button -->
+      <button class="btn-to-top" title="Lên đầu trang">
+        <span
+          class="iconify to-top-icon"
+          data-icon="carbon:back-to-top"
+          data-inline="false"
+        ></span>
+      </button>
 
       <!-- Header Page Banner -->
       <div class="page-banner container-fluid">
@@ -924,17 +1038,23 @@
                     <div class="pro-volume medium-col">30ml</div>
                     <div class="unit-price medium-col mobile-flex">
                       <span class="col-name">Đơn giá</span>
-                      <span class="col-value">1.850.000đ</span>
+                      <span class="col-value">1.860.000đ</span>
                     </div>
 
                     <div class="pro-quantity medium-col mobile-flex">
                       <span class="col-name">Số lượng</span>
                       <div class="cart__quantity">
-                        <button class="quantity-btn quantity-decrease-btn">
+                        <button
+                          class="quantity-btn quantity-decrease-btn"
+                          onclick="quantityDecrease()"
+                        >
                           -
                         </button>
                         <input type="text" class="quantity-input" value="1" />
-                        <button class="quantity-btn quantity-increase-btn">
+                        <button
+                          class="quantity-btn quantity-increase-btn"
+                          onclick="quantityIncrease()"
+                        >
                           +
                         </button>
                       </div>
@@ -942,11 +1062,14 @@
 
                     <div class="total-price medium-col mobile-flex">
                       <span class="col-name">Thành tiền</span>
-                      <span class="col-value">1.850.000đ</span>
+                      <span class="col-value">1.860.000đ</span>
                     </div>
 
                     <div class="pro-remove text-center mobile-hidden">
-                      <button class="btn-remove-product">
+                      <button
+                        class="btn-remove-product"
+                        onclick="removeProduct()"
+                      >
                         <span
                           class="iconify remove-icon"
                           data-icon="icomoon-free:bin"
@@ -1023,7 +1146,13 @@
                 <a href="./female-products.html">TIẾP TỤC MUA HÀNG</a>
               </button>
 
-              <button class="section__btn btn-remove-all">XÓA TOÀN BỘ</button>
+              <button
+                class="section__btn btn-remove-all"
+                data-bs-toggle="modal"
+                data-bs-target="#removeAllModal"
+              >
+                XÓA TOÀN BỘ
+              </button>
             </div>
           </div>
 
@@ -1031,11 +1160,14 @@
             <div class="order-discount">
               <h4 class="order__title">MÃ GIẢM GIÁ</h4>
 
-              <input
-                class="form-control form-control-lg discount-input"
-                type="text"
-                placeholder="Nhập mã giảm giá"
-              />
+              <div class="discount-wrapper">
+                <input
+                  class="form-control form-control-lg discount-input"
+                  type="text"
+                  placeholder="Nhập mã giảm giá (D10, D20, D30)"
+                />
+                <div class="feedback-noti">Mã giảm giá đã hết hạn</div>
+              </div>
 
               <button class="section__btn btn-apply-discount">
                 ÁP DỤNG MÃ GIẢM GIÁ
@@ -1047,19 +1179,22 @@
 
               <div class="order__temp-price order-row">
                 <p class="order__entry">Tạm tính</p>
-                <p class="order__temp-value">5.430.000₫</p>
+                <p><span class="order__temp-value">5.440.000</span>₫</p>
               </div>
 
               <div class="order__discount order-row">
                 <p class="order__entry">Giảm giá</p>
                 <p class="order__discount-value">
-                  - <span class="discount-amount">200.000₫</span>
+                  - <span class="discount-amount">0</span>₫
                 </p>
               </div>
 
               <div class="order__subtotal order-row">
                 <p class="order__entry">Tổng tiền</p>
-                <p class="order__subtotal-value">5.230.000₫</p>
+                <p class="order__value">
+                  <span class="order__subtotal-value">5.240.000</span>
+                  ₫
+                </p>
               </div>
 
               <button class="section__btn btn-checkout">
@@ -1069,6 +1204,49 @@
           </div>
         </div>
       </section>
+
+      <!-- Modal Remove All -->
+      <div
+        class="modal fade"
+        id="removeAllModal"
+        tabindex="-1"
+        aria-labelledby="removeAllModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="removeAllModalLabel">Xác nhận</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              Bạn có chắc chắn muốn xóa toàn bộ sản phẩm trong giỏ hàng?
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-success btn-confirm-remove-all"
+                data-bs-dismiss="modal"
+              >
+                Chắc chắn
+              </button>
+
+              <button
+                type="button"
+                class="btn btn-danger"
+                data-bs-dismiss="modal"
+              >
+                Hủy bỏ
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <!-- Section Newsletters -->
       <section class="section section-newsletters container-fluid">

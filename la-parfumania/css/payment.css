@@ -43,10 +43,6 @@
   margin-bottom: 1.5rem;
 }
 
-.feedback-noti {
-  display: none;
-}
-
 .form-control::placeholder {
   font-size: 1rem;
   font-family: "IBM Plex Sans", sans-serif;
@@ -92,7 +88,7 @@
 
 .order-row-small .col-left {
   text-align: left;
-  font-size: 1.rem;
+  font-size: 1rem;
   line-height: 1.625rem;
   font-weight: 500;
 }
@@ -207,6 +203,10 @@
 
 .accordion-body .row {
   --bs-gutter-x: 0.5rem;
+}
+
+.order__receiver-info {
+  margin-top: 1rem;
 }
 
 /* ----- End: Section Payment ----- */

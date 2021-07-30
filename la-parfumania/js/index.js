@@ -39,6 +39,7 @@ $(function () {
     ],
   });
 
+  // ---------------------------------
   // Product list
 
   $(".products-slider").slick({

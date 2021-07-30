@@ -228,7 +228,8 @@ img {
   font-size: 1.75rem;
 }
 
-.header-component__btn:not(:last-child) {
+.header-component__btn:not(:last-child),
+.user-login {
   margin-right: 1.5rem;
 }
 
@@ -512,14 +513,6 @@ img {
 
 .product-card__wishlist .wishlist-icon--filled {
   display: none;
-}
-
-.product-card__wishlist:hover .wishlist-icon--empty {
-  display: none;
-}
-
-.product-card__wishlist:hover .wishlist-icon--filled {
-  display: inline;
 }
 
 .product-card__btn {
@@ -1098,7 +1091,8 @@ img {
   border-radius: 0;
 }
 
-.modal-content {
+.login-modal .modal-content,
+.forgotpass-modal .modal-content {
   background-image: url(../images/decors/feedback-bg.webp);
   background-size: cover;
 }
@@ -1126,11 +1120,12 @@ img {
 
 .login-modal .modal-dialog,
 .forgotpass-modal .modal-dialog {
-  max-width: 330px;
+  max-width: 360px;
   margin: 5rem auto;
 }
 
-.remember-acc label {
+.remember-acc label,
+.show-hide-pass label {
   font-size: 0.93rem;
 }
 
@@ -1156,7 +1151,9 @@ img {
   font-weight: 500;
 }
 
-.error {
+.error,
+.feedback-noti {
+  color: var(--color-danger);
   font-style: italic;
   font-size: 0.8rem;
   display: none;
@@ -1172,7 +1169,149 @@ img {
   padding: 0.5rem;
 }
 
+/* Login/Signup/Payment/Wishlist/Addtocart Toast */
+
+.toast {
+  background-color: #fff;
+  font-family: "IBM Plex Sans", sans-serif !important;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.toast p {
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+
+.toast .login-success-noti,
+.toast .signup-success-noti,
+.toast .payment-fail-noti,
+.toast .wishlist-noti,
+.toast .addcart-noti {
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.toast .welcome-text,
+.toast-brand-text,
+.toast-name-text {
+  font-size: 1rem;
+}
+
+.toast-brand-text {
+  text-align: left !important;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem !important;
+}
+
+.toast-name-text {
+  text-align: left !important;
+}
+
+.toast-detail {
+  display: flex;
+  align-items: center;
+}
+
+.toast-img {
+  flex-basis: 20%;
+  margin-left: 0.5rem;
+}
+
+.toast-img img {
+  max-width: 3.5rem;
+}
+
+/* Login/Logout */
+
+.user-login {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  position: relative;
+}
+
+.user-avatar {
+  display: inline-block;
+}
+
+.user-avatar img {
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.user-dropdown {
+  text-align: left;
+  position: absolute;
+  left: -10%;
+  top: 120%;
+  z-index: -10;
+  padding-top: 0.5rem;
+  border: 1px solid rgba(18, 18, 18, 0.2);
+  width: 150px;
+  background-color: #fff;
+  opacity: 0;
+}
+
+.user-dropdown.show {
+  opacity: 1;
+  z-index: 1030;
+}
+
+.user-dropdown div {
+  padding: 0.25rem 0.5rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.user-dropdown div:hover {
+  background-color: rgba(18, 18, 18, 0.1);
+}
+
 /* ----- End: Login/Signup Modal ----- */
+
+/* ----- Start: Back to top button ----- */
+
+.btn-to-top {
+  position: fixed;
+  z-index: -8;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  outline: none;
+  border: none;
+  background-color: #fff;
+  width: 3.25rem;
+  height: 3.25rem;
+  border-radius: 50%;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  transform: translateY(2rem);
+  -webkit-transform: translateY(2rem);
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+
+.to-top-icon {
+  font-size: 1.75rem;
+  color: rgba(18, 18, 18, 0.6);
+  transition: all 0.25s ease;
+}
+
+.btn-to-top:hover .to-top-icon {
+  color: var(--color-text);
+}
+
+.btn-to-top.show-totop {
+  opacity: 1;
+  z-index: 1000;
+  transform: translateY(0);
+  -webkit-transform: translateY(0);
+}
+
+/* ----- End: Back to top button ----- */
 
 /* ------------ START: RESPONSIVE ----------- */
 
@@ -1237,7 +1376,8 @@ img {
     display: none;
   }
 
-  .header-component__btn:not(:last-child) {
+  .header-component__btn:not(:last-child),
+  .user-login {
     margin-right: 1rem;
   }
 
@@ -1279,7 +1419,8 @@ img {
   }
 
   .header-component__btn:not(:last-child),
-  .tablet-components .mobile-menu-icon {
+  .tablet-components .mobile-menu-icon,
+  .user-login {
     margin-right: 0.75rem;
   }
 
@@ -1350,7 +1491,14 @@ img {
 
   .login-modal .modal-dialog,
   .forgotpass-modal .modal-dialog {
-    max-width: 300px;
+    max-width: 308px;
+  }
+}
+
+@media (max-width: 360px) {
+  .toast {
+    width: 300px;
+    max-width: 95%;
   }
 }
 

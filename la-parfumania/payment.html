@@ -139,7 +139,7 @@
                   <div class="search-box">
                     <div class="header-component__inner-search d-flex">
                       <input
-                        type="search"
+                        type="text"
                         class="header-component__search-input"
                         placeholder="Tìm kiếm"
                       />
@@ -178,6 +178,21 @@
                   data-icon="clarity:user-line"
                   data-inline="false"
                 ></span>
+              </button>
+
+              <button class="user-login d-none">
+                <span class="user-avatar">
+                  <img
+                    src="./images/customers/customer-02.webp"
+                    alt="user-avatar"
+                  />
+                </span>
+
+                <div class="user-dropdown">
+                  <div>Thông tin cá nhân</div>
+                  <div>Đơn hàng</div>
+                  <div class="user-logout">Đăng xuất</div>
+                </div>
               </button>
 
               <button
@@ -665,7 +680,7 @@
                           class="form-control"
                           type="text"
                           id="login-email"
-                          placeholder="Email"
+                          placeholder="Email *"
                           autocomplete="email"
                         />
                         <small class="email-error error text-danger"
@@ -676,14 +691,29 @@
                       <div class="form-input mb-3">
                         <input
                           class="form-control"
-                          type="text"
+                          type="password"
                           id="login-password"
-                          placeholder="Mật khẩu"
+                          placeholder="Mật khẩu *"
                           autocomplete="current-password"
                         />
                         <small class="pass-error error text-danger"
                           >Error message</small
                         >
+                      </div>
+
+                      <div class="form-check mb-2 show-hide-pass">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value="show-hide password"
+                          id="show-hide-pass-login"
+                        />
+                        <label
+                          class="form-check-label"
+                          for="show-hide-pass-login"
+                        >
+                          Ẩn/Hiện mật khẩu
+                        </label>
                       </div>
 
                       <div class="form-check mb-3 remember-acc">
@@ -730,29 +760,44 @@
                     role="tabpanel"
                     aria-labelledby="signup-tab"
                   >
-                    <div class="form-input mb-3">
-                      <input
-                        class="form-control"
-                        type="text"
-                        id="signup-email"
-                        placeholder="Email"
-                        autocomplete="email"
-                      />
-                      <small class="error">Error message</small>
-                    </div>
+                    <form class="row needs-validation">
+                      <div class="form-input mb-3">
+                        <input
+                          class="form-control"
+                          type="text"
+                          id="signup-email"
+                          placeholder="Email *"
+                          autocomplete="email"
+                        />
+                        <small class="error">Error message</small>
+                      </div>
 
-                    <div class="form-input mb-3">
-                      <input
-                        class="form-control"
-                        type="text"
-                        id="signup-password"
-                        placeholder="Mật khẩu"
-                        autocomplete="new-password"
-                      />
-                      <small class="error">Error message</small>
-                    </div>
+                      <div class="form-input mb-3">
+                        <input
+                          class="form-control"
+                          type="password"
+                          id="signup-password"
+                          placeholder="Mật khẩu *"
+                          autocomplete="new-password"
+                        />
+                        <small class="error">Error message</small>
+                      </div>
 
-                    <form class="row needs-validation" novalidate>
+                      <div class="form-check mb-3 show-hide-pass">
+                        <input
+                          class="form-check-input"
+                          type="checkbox"
+                          value="show-hide password"
+                          id="show-hide-pass-signup"
+                        />
+                        <label
+                          class="form-check-label"
+                          for="show-hide-pass-signup"
+                        >
+                          Ẩn/Hiện mật khẩu
+                        </label>
+                      </div>
+
                       <div class="form-input mb-3">
                         <input
                           class="form-control"
@@ -768,7 +813,7 @@
                           class="form-control"
                           type="text"
                           id="signup-phone"
-                          placeholder="Số điện thoại"
+                          placeholder="Số điện thoại *"
                           autocomplete="phone"
                         />
                         <small class="error">Error message</small>
@@ -818,11 +863,9 @@
                 <form>
                   <div class="form-input mb-3">
                     <input
-                      class="form-control"
+                      class="form-control send-recovery-email"
                       type="text"
-                      id="email"
                       placeholder="Email"
-                      required
                     />
                     <small class="error">Error message</small>
                   </div>
@@ -838,6 +881,109 @@
                   </div>
                 </form>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Login Toast -->
+      <div
+        class="position-fixed top-0 start-50 translate-middle-x p-5"
+        style="z-index: 1020"
+      >
+        <div
+          data-bs-delay="1500"
+          id="loginToast"
+          class="toast login-toast hide"
+          role="alert"
+          aria-live="assertive"
+          aria-atomic="true"
+        >
+          <div class="toast-body">
+            <p class="login-success-noti text-success">Đăng nhập thành công!</p>
+            <p class="welcome-text">
+              Chào mừng <span class="login-name"></span> quay trở lại!
+            </p>
+
+            <div class="mt-2 pt-2 border-top text-center">
+              <button
+                type="button"
+                class="btn btn-danger btn-sm"
+                data-bs-dismiss="toast"
+              >
+                Đóng
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Signup Toast -->
+      <div
+        class="position-fixed top-0 start-50 translate-middle-x p-5"
+        style="z-index: 1020"
+      >
+        <div
+          data-bs-delay="1500"
+          id="signupToast"
+          class="toast signup-toast hide"
+          role="alert"
+          aria-live="assertive"
+          aria-atomic="true"
+        >
+          <div class="toast-body">
+            <p class="signup-success-noti text-success">Đăng ký thành công!</p>
+            <p class="welcome-text">Vui lòng đăng nhập để tiếp tục.</p>
+
+            <div class="mt-2 pt-2 border-top text-center">
+              <button
+                type="button"
+                class="btn btn-danger btn-sm"
+                data-bs-dismiss="toast"
+              >
+                Đóng
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Back to top button -->
+      <button class="btn-to-top" title="Lên đầu trang">
+        <span
+          class="iconify to-top-icon"
+          data-icon="carbon:back-to-top"
+          data-inline="false"
+        ></span>
+      </button>
+
+      <!-- Payment Toast -->
+      <div
+        class="position-fixed top-0 start-50 translate-middle-x p-5"
+        style="z-index: 1020"
+      >
+        <div
+          data-bs-delay="1700"
+          id="paymentToast"
+          class="toast payment-toast hide"
+          role="alert"
+          aria-live="assertive"
+          aria-atomic="true"
+        >
+          <div class="toast-body">
+            <p class="payment-fail-noti text-danger">
+              Thông tin thanh toán chưa hợp lệ.
+            </p>
+            <p class="welcome-text">Vui lòng kiểm tra lại.</p>
+
+            <div class="mt-2 pt-2 border-top text-center">
+              <button
+                type="button"
+                class="btn btn-danger btn-sm"
+                data-bs-dismiss="toast"
+              >
+                Đóng
+              </button>
             </div>
           </div>
         </div>
@@ -954,7 +1100,10 @@
                 </div>
 
                 <div class="order__ship-method">
-                  <select class="form-select" id="ship-method">
+                  <select
+                    class="form-select ship-method-select"
+                    id="ship-method"
+                  >
                     <option selected disabled value="">
                       Phương thức vận chuyển *
                     </option>
@@ -963,7 +1112,8 @@
                     <option value="fast">Nhanh</option>
                     <option value="super-fast">Hỏa tốc</option>
                   </select>
-                  <div class="invalid-feedback feedback-noti">
+
+                  <div class="feedback-noti">
                     Vui lòng chọn phương thức vận chuyển
                   </div>
                 </div>
@@ -990,7 +1140,7 @@
                 </label>
               </div>
 
-              <div class="order__receiver-info row g-3 d-none">
+              <div class="order__receiver-info row g-3">
                 <div class="order__name">
                   <input
                     type="text"
@@ -1065,7 +1215,7 @@
                       >&nbsp;1</span
                     >
                   </div>
-                  <div class="col-right order-item__unit-price">1.850.000₫</div>
+                  <div class="col-right order-item__unit-price">1.860.000₫</div>
                 </div>
 
                 <div class="order-item order-row">
@@ -1080,7 +1230,7 @@
 
                 <div class="order-price order-row-small">
                   <div class="col-left">Tạm tính</div>
-                  <div class="col-right">5.430.000₫</div>
+                  <div class="col-right">5.440.000₫</div>
                 </div>
 
                 <div class="order-discount order-row-small">
@@ -1097,7 +1247,7 @@
 
                 <div class="order-subtotal order-row">
                   <div class="col-left">TỔNG TIỀN</div>
-                  <div class="col-right">5.230.000₫</div>
+                  <div class="col-right">5.240.000₫</div>
                 </div>
               </div>
 
@@ -1140,43 +1290,51 @@
                         <div class="row g-2">
                           <div class="col-12">
                             <input
-                              required
-                              class="form-control"
+                              class="form-control visa-card-number"
                               type="text"
-                              placeholder="Số thẻ"
+                              placeholder="Số thẻ *"
                               aria-label="Card number"
                             />
+                            <div class="feedback-noti">
+                              Vui lòng nhập số thẻ
+                            </div>
                           </div>
 
                           <div class="col-12">
                             <input
-                              required
                               type="text"
-                              class="form-control"
-                              placeholder="Tên chủ thẻ"
+                              class="form-control visa-card-name"
+                              placeholder="Tên chủ thẻ *"
                               aria-label="Card name"
                             />
+                            <div class="feedback-noti">
+                              Vui lòng nhập tên chủ thẻ
+                            </div>
                           </div>
 
                           <div class="col-7">
                             <input
-                              required
                               type="text"
-                              class="form-control"
+                              class="form-control visa-card-date"
                               name="datepicker"
                               id="datepicker"
-                              placeholder="MM/YYYY"
+                              placeholder="MM/YYYY *"
                             />
+                            <div class="feedback-noti">
+                              Vui lòng nhập ngày hết hạn
+                            </div>
                           </div>
 
                           <div class="col-5">
                             <input
-                              required
                               type="text"
-                              class="form-control"
-                              placeholder="CVV/CVC"
+                              class="form-control visa-card-cvv"
+                              placeholder="CVV/CVC *"
                               aria-label="CVV-CVC"
                             />
+                            <div class="feedback-noti">
+                              Vui lòng nhập số CVV/CVC
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -1270,8 +1428,12 @@
               </div>
 
               <div class="col-12">
-                <button class="section__btn w-100" type="submit">
-                  <a href="./order-complete.html">ĐẶT HÀNG</a>
+                <button
+                  class="section__btn w-100 btn-place-order"
+                  type="button"
+                >
+                  ĐẶT HÀNG
+                  <!-- <a href="./order-complete.html">ĐẶT HÀNG</a> -->
                 </button>
               </div>
             </div>
