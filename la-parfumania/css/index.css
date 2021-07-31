@@ -582,6 +582,11 @@
   padding: 0;
 }
 
+.section-services__title {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
 .service {
   padding: 0 3rem;
 }
@@ -626,11 +631,6 @@
 .carousel-dark .carousel-indicators [data-bs-target] {
   background-color: transparent;
 }
-
-/* .carousel-indicators [data-bs-target].active {
-  width: 5rem;
-  height: 5rem;
-} */
 
 .carousel-indicators [data-bs-target] {
   width: 4.5rem;
