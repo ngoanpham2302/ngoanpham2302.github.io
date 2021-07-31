@@ -139,8 +139,8 @@
   box-shadow: none;
 }
 
-.accordion-button:not(.collapsed)::after,
-.accordion-button::after {
+.order__payment-method .accordion-button:not(.collapsed)::after,
+.order__payment-method .accordion-button::after {
   background-image: none;
   transform: none;
   color: transparent;
@@ -148,10 +148,10 @@
   display: none;
 }
 
-.accordion-button:not(.collapsed),
-.accordion-button,
-.accordion-button:focus,
-.accordion-button:focus {
+.order__payment-method .accordion-button:not(.collapsed),
+.order__payment-method .accordion-button,
+.order__payment-method .accordion-button:focus,
+.order__payment-method .accordion-button:focus {
   padding: 0;
   color: inherit;
   background-color: transparent;
@@ -160,7 +160,7 @@
   text-transform: none;
 }
 
-.accordion-item {
+.order__payment-method .accordion-item {
   padding: 0.5rem 0;
 }
 
@@ -180,18 +180,18 @@
   display: block;
 }
 
-.accordion-header {
+.order__payment-method .accordion-header {
   margin-bottom: 0.5rem;
 }
 
-.accordion-body {
+.order__payment-method .accordion-body {
   position: relative;
   color: rgba(18, 18, 18, 0.7);
   background-color: var(--color-neutral-bg);
   z-index: 200;
 }
 
-.accordion-body::before {
+.order__payment-method .accordion-body::before {
   content: url("https://api.iconify.design/ant-design:caret-up-filled.svg?color=%23f6f6f6&height=32");
   vertical-align: -0.125em;
   position: absolute;
@@ -201,7 +201,7 @@
   z-index: 100;
 }
 
-.accordion-body .row {
+.order__payment-method .accordion-body .row {
   --bs-gutter-x: 0.5rem;
 }
 
@@ -214,14 +214,6 @@
 /*------------ END: MAIN CONTENT ----------- */
 
 /*------------ START: RESPONSIVE ----------- */
-
-/* @media (max-width: 1399px) {
-
-} */
-
-/* @media (max-width: 1199px) {
-
-} */
 
 @media (max-width: 992px) {
   .order-form {
