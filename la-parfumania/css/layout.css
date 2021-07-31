@@ -4,7 +4,7 @@
 
 :root {
   --color-danger: #ee3b47;
-  --color-success: #1fd312;
+  --color-success: #0db102;
   --color-info: #167efb;
   --color-logo: #2c2e3e;
   --color-logo-light: #34374c;
@@ -81,7 +81,7 @@ img {
 }
 
 .text-danger {
-  color: var(--color-danger);
+  color: var(--color-danger) !;
 }
 
 .text-success {
@@ -476,6 +476,20 @@ img {
 }
 
 /* ----- Start: Product Card ----- */
+
+/* Fixed slick image zoom when page load */
+
+.products-slider {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease;
+  -webkit-transition: opacity 1s ease;
+}
+
+.products-slider.slick-initialized {
+  visibility: visible;
+  opacity: 1;
+}
 
 .card {
   border-radius: 0;
@@ -1230,6 +1244,11 @@ img {
   padding: 0 !important;
 }
 
+.btn-danger {
+  color: #fff;
+  background-color: var(--color-danger);
+  border-color: var(--color-danger);
+}
 /* Login/Logout */
 
 .user-login {

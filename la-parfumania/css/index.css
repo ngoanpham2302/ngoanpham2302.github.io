@@ -92,6 +92,20 @@
   opacity: 0.6;
 }
 
+/* Fixed slick image zoom when page load */
+
+.banner-slider {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease;
+  -webkit-transition: opacity 1s ease;
+}
+
+.banner-slider.slick-initialized {
+  visibility: visible;
+  opacity: 1;
+}
+
 /* .banner-slider .slick-dots li {
   margin: 0 0.35rem;
   width: 0.75rem;
