@@ -210,7 +210,7 @@
                     data-icon="clarity:shopping-cart-line"
                     data-inline="false"
                   ></span>
-                  <span class="header-component__cart-badge">2</span>
+                  <span class="header-component__cart-badge cart-badge">2</span>
                 </a>
               </button>
             </div>
@@ -251,7 +251,7 @@
                   data-icon="clarity:shopping-cart-solid"
                   data-inline="false"
                 ></span>
-                <span class="mobile-component__cart-badge">2</span>
+                <span class="mobile-component__cart-badge cart-badge">2</span>
               </span>
               <span>Cart</span>
             </a>
@@ -285,7 +285,7 @@
         </button>
 
         <div class="mobile-logo">
-          <a href="index.html">
+          <a href="./index.html">
             <img
               class="logo"
               src="./images/brands/logo.png"
@@ -1084,8 +1084,8 @@
               ></span>
 
               <input
-                type="search"
-                class="header-component__search-input"
+                type="text"
+                class="header-component__search-input product-search-input"
                 placeholder="Tìm kiếm"
               />
             </div>
@@ -1098,22 +1098,60 @@
               <h4 class="section-title filter-title">LỌC THEO THƯƠNG HIỆU</h4>
 
               <ul class="filter__brands-list filter__list">
-                <li class="filter__item filter__brand-item">Chanel</li>
-                <li class="filter__item filter__brand-item">Christian Dior</li>
-                <li class="filter__item filter__brand-item">Dolce&Gabbana</li>
-                <li class="filter__item filter__brand-item">Giorgio Armani</li>
-                <li class="filter__item filter__brand-item">Givenchy</li>
-                <li class="filter__item filter__brand-item">Gucci</li>
-                <li class="filter__item filter__brand-item">Guerlain</li>
-                <li class="filter__item filter__brand-item">Marc Jocobs</li>
-                <li class="filter__item filter__brand-item">Viktor&Rolf</li>
-                <li class="filter__item filter__brand-item">
+                <li class="filter__item filter__brand-item" data-brand="chanel">
+                  Chanel
+                </li>
+                <li class="filter__item filter__brand-item" data-brand="dg">
+                  Dolce&Gabbana
+                </li>
+                <li class="filter__item filter__brand-item" data-brand="armani">
+                  Giorgio Armani
+                </li>
+                <li
+                  class="filter__item filter__brand-item"
+                  data-brand="givenchy"
+                >
+                  Givenchy
+                </li>
+                <li class="filter__item filter__brand-item" data-brand="gucci">
+                  Gucci
+                </li>
+                <li
+                  class="filter__item filter__brand-item"
+                  data-brand="guerlain"
+                >
+                  Guerlain
+                </li>
+                <li class="filter__item filter__brand-item" data-brand="marc">
+                  Marc Jacobs
+                </li>
+                <li class="filter__item filter__brand-item" data-brand="ysl">
                   Yves Saint Laurent
                 </li>
-                <li class="filter__item filter__brand-item">Marc Jocobs</li>
-                <li class="filter__item filter__brand-item">Viktor&Rolf</li>
-                <li class="filter__item filter__brand-item">Dolce&Gabbana</li>
-                <li class="filter__item filter__brand-item">Giorgio Armani</li>
+                <li class="filter__item filter__brand-item" data-brand="viktor">
+                  Viktor&Rolf
+                </li>
+                <li class="filter__item filter__brand-item" data-brand="dior">
+                  Christian Dior
+                </li>
+                <li class="filter__item filter__brand-item" data-brand="paco">
+                  Paco Rabanne
+                </li>
+                <li
+                  class="filter__item filter__brand-item"
+                  data-brand="bvlgari"
+                >
+                  Bvlgari
+                </li>
+                <li
+                  class="filter__item filter__brand-item"
+                  data-brand="burberry"
+                >
+                  Burberry
+                </li>
+                <li class="filter__item filter__brand-item" data-brand="kilian">
+                  Kilian
+                </li>
               </ul>
             </div>
 
@@ -1261,17 +1299,20 @@
               </div>
 
               <div class="products__sort-item products__sort-page-items">
-                <select class="form-select" aria-label="select-page-items">
-                  <option value="1">9 sản phẩm/trang</option>
-                  <option selected value="2">12 sản phẩm/trang</option>
-                  <option value="3">15 sản phẩm/trang</option>
+                <select class="form-select select-page-items" aria-label="select-page-items">
+                  <option value="6">6 sản phẩm/trang</option>
+                  <option value="9">9 sản phẩm/trang</option>
+                  <option value="12" selected>12 sản phẩm/trang</option>
                 </select>
               </div>
             </div>
 
             <div class="products-list">
               <div class="row products-list__inner">
-                <div class="col-12 col-sm-6 col-xl-4">
+                <div
+                  class="col-12 col-sm-6 col-xl-4 product-item"
+                  data-brand="guerlain"
+                >
                   <div class="card product-card">
                     <div class="product-card__img">
                       <img
@@ -1316,7 +1357,10 @@
                   </div>
                 </div>
 
-                <div class="col-12 col-sm-6 col-xl-4">
+                <div
+                  class="col-12 col-sm-6 col-xl-4 product-item"
+                  data-brand="dg"
+                >
                   <div class="card product-card">
                     <div class="product-card__img">
                       <img
@@ -1363,7 +1407,10 @@
                   </div>
                 </div>
 
-                <div class="col-12 col-sm-6 col-xl-4">
+                <div
+                  class="col-12 col-sm-6 col-xl-4 product-item"
+                  data-brand="givenchy"
+                >
                   <div class="card product-card">
                     <div class="product-card__img">
                       <img
@@ -1406,7 +1453,10 @@
                   </div>
                 </div>
 
-                <div class="col-12 col-sm-6 col-xl-4">
+                <div
+                  class="col-12 col-sm-6 col-xl-4 product-item"
+                  data-brand="ysl"
+                >
                   <div class="card product-card">
                     <div class="product-card__img">
                       <img
@@ -1451,7 +1501,10 @@
                   </div>
                 </div>
 
-                <div class="col-12 col-sm-6 col-xl-4">
+                <div
+                  class="col-12 col-sm-6 col-xl-4 product-item"
+                  data-brand="gucci"
+                >
                   <div class="card product-card">
                     <div class="product-card__img">
                       <img
@@ -1496,7 +1549,10 @@
                   </div>
                 </div>
 
-                <div class="col-12 col-sm-6 col-xl-4">
+                <div
+                  class="col-12 col-sm-6 col-xl-4 product-item"
+                  data-brand="marc"
+                >
                   <div class="card product-card">
                     <div class="product-card__img">
                       <img
@@ -1541,7 +1597,10 @@
                   </div>
                 </div>
 
-                <div class="col-12 col-sm-6 col-xl-4">
+                <div
+                  class="col-12 col-sm-6 col-xl-4 product-item"
+                  data-brand="guerlain"
+                >
                   <div class="card product-card">
                     <div class="product-card__img">
                       <img
@@ -1584,7 +1643,10 @@
                   </div>
                 </div>
 
-                <div class="col-12 col-sm-6 col-xl-4">
+                <div
+                  class="col-12 col-sm-6 col-xl-4 product-item"
+                  data-brand="armani"
+                >
                   <div class="card product-card">
                     <div class="product-card__img">
                       <img
@@ -1631,7 +1693,10 @@
                   </div>
                 </div>
 
-                <div class="col-12 col-sm-6 col-xl-4">
+                <div
+                  class="col-12 col-sm-6 col-xl-4 product-item"
+                  data-brand="ysl"
+                >
                   <div class="card product-card">
                     <div class="product-card__img">
                       <img
@@ -1678,7 +1743,10 @@
                   </div>
                 </div>
 
-                <div class="col-12 col-sm-6 col-xl-4">
+                <div
+                  class="col-12 col-sm-6 col-xl-4 product-item"
+                  data-brand="armani"
+                >
                   <div class="card product-card">
                     <div class="product-card__img">
                       <img
@@ -1723,7 +1791,10 @@
                   </div>
                 </div>
 
-                <div class="col-12 col-sm-6 col-xl-4">
+                <div
+                  class="col-12 col-sm-6 col-xl-4 product-item"
+                  data-brand="dg"
+                >
                   <div class="card product-card">
                     <div class="product-card__img">
                       <img
@@ -1768,7 +1839,10 @@
                   </div>
                 </div>
 
-                <div class="col-12 col-sm-6 col-xl-4">
+                <div
+                  class="col-12 col-sm-6 col-xl-4 product-item"
+                  data-brand="chanel"
+                >
                   <div class="card product-card">
                     <div class="product-card__img">
                       <img
@@ -1816,12 +1890,8 @@
             <div class="products__pagination">
               <nav aria-label="page-navigation">
                 <ul class="pagination">
-                  <li class="pagination-item">
-                    <a
-                      class="pagination-link page-prev"
-                      href="#"
-                      aria-label="Previous"
-                    >
+                  <li class="pagination-item page-prev" data-page="prev">
+                    <a class="pagination-link" href="#" aria-label="Previous">
                       <span
                         class="iconify"
                         data-icon="akar-icons:chevron-left"
@@ -1829,22 +1899,22 @@
                       ></span>
                     </a>
                   </li>
-                  <li class="pagination-item">
+                  <li class="pagination-item" data-page="1">
                     <a class="pagination-link" href="#">1</a>
                   </li>
-                  <li class="pagination-item">
+                  <li class="pagination-item" data-page="2">
                     <a class="pagination-link" href="#">2</a>
                   </li>
-                  <li class="pagination-item">
+                  <li class="pagination-item" data-page="3">
                     <a class="pagination-link" href="#">3</a>
                   </li>
-                  <li class="pagination-item">
+                  <li class="pagination-item" data-page="4">
                     <a class="pagination-link" href="#">4</a>
                   </li>
-                  <li class="pagination-item">
+                  <li class="pagination-item" data-page="5">
                     <a class="pagination-link" href="#">5</a>
                   </li>
-                  <li class="pagination-item page-next">
+                  <li class="pagination-item page-next" data-page="next">
                     <a class="pagination-link" href="#" aria-label="Next">
                       <span
                         class="iconify"
@@ -1858,6 +1928,8 @@
             </div>
           </div>
         </div>
+
+        <!-- Mobile Filter -->
 
         <div class="mobile-filter-backdrop">
           <div class="mobile-products__filter">
@@ -1879,22 +1951,63 @@
               <h4 class="section-title filter-title">LỌC THEO THƯƠNG HIỆU</h4>
 
               <ul class="filter__brands-list filter__list">
-                <li class="filter__item filter__brand-item">Chanel</li>
-                <li class="filter__item filter__brand-item">Christian Dior</li>
-                <li class="filter__item filter__brand-item">Dolce&Gabbana</li>
-                <li class="filter__item filter__brand-item">Giorgio Armani</li>
-                <li class="filter__item filter__brand-item">Givenchy</li>
-                <li class="filter__item filter__brand-item">Gucci</li>
-                <li class="filter__item filter__brand-item">Guerlain</li>
-                <li class="filter__item filter__brand-item">Marc Jocobs</li>
-                <li class="filter__item filter__brand-item">Viktor&Rolf</li>
-                <li class="filter__item filter__brand-item">
+                <li class="filter__item filter__brand-item" data-brand="chanel">
+                  Chanel
+                </li>
+                <li class="filter__item filter__brand-item" data-brand="dior">
+                  Christian Dior
+                </li>
+                <li class="filter__item filter__brand-item" data-brand="dg">
+                  Dolce&Gabbana
+                </li>
+                <li class="filter__item filter__brand-item" data-brand="armani">
+                  Giorgio Armani
+                </li>
+                <li
+                  class="filter__item filter__brand-item"
+                  data-brand="givenchy"
+                >
+                  Givenchy
+                </li>
+                <li class="filter__item filter__brand-item" data-brand="gucci">
+                  Gucci
+                </li>
+                <li
+                  class="filter__item filter__brand-item"
+                  data-brand="guerlain"
+                >
+                  Guerlain
+                </li>
+                <li
+                  class="filter__item filter__brand-item"
+                  data-brand="marc-jacobs"
+                >
+                  Marc Jacobs
+                </li>
+                <li class="filter__item filter__brand-item" data-brand="viktor">
+                  Viktor&Rolf
+                </li>
+                <li class="filter__item filter__brand-item" data-brand="ysl">
                   Yves Saint Laurent
                 </li>
-                <li class="filter__item filter__brand-item">Marc Jocobs</li>
-                <li class="filter__item filter__brand-item">Viktor&Rolf</li>
-                <li class="filter__item filter__brand-item">Dolce&Gabbana</li>
-                <li class="filter__item filter__brand-item">Giorgio Armani</li>
+                <li class="filter__item filter__brand-item" data-brand="paco">
+                  Paco Rabanne
+                </li>
+                <li
+                  class="filter__item filter__brand-item"
+                  data-brand="bvlgari"
+                >
+                  Bvlgari
+                </li>
+                <li
+                  class="filter__item filter__brand-item"
+                  data-brand="burberry"
+                >
+                  Burberry
+                </li>
+                <li class="filter__item filter__brand-item" data-brand="kilian">
+                  Kilian
+                </li>
               </ul>
             </div>
 

@@ -27,18 +27,20 @@ let list = [
   {
     id: randomId(),
     image: "./images/products/cart-dior-homme-intense.webp",
-    name: "Dior Homme Intense EDP",
+    name: "Dior Homme Intense&nbsp;EDP",
     volume: "100ml",
     price: 2800000,
     status: "Còn hàng",
+    statusClass: "available",
   },
   {
     id: randomId(),
     image: "./images/products/cart-armani-my-way.webp",
-    name: "Giorgio Armani My Way EDP",
+    name: "Giorgio Armani My Way&nbsp;EDP",
     volume: "100ml",
     price: 2590000,
     status: "Hết hàng",
+    statusClass: "unavailable",
   },
 ];
 
@@ -98,7 +100,7 @@ function renderList(arr) {
 
                     <div class="pro-quantity medium-col mobile-flex status">
                       <span class="col-name">Tình trạng</span>
-                      <span class="col-value status--available">${
+                      <span class="col-value status--${product.statusClass}">${
                         product.status
                       }</span>
                     </div>

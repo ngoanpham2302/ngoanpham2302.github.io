@@ -18,7 +18,7 @@
   color: var(--color-success);
 }
 
-.status--runout {
+.status--unavailable {
   color: var(--color-danger);
 }
 

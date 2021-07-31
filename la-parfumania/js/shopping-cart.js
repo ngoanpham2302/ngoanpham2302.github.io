@@ -9,7 +9,7 @@ let cart = [
   {
     id: randomId(),
     image: "./images/products/cart-ysl-libre.webp",
-    name: "Yves Saint Laurent Libre EDP",
+    name: "Yves Saint Laurent Libre&nbsp;EDP",
     volume: "30ml",
     price: 1860000,
     quantity: 1,
@@ -17,7 +17,7 @@ let cart = [
   {
     id: randomId(),
     image: "./images/products/cart-armani-si.webp",
-    name: "Yves Saint Laurent Libre EDP",
+    name: "Giorgio Armani Sì&nbsp;EDP",
     volume: "100ml",
     price: 3580000,
     quantity: 1,

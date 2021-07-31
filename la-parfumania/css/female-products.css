@@ -76,7 +76,8 @@
 }
 
 .filter__gender-item--female,
-.filter__item:hover {
+.filter__item:hover,
+.filter__item.active {
   background-color: var(--color-highlight-bg);
   color: var(--color-primary);
 }

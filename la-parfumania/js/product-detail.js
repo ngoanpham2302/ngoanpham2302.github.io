@@ -195,4 +195,5 @@ detailAddCart.on("click", function () {
   let addcartToast = document.getElementById("addcartToast");
   let addcartAlert = new bootstrap.Toast(addcartToast); //inizialize toast
   addcartAlert.show(); //show toast
+  updateCartBadge(); 
 });

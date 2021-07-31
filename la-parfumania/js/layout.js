@@ -315,3 +315,15 @@ $(".btn-signup").click(function () {
 });
 
 // ------------ End: Validate Login/Signup ------------
+
+// Update cart badge
+function updateCartBadge() {
+  let desktopBadge = Number($(".header-component__cart-badge").text());
+  let mobileBadge = Number($(".mobile-component__cart-badge").text());
+
+  desktopBadge += 1;
+  mobileBadge += 1;
+
+  $(".header-component__cart-badge").text(desktopBadge);
+  $(".mobile-component__cart-badge").text(mobileBadge);
+}

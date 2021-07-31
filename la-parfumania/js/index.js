@@ -104,7 +104,7 @@ $(function () {
   $(".brands-slider").slick({
     autoplay: true,
     autoplaySpeed: 4000,
-    speed: 1000,
+    speed: 1200,
     slidesToShow: 6,
     slidesToScroll: 1,
     arrows: false,
@@ -145,7 +145,11 @@ $(function () {
   // Customer pictures gallery
 
   // Zoom in
-  $(".picture-gallery a").fancybox();
+  $(".picture-gallery a").fancybox({
+    loop: true,
+    // transitionEffect: "circular",
+    // transitionDuration: 800,
+  });
 
   $(".picture-gallery").slick({
     autoplay: false,
