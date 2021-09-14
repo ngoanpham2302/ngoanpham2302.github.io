@@ -475,8 +475,6 @@ img {
   color: var(--color-logo);
 }
 
-/* ----- Start: Product Card ----- */
-
 /* Fixed slick image zoom when page load */
 
 .products-slider {
@@ -490,6 +488,8 @@ img {
   visibility: visible;
   opacity: 1;
 }
+
+/* ----- Start: Product Card ----- */
 
 .card {
   border-radius: 0;
