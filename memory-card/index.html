@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Memory Cards Game</title>
+    <link rel="shortcut icon" href="./img/flaticon.jpg" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="dark-bg"></div>
+    <div class="snow"></div>
+
+    <div class="container">
+      <div class="count-moves">
+        <div>
+          <i class="fas fa-dot-circle"></i>
+          <p class="moves">You got 30 moves</p>
+        </div>
+      </div>
+      <div class="timer">
+        <div class="progress-bar">
+          <progress value="30" max="30"></progress>
+        </div>
+      </div>
+
+      <div class="cards-wrapper">
+        <div class="grid-item">
+          <div class="card" data-name="f1" onclick="flipCard(this)">
+            <div class="front">
+              <img src="img/f1.jpg" alt="card-front" />
+            </div>
+            <div class="back">
+              <img src="img/back.jpg" alt="card-back" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal start">
+      <p class="game-title">Memory Cards Game</p>
+      <div class="content">
+        <div class="content-left">
+          <img src="img/start.png" alt="start" />
+        </div>
+
+        <div class="content-right">
+          <div class="right-inner">
+            <p class="modal-title play-mode">Choose play mode</p>
+            <div class="mode-btns">
+              <button
+                class="btn btn-normal"
+                value="normal"
+                onclick="start(this)"
+              >
+                Normal
+              </button>
+              <button class="btn btn-hard" value="hard" onclick="start(this)">
+                Hard
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal win end hide">
+      <div class="content">
+        <div class="content-left">
+          <img src="img/win.png" alt="win" />
+        </div>
+
+        <div class="content-right">
+          <div class="right-inner">
+            <p class="modal-title">You win !</p>
+            <button class="btn btn-restart">Play again</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal lose end hide">
+      <div class="content">
+        <div class="content-left">
+          <img src="img/lose.png" alt="lose" />
+        </div>
+
+        <div class="content-right">
+          <div class="right-inner">
+            <p class="modal-title">Time over !</p>
+            <button class="btn btn-restart">Play again</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="audio hide">
+      <audio class="lose-sound">
+        <source src="./audio/lose.mp3" type="audio/mpeg" />
+      </audio>
+      <audio class="win-sound">
+        <source src="./audio/win.mp3" type="audio/mpeg" />
+      </audio>
+      <audio class="right-sound">
+        <source src="./audio/right.mp3" type="audio/mpeg" />
+      </audio>
+      <audio class="wrong-sound">
+        <source src="./audio/wrong.mp3" type="audio/mpeg" />
+      </audio>
+      <audio class="flip-sound">
+        <source src="./audio/flip.mp3" type="audio/mpeg" />
+      </audio>
+      <audio class="time-sound">
+        <source src="./audio/timeleft.mp3" type="audio/mpeg" />
+      </audio>
+      <audio class="game-sound">
+        <source src="./audio/game.mp3" type="audio/mpeg" />
+      </audio>
+      <audio class="click-sound">
+        <source src="./audio/click.mp3" type="audio/mpeg" />
+      </audio>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>

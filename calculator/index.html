@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator Online</title>
+    <link rel="stylesheet" href="./calculator.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="screen">
+        <div class="expression-box">
+          <p class="expression"></p>
+        </div>
+
+        <div class="result-box">
+          <p class="result"></p>
+        </div>
+      </div>
+
+      <div class="buttons">
+        <button id="btn-square" class="btn btn-left" onclick="display('^2')">
+          x<sup>2</sup>
+        </button>
+
+        <button id="btn-factorial" class="btn btn-left" onclick="display('!')">
+          x!
+        </button>
+
+        <button id="btn-exp" class="btn btn-left" onclick="display('e^(')">
+          e<sup>x</sup>
+        </button>
+
+        <button id="btn-ce" class="btn btn-left" onclick="clearEntry()">
+          CE
+        </button>
+
+        <button id="btn-ac" class="btn" onclick="allClear()">AC</button>
+
+        <button id="btn-power" class="btn btn-left" onclick="display('^3')">
+          x<sup>3</sup>
+        </button>
+
+        <button id="btn-open-par" class="btn btn-left" onclick="display('(')">
+          (
+        </button>
+
+        <button id="btn-close-par" class="btn btn-left" onclick="display(')')">
+          )
+        </button>
+
+        <button id="btn-percent" class="btn btn-left" onclick="display('%')">
+          <i class="fas fa-percent"></i>
+        </button>
+
+        <button id="btn-divide" class="btn btn-right" onclick="display(' ÷ ')">
+          ÷
+        </button>
+
+        <button id="btn-sqrt" class="btn btn-left" onclick="display('√(')">
+          <i class="fas fa-square-root-alt"></i>
+        </button>
+
+        <button id="btn-7" class="btn btn-middle" onclick="display('7')">
+          7
+        </button>
+        <button id="btn-8" class="btn btn-middle" onclick="display('8')">
+          8
+        </button>
+        <button id="btn-9" class="btn btn-middle" onclick="display('9')">
+          9
+        </button>
+
+        <button id="btn-multiply" class="btn btn-right" onclick="display(' × ')">
+          ×
+        </button>
+
+        <button id="btn-log" class="btn btn-left" onclick="display('log(')">
+          log
+        </button>
+
+        <button id="btn-4" class="btn btn-middle" onclick="display('4')">
+          4
+        </button>
+        <button id="btn-5" class="btn btn-middle" onclick="display('5')">
+          5
+        </button>
+        <button id="btn-6" class="btn btn-middle" onclick="display('6')">
+          6
+        </button>
+
+        <button id="btn-minus" class="btn btn-right" onclick="display(' - ')">
+          −
+        </button>
+        <button id="btn-ln" class="btn btn-left" onclick="display('ln(')">
+          ln
+        </button>
+        <button id="btn-1" class="btn btn-middle" onclick="display('1')">
+          1
+        </button>
+        <button id="btn-2" class="btn btn-middle" onclick="display('2')">
+          2
+        </button>
+        <button id="btn-3" class="btn btn-middle" onclick="display('3')">
+          3
+        </button>
+        <button id="btn-plus" class="btn btn-right" onclick="display(' + ')">
+          +
+        </button>
+        <button id="btn-pi" class="btn btn-left" onclick="display('π')">
+          π
+        </button>
+        <button id="btn-0" class="btn btn-middle" onclick="display('0')">
+          0
+        </button>
+        <button id="btn-point" class="btn btn-middle" onclick="display('.')">
+          .
+        </button>
+        <button id="btn-equal" class="btn" onclick="calculate()">=</button>
+      </div>
+    </div>
+
+    <script src="./calculator.js"></script>
+  </body>
+</html>

@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("./img/dawn-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left center;
+  color: #4a3933;
+  font-weight: 500;
+}
+
+.container {
+  padding: 40px 20px;
+  border: 1px solid rgba(12, 43, 63, 0.2);
+  border-radius: 15px;
+  background: linear-gradient(45deg, #fdece4, #bff0ff);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -5px 6px 0px inset;
+}
+
+.screen {
+  width: 100%;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: rgb(195, 199, 202) 2px 2px 6px 0px inset,
+    rgba(255, 255, 255, 0.5) -2px -2px 6px 1px inset,
+    rgba(14, 18, 22, 0.35) -1px -2px 6px 0px inset;
+}
+
+.expression-box {
+  height: 30px;
+}
+
+.result-box {
+  height: 50px;
+}
+
+.result,
+.expression {
+  font-size: 30px;
+  text-align: right;
+  vertical-align: bottom;
+  padding: 7px 10px 0;
+  height: 100%;
+}
+
+.expression {
+  font-size: 20px;
+  color: rgba(74, 57, 51, 0.5);
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  grid-gap: 10px;
+}
+
+.btn {
+  width: 60px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 600;
+  color: #4a3933;
+  transition: all 0.2s ease-in-out;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+#btn-equal {
+  width: auto;
+  grid-column: 4 / span 2;
+  font-size: 25px;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.fa-square-root-alt,
+.fa-percent {
+  font-size: 18px;
+}
+
+#btn-ac,
+#btn-equal {
+  color: #fff;
+  background-color: #e45826;
+}
+
+.btn-left {
+  background-color: #e6d5b8;
+}
+
+.btn-right {
+  background-color: #f0a500;
+  font-size: 25px;
+}
+
+.btn-middle {
+  color: #fff;
+  background-color: #4a3933;
+}
+
+.btn sup {
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.btn:hover {
+  background-color: #cec0a4;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+/* night color */
+
+/* #btn-ac,
+#btn-equal {
+  background: linear-gradient(45deg, #e94e43, #cfcdb4);
+}
+
+.btn-left {
+  background: linear-gradient(45deg, #65dae7, #acac85);
+}
+
+.btn-right {
+    background: linear-gradient(45deg, #ad88b3, #74b6bb);
+} */
